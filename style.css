@@ -314,3 +314,75 @@ nav {
 .barre-green{
   background: #2a9d5c;
 }
+
+/* SECTION COMMENT ? */
+.comment{
+  padding: 61px 40px;
+  background: #f0f4f8;
+}
+
+.comment-head{
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.bg{
+  background: #1a3a4a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.comment-head h2{
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a3a4a;
+  margin-bottom: 12px;
+}
+
+.comment-head p{
+  font-size: 15px;
+  color: #555;
+}
+.grille-comment{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 25px 20px;
+}
+
+.grille-item{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.comment-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  background: #dce8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #1a3a4a;
+}
+
+.grille-item h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.grille-item p{
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
