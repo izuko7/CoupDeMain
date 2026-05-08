@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
@@ -17,229 +17,207 @@
             <img src="Ressources/images/logo.png" alt="" />
         </div>
         <div class="tab">
-            <a href="#">Connexion</a>
-            <a href="#" class="btn-inscrire">S'inscrire</a>
+            <a href="#" data-i18n="nav.connexion">Connexion</a>
+            <a href="#" class="btn-inscrire" data-i18n="nav.inscrire">S'inscrire</a>
         </div>
         <div class="nav-notif">
-            <span class="nav-icon">
-                <i class="fa-solid fa-bell"></i>
-            </span>
+            <span class="nav-icon"><i class="fa-solid fa-bell"></i></span>
             <select id="lang-select">
                 <option value="fr">🇫🇷 FR</option>
                 <option value="en">🇬🇧 EN</option>
             </select>
         </div>
     </nav>
+
     <!-- Hero section -->
     <div class="hero">
         <div class="hero-background">
             <img src="Ressources/images/bg.png" alt="" />
         </div>
         <div class="hero-contenu">
-            <h1>Trouvez le bon professionnel pour vos travaux en quelques clics</h1>
-            <p>
-                La plateforme de confiance qui connecte les particuliers et
-                entreprises avec les meilleurs artisans certifiés du BTP en Afrique.
-            </p>
-
-            <!-- barre de recherche -->
+            <h1 data-i18n="hero.titre">Trouvez le bon professionnel pour vos travaux en quelques clics</h1>
+            <p data-i18n="hero.description">La plateforme de confiance qui connecte les particuliers et entreprises avec
+                les meilleurs artisans certifiés du BTP en Afrique.</p>
             <div class="search-bar">
                 <div class="search-logo">
                     <i class="fa-solid fa-wrench"></i>
-                    <input type="text" placeholder="Quel métier recherchez-vous ?" />
+                    <input type="text" data-i18n-placeholder="hero.search.metier"
+                        placeholder="Quel métier recherchez-vous ?" />
                 </div>
                 <div class="search-location">
                     <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" placeholder="Localisation" />
+                    <input type="text" data-i18n-placeholder="hero.search.localisation" placeholder="Localisation" />
                 </div>
-                <button>Rechercher</button>
+                <button data-i18n="hero.search.bouton">Rechercher</button>
             </div>
             <div class="CTA-buttons">
-                <a href="#" class="btn-ornage">Trouver un professionel</a>
-                <a href="#" class="btn-outline">S'inscrire</a>
+                <a href="#" class="btn-ornage" data-i18n="hero.cta.trouver">Trouver un professionnel</a>
+                <a href="#" class="btn-outline" data-i18n="hero.cta.inscrire">S'inscrire</a>
             </div>
         </div>
     </div>
-    <!-- Section principal -->
+
+    <!-- Section principale -->
     <div class="main">
         <div class="main-content">
             <div>
-                <h2>Explorez par corps de métier</h2>
-                <p>Les artisants les plus qualifiés pour vos projets spécifiques</p>
+                <h2 data-i18n="metiers.titre">Explorez par corps de métier</h2>
+                <p data-i18n="metiers.soustitre">Les artisans les plus qualifiés pour vos projets spécifiques</p>
             </div>
-            <a href="#">Voir tout →</a>
+            <a href="#" data-i18n="metiers.voir">Voir tout →</a>
         </div>
         <div class="main-card">
-            <!-- carte1 -->
             <div class="card">
-                <div class="icon-card blue-icon">
-                    <i class="fa-solid fa-compass-drafting"></i>
-                </div>
-                <h3>Architecture</h3>
-                <p>Conception de plans, design d'intérieur et suivi de chantier.</p>
+                <div class="icon-card blue-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <h3 data-i18n="metiers.archi.titre">Architecture</h3>
+                <p data-i18n="metiers.archi.desc">Conception de plans, design d'intérieur et suivi de chantier.</p>
                 <div class="bar-card barre-bleu"></div>
             </div>
-            <!-- carte 2 -->
             <div class="card">
-                <div class="icon-card orange-icon">
-                    <i class="fa-solid fa-house-chimney"></i>
-                </div>
-                <h3>Maçonnerie</h3>
-                <p>Gros œuvre, fondations et structures en béton armé.</p>
+                <div class="icon-card orange-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                <h3 data-i18n="metiers.macon.titre">Maçonnerie</h3>
+                <p data-i18n="metiers.macon.desc">Gros œuvre, fondations et structures en béton armé.</p>
                 <span class="bar-card barre-orange"></span>
             </div>
-            <!-- carte 3 -->
             <div class="card">
-                <div class="icon-card yellow-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-                <h3>Electricité</h3>
-                <p>Installations domestiques, industrielles et maintenance.</p>
+                <div class="icon-card yellow-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3 data-i18n="metiers.elec.titre">Électricité</h3>
+                <p data-i18n="metiers.elec.desc">Installations domestiques, industrielles et maintenance.</p>
                 <span class="bar-card barre-yellow"></span>
             </div>
-            <!-- carte 4 -->
             <div class="card">
-                <div class="icon-card green-icon">
-                    <i class="fa-solid fa-wrench"></i>
-                </div>
-                <h3>Plomberie</h3>
-                <p>Réseaux d'eau, sanitaires et dépannages d'urgence.</p>
+                <div class="icon-card green-icon"><i class="fa-solid fa-wrench"></i></div>
+                <h3 data-i18n="metiers.plomb.titre">Plomberie</h3>
+                <p data-i18n="metiers.plomb.desc">Réseaux d'eau, sanitaires et dépannages d'urgence.</p>
                 <span class="bar-card barre-green"></span>
             </div>
         </div>
     </div>
 
-    <!-- section 'comment ça marche' -->
+    <!-- Comment ça marche -->
     <div class="comment">
         <div class="comment-head">
-            <span class="bg">CONFIANCE & EXPERTISE</span>
-            <h2>Comment ça marche</h2>
-            <p>Une approche structurée pour garantir la qualité de vos travaux du début à la fin.</p>
+            <span class="bg" data-i18n="comment.badge">CONFIANCE & EXPERTISE</span>
+            <h2 data-i18n="comment.titre">Comment ça marche</h2>
+            <p data-i18n="comment.soustitre">Une approche structurée pour garantir la qualité de vos travaux du début à
+                la fin.</p>
         </div>
     </div>
     <div class="grille-comment">
-        <!-- grille 1 -->
         <div class="grille-item">
-            <div class="comment-icon">
-                <img src="Ressources/images/ccm-1.61d5282 1.png" alt="">
-            </div>
+            <div class="comment-icon"><img src="Ressources/images/ccm-1.61d5282 1.png" alt=""></div>
             <div>
-                <h3>Décrivez votre projet</h3>
-                <p>récisez vos besoins, votre budget et votre localisation géographique.</p>
+                <h3 data-i18n="comment.etape1.titre">Décrivez votre projet</h3>
+                <p data-i18n="comment.etape1.desc">Précisez vos besoins, votre budget et votre localisation
+                    géographique.</p>
             </div>
         </div>
-        <!-- grille 2 -->
         <div class="grille-item">
-            <div class="comment-icon">
-                <img src="Ressources/images/ccm-2.9033d62 1.png" alt="">
-            </div>
+            <div class="comment-icon"><img src="Ressources/images/ccm-2.9033d62 1.png" alt=""></div>
             <div>
-                <h3>Comparer les offres</h3>
-                <p>Recevez des devis de professionnels vérifiés et consultez leurs réalisations.</p>
+                <h3 data-i18n="comment.etape2.titre">Comparez les offres</h3>
+                <p data-i18n="comment.etape2.desc">Recevez des devis de professionnels vérifiés et consultez leurs
+                    réalisations.</p>
             </div>
         </div>
-        <!-- grille 3 -->
         <div class="grille-item">
-            <div class="comment-icon">
-                <img src="Ressources/images/ccm-2.9033d62 3.png" alt="">
-            </div>
+            <div class="comment-icon"><img src="Ressources/images/ccm-2.9033d62 3.png" alt=""></div>
             <div>
-                <h3>Suivez en temps réel</h3>
-                <p>Payer en toute sécurité et suivez l’anvancement de vos chantiers.</p>
+                <h3 data-i18n="comment.etape3.titre">Suivez en temps réel</h3>
+                <p data-i18n="comment.etape3.desc">Payez en toute sécurité et suivez l'avancement de vos chantiers.</p>
             </div>
         </div>
     </div>
-    <!-- section avantages -->
+
+    <!-- Avantages -->
     <div class="avantages">
         <div class="grille-avantages">
             <div class="avantages-items">
                 <img src="Ressources/images/image 2.png" alt="">
-                <p>Prix connus à l'avance</p>
+                <p data-i18n="avantages.prix">Prix connus à l'avance</p>
             </div>
             <div class="avantages-items">
                 <img src="Ressources/images/image 3.png" alt="">
-                <p>Des artisans expérimentés</p>
+                <p data-i18n="avantages.artisans">Des artisans expérimentés</p>
             </div>
             <div class="avantages-items">
                 <img src="Ressources/images/image 4.png" alt="">
-                <p>Devis gratuis lors de la 1ère visite</p>
+                <p data-i18n="avantages.devis">Devis gratuits lors de la 1ère visite</p>
             </div>
             <div class="avantages-items">
                 <img src="Ressources/images/image 5.png" alt="">
-                <p>En urgence ou sur rendez-vous</p>
+                <p data-i18n="avantages.urgence">En urgence ou sur rendez-vous</p>
             </div>
             <div class="avantages-items">
                 <img src="Ressources/images/image 6.png" alt="">
-                <p>Intervention couverte par une assurance</p>
+                <p data-i18n="avantages.assurance">Intervention couverte par une assurance</p>
             </div>
             <div class="avantages-items">
                 <img src="Ressources/images/image 7.png" alt="">
-                <p>Service 7j/7 interventions 24h/24</p>
+                <p data-i18n="avantages.service">Service 7j/7 interventions 24h/24</p>
             </div>
         </div>
     </div>
 
-    <!-- section vérification     -->
+    <!-- Bannière vérification -->
     <div class="banniere">
         <div class="carte">
             <img src="Ressources/images/woker.png" alt="">
             <div class="banniere-text">
-                <h3>professionnels vérifiés à 100%</h3>
-                <p>Chaque artisan sur Coup de Main subit un contrôle rigoureux de ses diplômes, de ses assurances et de
-                    ses antécédents de chantiers pour votre tranquillité d'esprit.</p>
+                <h3 data-i18n="banniere.titre">Professionnels vérifiés à 100%</h3>
+                <p data-i18n="banniere.desc">Chaque artisan sur Coup de Main subit un contrôle rigoureux de ses
+                    diplômes, de ses assurances et de ses antécédents de chantiers pour votre tranquillité d'esprit.</p>
             </div>
-            <a href="" class="btn-inscrire">En savoir plus</a>
+            <a href="" class="btn-inscrire" data-i18n="banniere.bouton">En savoir plus</a>
         </div>
     </div>
 
-    <!-- pied de page -->
+    <!-- Footer -->
     <footer class="pied-de-page">
         <div class="pied-de-page__contenu">
-
             <div class="pied-de-page__colonne">
                 <img src="Ressources/images/Group 8.png" alt="Logo Coup de Main" class="pied-de-page__logo" />
-                <p class="pied-de-page__description">Excellence et rapidtité dans la réalisation de vos traveaux. Au
-                    service de votre quotidien</p>
+                <p class="pied-de-page__description" data-i18n="footer.description">Excellence et rapidité dans la
+                    réalisation de vos travaux. Au service de votre quotidien.</p>
                 <div class="pied-de-page__reseaux">
                     <a href="#"><i class="fa-solid fa-globe"></i></a>
                     <a href="#"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
-
             <div class="pied-de-page__colonne">
-                <h4>Navigation</h4>
+                <h4 data-i18n="footer.nav.titre">Navigation</h4>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">Conditions</a></li>
-                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#" data-i18n="footer.nav.accueil">Accueil</a></li>
+                    <li><a href="#" data-i18n="footer.nav.apropos">À propos</a></li>
+                    <li><a href="#" data-i18n="footer.nav.conditions">Conditions</a></li>
+                    <li><a href="#" data-i18n="footer.nav.confidentialite">Confidentialité</a></li>
                 </ul>
             </div>
-
             <div class="pied-de-page__colonne">
-                <h4>Contactez-nous</h4>
+                <h4 data-i18n="footer.contact.titre">Contactez-nous</h4>
                 <ul class="pied-de-page__contact">
-                    <li><i class="fa-solid fa-location-dot"></i> Abidjan, Côte d'Ivoire</li>
+                    <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer.contact.adresse">Abidjan, Côte
+                            d'Ivoire</span></li>
                     <li><i class="fa-solid fa-phone"></i> +225 27 00 00 00 00</li>
                     <li><i class="fa-solid fa-envelope"></i> info@cdm-tech.com</li>
                 </ul>
             </div>
-
             <div class="pied-de-page__colonne">
-                <h4>Newsletter</h4>
-                <p class="pied-de-page__newsletter-texte">Restez informé(e) de nos dernières actualités et recherches
-                    médicales.</p>
+                <h4 data-i18n="footer.newsletter.titre">Newsletter</h4>
+                <p class="pied-de-page__newsletter-texte" data-i18n="footer.newsletter.texte">Restez informé(e) de nos
+                    dernières actualités et recherches médicales.</p>
                 <div class="pied-de-page__formulaire">
-                    <input type="email" placeholder="Adresse email" />
-                    <button>Souscrire</button>
+                    <input type="email" data-i18n-placeholder="footer.newsletter.placeholder"
+                        placeholder="Adresse email" />
+                    <button data-i18n="footer.newsletter.bouton">Souscrire</button>
                 </div>
             </div>
-
         </div>
         <div class="pied-de-page__bas">
-            <p>© 2026 Bits Entreprise. Tous droits réservés.</p>
+            <p data-i18n="footer.copyright">© 2026 Bits Entreprise. Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="Script/traduction.js"></script>
 </body>
 
 </html>
