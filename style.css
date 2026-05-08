@@ -42,6 +42,7 @@ nav {
   padding: 10px 22px;
   border-radius: 8px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .nav-icon {
@@ -414,3 +415,16 @@ nav {
 }
 
 /* BANNIERE */
+.banniere{
+  padding: 0 40px 60px;
+  background: #fff;
+}
+
+.carte{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 31px 40px;
+}
