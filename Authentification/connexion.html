@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="connexion.css" />
+    <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupdeMain | Connexion</title>
+</head>
+
+<body>
+    <!-- navbar -->
+     <nav>
+        <div class="logo">
+            <img src="../Ressources/images/logo.png" alt="">
+        </div>
+        <div class="onglets">
+            <a href="#">Accueil</a>
+            <a href="#" class="btn-inscrire">S'incrire</a>
+        </div>
+     </nav>
+    <!-- gauche -->
+    <div class="gauche">
+        <img src="../Ressources/images/Background1.png" alt="" class="gauche-bg" />
+        <div class="gauche-fond"></div>
+        <div class="gauche-contenu">
+            <h1>Coup De Main</h1>
+            <p>La fondation de vos projets en Afrique. Accédez au plus grand réseau de professionnels du bâtiment et de la construction.</p>
+            <div class="badges-gauche">
+                <span><i class="fa-solid fa-circle-check"></i> Professionnels vérifiés</span>
+                <span><i class="fa-solid fa-lock"></i> Paiements sécurisés</span>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- formulaire -->
+    <div class="droite">
+        <div class="formulaire">
+            <h2>Bon retour parmi nous</h2>
+            <p class="sous-titre">Connectez-vous pour gérer vos projets et offres.</p>
+ 
+            <div class="champ">
+                <label>E-mail</label>
+                <div class="input-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="nom@entreprise.com" />
+                </div>
+            </div>
+ 
+            <div class="champ">
+                <div class="label-row">
+                    <label>Mot de passe</label>
+                    <a href="#" class="oublie">Mot de passe oublié ?</a>
+                </div>
+                <div class="input-info">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="mdp" placeholder="••••••••" />
+                    <i class="fa-solid fa-eye toggle-mdp" onclick="toggleMotdePasse()"></i>
+                </div>
+            </div>
+ 
+            <div class="souvenir">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Se souvenir de moi</label>
+            </div>
+ 
+            <button class="btn-connexion">Se connecter</button>
+ 
+            <div class="separateur">
+                <span>OU SE CONNECTER AVEC</span>
+            </div>
+ 
+            <div class="button-socials">
+                <button class="btn-social">
+                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+                    Google
+                </button>
+                <button class="btn-social">
+                    <i class="fa-brands fa-apple"></i>
+                    Apple
+                </button>
+            </div>
+ 
+            <p class="inscription">
+                Vous n'avez pas de compte ? <a href="#">S'inscrire gratuitement</a>
+            </p>
+        </div>
+ 
+        <div class="droite-bas">
+            <p>© 2026 Coup de Main. La fondation de vos projets en Afrique.</p>
+            <div class="droite-liens">
+                <a href="#">Confidentialité</a>
+                <a href="#">Conditions</a>
+                <a href="#">Aide</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
