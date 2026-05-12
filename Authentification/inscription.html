@@ -1,24 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="inscription.css" />
+    <link rel="stylesheet" href="inscription.css" />
     <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>CoupdeMain | Inscription</title>
 </head>
+
 <body>
     <!-- navbar -->
-     <nav>
+    <nav>
         <div class="logo">
             <img src="../Ressources/images/logo.png" alt="">
         </div>
         <div class="onglets">
-            <a href="">Connexion</a>
-            <a href="" class="btn-dark">Accueil</a>
+            <a href="connexion.html">Connexion</a>
+            <a href="../index.html" class="btn-dark">Accueil</a>
         </div>
-     </nav>
-     
+    </nav>
+    <div class="contenu">
+        <!-- gauche  -->
+        <div class="gauche">
+            <img src="../Ressources/images/Background construction.png" alt="" class="gauche-bg">
+            <div class="gauche-fond">
+                <div class="gauche-contenu">
+                    <h1>Rejoignez le premier réseau de professionels du BTP.</h1>
+                    <p>Développez votre entreprise avec des outils conçus pour les bâtisseurs d'aujourd'hui.</p>
+                    <div class="avantages">
+                        <div class="avantages-contenu">
+                            <div class="icon-avantages orange"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div>
+                                <h4>Trouver plus de chantiers</h4>
+                                <p>Accédez en temps réel aux offres d'autres acteurs locaux et aux projets vérifiés dans
+                                    votre région.</p>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="avantages-contenu">
+                            <div class="icon-avantages blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div>
+                                <h4>Trouver plus de chantiers</h4>
+                                <p>Accédez en temps réel aux offres d'autres acteurs locaux et aux projets vérifiés dans
+                                    votre région.</p>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="avantages-contenu">
+                            <div class="icon-avantages green"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div>
+                                <h4>Trouver plus de chantiers</h4>
+                                <p>Accédez en temps réel aux offres d'autres acteurs locaux et aux projets vérifiés dans
+                                    votre région.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- droite -->
+        <div class="droite">
+            <div class="formulaire">
+                <h2>Créer votre compte</h2>
+                <p class="sous-titre">Sélectionnez votre profil pour personnaliser votre expérience.</p>
+            </div>
+            <!-- selectionner les profils -->
+            <div class="profil-selection">
+                <div class="profil-item active" onclick="selectionProfil()">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Particulier</span>
+                    <small>Je cherche un pro</small>
+                </div>
+                <div class="profil-item" onclick="selectionProfil()">
+                    <i class="fa-solid fa-wrench"></i>
+                    <span>Professionnel</span>
+                    <small>Je propose des services</small>
+                </div>
+                <div class="profil-item" onclick="selectProfil(this)">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Entreprise</span>
+                    <small>Gestion d'équipes & appels d'offres</small>
+                </div>
+            </div>
+            <!--  -->
+            <div class="formulaire-label">
+                <span class="badge-orange">INSCRIPTION PROFESSIONNEL</span>
+                <h3>Créez votre profil d'expert</h3>
+                <p>Remplissez les informations ci-dessous pour commencer.</p>
+            </div>
+            <!--  -->
+            <div class="champs-grille">
+                <div class="champs">
+                    <label>Nom Complet</label>
+                    <input type="text" placeholder="Jean Dupont">
+                </div>
+                <!--  -->
+                <div class="champ">
+                    <label>Email Professionnel</label>
+                    <input type="email" placeholder="jean.dupont@entreprise.com">
+                </div>
+
+                <div class="champ">
+                    <label>Corps de métiers</label>
+                    <div class="input-selection">
+                        <select>
+                            <option value="">Sélectionner votre métier</option>
+                            <option>Architecture</option>
+                            <option>Maçonnerie</option>
+                            <option>Électricité</option>
+                            <option>Plomberie</option>
+                            <option>AIde maçon</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="champ">
+                    <label>Années d'expérience</label>
+                    <input type="number" placeholder="ex: 5">
+                </div>
+                <div class="champ">
+                    <label>Localisation (Ville / Pays)</label>
+                    <div class="input-info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Daoukro, Abidjan">
+                    </div>
+                </div>
+                <div class="cgu">
+                    <input type="checkbox" id="cgu">
+                    <label for="cgu">J'accepte les <a href="#">Conditions Générales d'Utilisation</a> et la <a
+                            href="#">Politique de Confidentialité</a> du BTP Marché.</label>
+                </div>
+                <button class="btn-submit">Finaliser mon inscription <i class="fa-solid fa-arrow-right"></i></button>
+
+                <p class="deja-compte">Vous avez déjà un compte ? <a href="#">Connectez-vous ici</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
