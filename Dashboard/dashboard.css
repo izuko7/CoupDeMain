@@ -1,0 +1,604 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f4f7;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* BARRE LATERALE */
+.barre-laterale {
+  width: 220px;
+  min-width: 220px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 24px;
+  border-right: 1px solid #eee;
+}
+
+.logo img {
+  height: 44px;
+}
+
+.carte-profil {
+  background: #f7f9fb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.carte-profil h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.carte-profil p {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0;
+}
+
+.carte-profil span {
+  font-size: 11px;
+  color: #999;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.lien {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #555;
+  transition: 0.15s;
+}
+
+.lien:hover {
+  background: #f2f4f7;
+}
+
+.lien.active {
+  background: #f0f5f8;
+  color: #1a3a4a;
+  font-weight: 600;
+}
+
+.lien i {
+  font-size: 14px;
+  width: 16px;
+}
+
+.bouton-poster {
+  background: #c0442a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s;
+}
+
+.bouton-poster:hover {
+  background: #a83820;
+}
+
+.liens-bas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.liens-bas a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #888;
+  text-decoration: none;
+}
+
+.liens-bas a:hover {
+  color: #333;
+}
+
+/* PRINCIPAL */
+.principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* EN-TETE */
+.en-tete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.icones {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cloche {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.pastille {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background: #e8601c;
+  border-radius: 50%;
+}
+
+.icone {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1a3a4a;
+  cursor: pointer;
+}
+
+/* PAGE */
+.page {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titre h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+}
+
+.titre p {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* STATISTIQUES */
+.statistiques {
+  display: flex;
+  gap: 12px;
+}
+
+.stat {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat.fonce {
+  background: #1a3a4a;
+}
+
+.icone-stat {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.icone-stat.vert {
+  background: #e0f4f1;
+  color: #2a9d8f;
+}
+.icone-stat.orange {
+  background: #fdeee6;
+  color: #e8601c;
+}
+.icone-stat.bleu {
+  background: #e6eef8;
+  color: #3a7bd5;
+}
+.icone-stat.jaune {
+  background: #fef9e6;
+  color: #d4a017;
+}
+.icone-stat.clair {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.libelle {
+  font-size: 11px;
+  color: #888;
+}
+
+.valeur {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.libelle.blanc,
+.valeur.blanc {
+  color: #fff;
+}
+
+/* DEUX COLONNES */
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* BLOC */
+.bloc {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bloc-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloc-entete h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.bloc-entete a {
+  font-size: 12px;
+  color: #888;
+  text-decoration: none;
+}
+
+/* PROJETS */
+.carte-projet {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projet-haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.projet-haut h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+.projet-haut p {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.etiquette-cours {
+  background: #e0f4f1;
+  color: #2a9d8f;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.etiquette-urgent {
+  background: #fdeee6;
+  color: #e8601c;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ligne-progression {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+}
+
+.barre {
+  background: #eee;
+  border-radius: 99px;
+  height: 6px;
+}
+
+.remplissage {
+  background: #c0442a;
+  height: 6px;
+  border-radius: 99px;
+}
+
+.projet-bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #888;
+}
+
+.petits-avatars {
+  display: flex;
+}
+
+.petit-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ddd;
+  border: 2px solid #fff;
+  margin-right: -6px;
+}
+
+/* MESSAGES */
+.message {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.message:last-of-type {
+  border-bottom: none;
+}
+
+.bulle-msg {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bulle-msg.fonce-msg {
+  background: #1a3a4a;
+  color: #fff;
+}
+.bulle-msg.gris-msg {
+  background: #eee;
+  color: #888;
+}
+
+.contenu-msg {
+  flex: 1;
+}
+
+.msg-haut {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.nom-msg {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+.heure-msg {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.contenu-msg p {
+  font-size: 12px;
+  color: #777;
+}
+
+.nouveau {
+  display: inline-block;
+  background: #e0f4f1;
+  color: #2a9d8f;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.voir-tout {
+  text-align: center;
+}
+
+.voir-tout a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3a4a;
+  text-decoration: none;
+}
+
+/* OPPORTUNITES */
+.filtres {
+  display: flex;
+  gap: 8px;
+}
+
+.filtre {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+.grille-opportunites {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.carte-opportunite {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-opport {
+  position: relative;
+  height: 140px;
+}
+
+.image-opport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prix {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.prix.sur-devis {
+  background: #1a3a4a;
+}
+
+.corps-opport {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.opport-haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opport-haut h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.etiquette-metier {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.etiquette-metier.maconnerie {
+  background: #e0f4f1;
+  color: #2a9d8f;
+}
+.etiquette-metier.gros-oeuvre {
+  background: #fdeee6;
+  color: #e8601c;
+}
+
+.meta-opport {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: #888;
+}
+
+.description-opport {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.bouton-repondre {
+  width: 100%;
+  border: 1px solid #1a3a4a;
+  background: #fff;
+  color: #1a3a4a;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s;
+}
+
+.bouton-repondre:hover {
+  background: #1a3a4a;
+  color: #fff;
+}
+
+/* PIED */
+.pied {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  padding: 8px 0 4px;
+}
