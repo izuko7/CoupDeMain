@@ -78,7 +78,6 @@ nav {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .gauche-contenu {
@@ -86,7 +85,7 @@ nav {
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 85px;
+  gap: 24px;
 }
 
 .gauche-contenu h1 {
@@ -111,9 +110,6 @@ nav {
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  background: rgba(182, 176, 176, 0.295);
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .icon-avantages {
@@ -127,18 +123,9 @@ nav {
   font-size: 16px;
 }
 
-.icon-avantages.orange {
-  background: rgba(232, 96, 28, 0.25);
-  color: #e8601c;
-}
-.icon-avantages.blue {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-.icon-avantages.green {
-  background: rgba(42, 157, 92, 0.25);
-  color: #2a9d5c;
-}
+.icon-avantages.orange { background: rgba(232, 96, 28, 0.25); color: #e8601c; }
+.icon-avantages.blue   { background: rgba(255, 255, 255, 0.15); color: #fff; }
+.icon-avantages.green  { background: rgba(42, 157, 92, 0.25); color: #2a9d5c; }
 
 .avantages-contenu h4 {
   font-size: 14px;
@@ -159,16 +146,7 @@ nav {
   padding: 36px 48px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 18px;
-}
-
-.formulaire,
-.profil-selection,
-.formulaire-label,
-.champs-grille {
-  width: 100%;
-  max-width: 520px;
 }
 
 .formulaire h2 {
@@ -210,11 +188,10 @@ nav {
   margin-bottom: 4px;
 }
 
-.profil-item span a {
-  font-size: 15px;
+.profil-item span {
+  font-size: 13px;
   font-weight: 700;
   color: #222;
-  text-decoration: none;
 }
 
 .profil-item small {
@@ -244,7 +221,7 @@ nav {
   display: inline-block;
   background: #fff0e8;
   color: #e8601c;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
   padding: 4px 10px;
@@ -369,7 +346,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: 0.2s;
+  transition: background 0.2s;
   font-family: "Poppins", sans-serif;
   grid-column: 1 / -1;
 }
