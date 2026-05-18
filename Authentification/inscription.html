@@ -360,29 +360,6 @@
 
     <script src="../Script/essentials.js"></script>
     <script>
-        function selectionProfil(profil, type) {
-            document.querySelectorAll('.profil-item').forEach(i => i.classList.remove('active'));
-            profil.classList.add('active');
-
-            document.getElementById('form-particulier').style.display = 'none';
-            document.getElementById('form-professionnel').style.display = 'none';
-            document.getElementById('form-entreprise').style.display = 'none';
-            document.getElementById('gauche-particulier').style.display = 'none';
-            document.getElementById('gauche-professionnel').style.display = 'none';
-            document.getElementById('gauche-entreprise').style.display = 'none';
-
-            if (type === 'particulier') {
-                document.getElementById('form-particulier').style.display = 'block';
-                document.getElementById('gauche-particulier').style.display = 'flex';
-            } else if (type === 'entreprise') {
-                document.getElementById('form-entreprise').style.display = 'block';
-                document.getElementById('gauche-entreprise').style.display = 'flex';
-            } else {
-                document.getElementById('form-professionnel').style.display = 'block';
-                document.getElementById('gauche-professionnel').style.display = 'flex';
-            }
-        }
-
         function toggleMdpParticulier() {
             const input = document.getElementById('mdp-part');
             const icon = document.querySelector('#form-particulier .toggle-mdp');
