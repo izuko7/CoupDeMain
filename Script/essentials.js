@@ -36,3 +36,23 @@ function selectionProfil(profil, type) {
         document.getElementById("gauche-professionnel").style.display = "flex";
     }
 }
+
+// Afficher les identifiants des utilisateurs sur le dashboard
+
+const user = getUserConnecte();
+
+    if (!user || user.role !== "client") {
+      window.location.href = "../../Auth/connexion.html";
+    }
+
+    if (user) {
+      document.getElementById("titre-bienvenue").textContent = "Bonjour, " + user.nom;
+      document.getElementById("patient-id").textContent = "ID: #" + user.id;
+    }
+
+    document.getElementById("btn-burger").addEventListener("click", function () {
+      document.querySelector(".barre-laterale").classList.toggle("ouvert");
+    });
+
+
+      
