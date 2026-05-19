@@ -1,4 +1,4 @@
-const userDafault = [
+const userDefault = [
   // profil professionnel
   {
     id: 1,
@@ -12,11 +12,10 @@ const userDafault = [
   },
   // profil entreprise
   {
-    id: 1,
+    id: 2,
     entreprisename: "BatiCorp",
     activite: "BTP",
-    taille: 11 - 50,
-    siret: "1234567",
+    taille: "11-50",           
     nom: "Bingoto Walebo",
     email: "Walebooon@gmail.com",
     password: "1234",
@@ -24,9 +23,9 @@ const userDafault = [
   },
   // profil particulier
   {
-    id: 1,
+    id: 3,                   
     nom: "jean Kouadio",
-    email: "SalifouDdoumb@gmail.com",
+    email: "JeanKouadio@gmail.com",
     projet: "Gros oeuvre",
     password: "01234",
     role: "particulier",
@@ -36,28 +35,27 @@ const userDafault = [
 function getUsers() {
   const saved = localStorage.getItem("users");
   const savedUsers = saved ? JSON.parse(saved) : [];
-  return [...userDafault, ...savedUsers];
+  return [...userDefault, ...savedUsers];
 }
 
 function getUserConnect() {
-  const user = localStorage.getItem("userConnect");
-  return user ? JSON.parse(user) : null;
+  const user = localStorage.getItem("userConnecte"); 
 }
 
 function protegerPage(roleRequis) {
   const user = getUserConnect();
   if (!user) {
-    window.location.href = "";
+    window.location.href = "../Authentification/connexion.html";
     return null;
   }
   if (user.role !== roleRequis) {
-    window.location.href = "";
+    window.location.href = "../Authentification/connexion.html";
     return null;
   }
-  return null;
+  return user;
 }
 
 function logOut() {
-  localStorage.removeItem("userConnect");
-  window.location.href;
+  localStorage.removeItem("userConnecte"); 
+  window.location.href = "../Authentification/connexion.html"; 
 }
