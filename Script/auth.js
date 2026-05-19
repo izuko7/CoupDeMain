@@ -40,6 +40,7 @@ function getUsers() {
 
 function getUserConnect() {
   const user = localStorage.getItem("userConnecte"); 
+  return user ? JSON.parse(user) : null;
 }
 
 function protegerPage(roleRequis) {

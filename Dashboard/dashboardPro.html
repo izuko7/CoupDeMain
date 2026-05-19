@@ -19,7 +19,7 @@
 
       <div class="carte-profil">
         <h4 id="sidebar-nom"></h4>
-        <p>Maçonnerie Générale</p>
+        <p id="sidebar-metier"></p>
         <span id="sidebar-id"></span>
       </div>
 
@@ -41,8 +41,12 @@
       <button class="bouton-poster">Poster une offre</button>
 
       <div class="liens-bas">
-        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        <a href="#"
+          ><i class="fa-solid fa-circle-question"></i> Centre d'aide</a
+        >
+        <a href="#" onclick="logOut()"
+          ><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a
+        >
       </div>
     </aside>
 
@@ -65,7 +69,7 @@
       <div class="page">
         <div class="titre">
           <h1 id="titre-bienvenue">Bonjour</h1>
-          <p>Voici un aperçu de votre activité pour ce mois de Mars.</p>
+          <p>Voici un aperçu de votre activité pour ce mois de <span id="mois-actuel"></span>.</p>
         </div>
 
         <!-- STATISTIQUES -->
@@ -128,7 +132,9 @@
               <div class="projet-haut">
                 <div>
                   <h4>Villa K - Gros Œuvre</h4>
-                  <p><i class="fa-solid fa-location-dot"></i> Cocody, Abidjan</p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Cocody, Abidjan
+                  </p>
                 </div>
                 <span class="etiquette-cours">EN COURS</span>
               </div>
@@ -152,7 +158,9 @@
               <div class="projet-haut">
                 <div>
                   <h4>Rénovation Immeuble "Le Phare"</h4>
-                  <p><i class="fa-solid fa-location-dot"></i> Plateau, Abidjan</p>
+                  <p>
+                    <i class="fa-solid fa-location-dot"></i> Plateau, Abidjan
+                  </p>
                 </div>
                 <span class="etiquette-urgent">URGENT</span>
               </div>
@@ -245,7 +253,9 @@
                   <span class="etiquette-metier maconnerie">Maçonnerie</span>
                 </div>
                 <p class="meta-opport">
-                  <span><i class="fa-solid fa-location-dot"></i> Bingerville</span>
+                  <span
+                    ><i class="fa-solid fa-location-dot"></i> Bingerville</span
+                  >
                   <span><i class="fa-solid fa-clock"></i> 7 jours</span>
                 </p>
                 <p class="description-opport">
@@ -289,8 +299,7 @@
       </div>
     </main>
 
-    <!-- CORRECTION : auth.js en premier, script inline en dernier -->
     <script src="../Script/auth.js"></script>
-    <script src="../Script/connexion.js"></script>
+    <script src="../Script/dashboard.js"></script>
   </body>
 </html>
