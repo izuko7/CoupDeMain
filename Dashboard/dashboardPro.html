@@ -1,305 +1,294 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dashboard.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <title>CoupdeMain | Tableau de bord</title>
-  </head>
-  <body>
-    <!-- BARRE LATERALE -->
-    <aside class="barre-laterale">
-      <div class="logo">
-        <img src="../Ressources/images/logo.png" alt="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>CoupdeMain | Tableau de bord</title>
+</head>
+
+<body>
+  <!-- BARRE LATERALE -->
+  <aside class="barre-laterale">
+    <div class="logo">
+      <img src="../Ressources/images/logo.png" alt="" />
+    </div>
+
+    <div class="carte-profil">
+      <h4 id="sidebar-nom"></h4>
+      <p id="sidebar-metier"></p>
+      <span id="sidebar-id"></span>
+    </div>
+
+    <nav class="navigation">
+      <a href="dashboardPro.html" class="lien active">
+        <i class="fa-solid fa-table-columns"></i> Tableau de bord
+      </a>
+      <a href="#" class="lien">
+        <i class="fa-solid fa-envelope"></i> Mes Messages
+      </a>
+      <a href="dashboardprojt.html" class="lien">
+        <i class="fa-solid fa-wrench"></i> Mes Projets
+      </a>
+      <a href="#" class="lien">
+        <i class="fa-solid fa-gear"></i> Paramètres
+      </a>
+    </nav>
+
+    <button class="bouton-poster">Poster une offre</button>
+
+    <div class="liens-bas">
+      <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+      <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+    </div>
+  </aside>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="principal">
+    <!-- EN-TETE -->
+    <header class="en-tete">
+      <div></div>
+      <div class="icones">
+        <span class="cloche">
+          <i class="fa-solid fa-bell"></i>
+          <span class="pastille"></span>
+        </span>
+        <span class="icone"><i class="fa-solid fa-message"></i></span>
+        <div class="avatar"></div>
+      </div>
+    </header>
+
+    <!-- PAGE -->
+    <div class="page">
+      <div class="titre">
+        <h1 id="titre-bienvenue">Bonjour</h1>
+        <p>Voici un aperçu de votre activité pour ce mois de <span id="mois-actuel"></span>.</p>
       </div>
 
-      <div class="carte-profil">
-        <h4 id="sidebar-nom"></h4>
-        <p id="sidebar-metier"></p>
-        <span id="sidebar-id"></span>
+      <!-- STATISTIQUES -->
+      <div class="statistiques">
+        <div class="stat">
+          <div class="icone-stat vert">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <div>
+            <p class="libelle">Chantiers</p>
+            <p class="valeur">4 actifs</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icone-stat orange">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <div>
+            <p class="libelle">Offres</p>
+            <p class="valeur">12 nouvelles</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icone-stat bleu">
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <div>
+            <p class="libelle">Clients</p>
+            <p class="valeur">3 rdv</p>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="icone-stat jaune"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <p class="libelle">Note</p>
+            <p class="valeur">4.8/5</p>
+          </div>
+        </div>
+        <div class="stat fonce">
+          <div class="icone-stat clair">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+          <div>
+            <p class="libelle blanc">Revenus du mois</p>
+            <p class="valeur blanc">2.450.000 FCFA</p>
+          </div>
+        </div>
       </div>
 
-      <nav class="navigation">
-        <a href="#" class="lien active">
-          <i class="fa-solid fa-table-columns"></i> Tableau de bord
-        </a>
-        <a href="#" class="lien">
-          <i class="fa-solid fa-envelope"></i> Mes Messages
-        </a>
-        <a href="#" class="lien">
-          <i class="fa-solid fa-wrench"></i> Mes Projets
-        </a>
-        <a href="#" class="lien">
-          <i class="fa-solid fa-gear"></i> Paramètres
-        </a>
-      </nav>
-
-      <button class="bouton-poster">Poster une offre</button>
-
-      <div class="liens-bas">
-        <a href="#"
-          ><i class="fa-solid fa-circle-question"></i> Centre d'aide</a
-        >
-        <a href="#" onclick="logOut()"
-          ><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a
-        >
-      </div>
-    </aside>
-
-    <!-- CONTENU PRINCIPAL -->
-    <main class="principal">
-      <!-- EN-TETE -->
-      <header class="en-tete">
-        <div></div>
-        <div class="icones">
-          <span class="cloche">
-            <i class="fa-solid fa-bell"></i>
-            <span class="pastille"></span>
-          </span>
-          <span class="icone"><i class="fa-solid fa-message"></i></span>
-          <div class="avatar"></div>
-        </div>
-      </header>
-
-      <!-- PAGE -->
-      <div class="page">
-        <div class="titre">
-          <h1 id="titre-bienvenue">Bonjour</h1>
-          <p>Voici un aperçu de votre activité pour ce mois de <span id="mois-actuel"></span>.</p>
-        </div>
-
-        <!-- STATISTIQUES -->
-        <div class="statistiques">
-          <div class="stat">
-            <div class="icone-stat vert">
-              <i class="fa-solid fa-wrench"></i>
-            </div>
-            <div>
-              <p class="libelle">Chantiers</p>
-              <p class="valeur">4 actifs</p>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="icone-stat orange">
-              <i class="fa-solid fa-bullhorn"></i>
-            </div>
-            <div>
-              <p class="libelle">Offres</p>
-              <p class="valeur">12 nouvelles</p>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="icone-stat bleu">
-              <i class="fa-solid fa-user-group"></i>
-            </div>
-            <div>
-              <p class="libelle">Clients</p>
-              <p class="valeur">3 rdv</p>
-            </div>
-          </div>
-          <div class="stat">
-            <div class="icone-stat jaune"><i class="fa-solid fa-star"></i></div>
-            <div>
-              <p class="libelle">Note</p>
-              <p class="valeur">4.8/5</p>
-            </div>
-          </div>
-          <div class="stat fonce">
-            <div class="icone-stat clair">
-              <i class="fa-solid fa-money-bill-wave"></i>
-            </div>
-            <div>
-              <p class="libelle blanc">Revenus du mois</p>
-              <p class="valeur blanc">2.450.000 FCFA</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- DEUX COLONNES -->
-        <div class="deux-colonnes">
-          <!-- PROJETS -->
-          <div class="bloc">
-            <div class="bloc-entete">
-              <h3>Projets Actifs</h3>
-              <a href="#">Voir tout</a>
-            </div>
-
-            <div class="carte-projet">
-              <div class="projet-haut">
-                <div>
-                  <h4>Villa K - Gros Œuvre</h4>
-                  <p>
-                    <i class="fa-solid fa-location-dot"></i> Cocody, Abidjan
-                  </p>
-                </div>
-                <span class="etiquette-cours">EN COURS</span>
-              </div>
-              <div class="ligne-progression">
-                <span>Progression</span>
-                <span>65%</span>
-              </div>
-              <div class="barre">
-                <div class="remplissage" style="width: 65%"></div>
-              </div>
-              <div class="projet-bas">
-                <div class="petits-avatars">
-                  <div class="petit-avatar"></div>
-                  <div class="petit-avatar"></div>
-                </div>
-                <span>Échéance: 12 Mai</span>
-              </div>
-            </div>
-
-            <div class="carte-projet">
-              <div class="projet-haut">
-                <div>
-                  <h4>Rénovation Immeuble "Le Phare"</h4>
-                  <p>
-                    <i class="fa-solid fa-location-dot"></i> Plateau, Abidjan
-                  </p>
-                </div>
-                <span class="etiquette-urgent">URGENT</span>
-              </div>
-              <div class="ligne-progression">
-                <span>Progression</span>
-                <span>20%</span>
-              </div>
-              <div class="barre">
-                <div class="remplissage" style="width: 20%"></div>
-              </div>
-              <div class="projet-bas">
-                <span>3 ouvriers assignés</span>
-                <span>Échéance: 30 Juin</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- MESSAGES -->
-          <div class="bloc">
-            <div class="bloc-entete">
-              <h3>Centre de Messages</h3>
-            </div>
-
-            <div class="message">
-              <div class="bulle-msg fonce-msg">MK</div>
-              <div class="contenu-msg">
-                <div class="msg-haut">
-                  <span class="nom-msg">M. Koffi</span>
-                  <span class="heure-msg">10:45</span>
-                </div>
-                <p>Bonjour Jean, avez-vous reçu le devis...</p>
-                <span class="nouveau">Nouveau</span>
-              </div>
-            </div>
-
-            <div class="message">
-              <div class="bulle-msg gris-msg">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div class="contenu-msg">
-                <div class="msg-haut">
-                  <span class="nom-msg">Mme. Diallo</span>
-                  <span class="heure-msg">Hier</span>
-                </div>
-                <p>Le chantier de Bingerville est prêt pour</p>
-              </div>
-            </div>
-
-            <div class="message">
-              <div class="bulle-msg gris-msg">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div class="contenu-msg">
-                <div class="msg-haut">
-                  <span class="nom-msg">Sékou Coulibaly</span>
-                  <span class="heure-msg">Hier</span>
-                </div>
-                <p>Paiement validé pour la phase 1 du...</p>
-              </div>
-            </div>
-
-            <div class="voir-tout">
-              <a href="#">Voir tous les messages</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- OPPORTUNITES -->
+      <!-- DEUX COLONNES -->
+      <div class="deux-colonnes">
+        <!-- PROJETS -->
         <div class="bloc">
           <div class="bloc-entete">
-            <h3>Opportunités à proximité</h3>
-            <div class="filtres">
-              <span class="filtre">Abidjan</span>
-              <span class="filtre">Maçonnerie</span>
+            <h3>Projets Actifs</h3>
+            <a href="#">Voir tout</a>
+          </div>
+
+          <div class="carte-projet">
+            <div class="projet-haut">
+              <div>
+                <h4>Villa K - Gros Œuvre</h4>
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> Cocody, Abidjan
+                </p>
+              </div>
+              <span class="etiquette-cours">EN COURS</span>
+            </div>
+            <div class="ligne-progression">
+              <span>Progression</span>
+              <span>65%</span>
+            </div>
+            <div class="barre">
+              <div class="remplissage" style="width: 65%"></div>
+            </div>
+            <div class="projet-bas">
+              <div class="petits-avatars">
+                <div class="petit-avatar"></div>
+                <div class="petit-avatar"></div>
+              </div>
+              <span>Échéance: 12 Mai</span>
             </div>
           </div>
 
-          <div class="grille-opportunites">
-            <div class="carte-opportunite">
-              <div class="image-opport">
-                <img
-                  src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80"
-                  alt=""
-                />
-                <span class="prix">1.200.000 FCFA</span>
-              </div>
-              <div class="corps-opport">
-                <div class="opport-haut">
-                  <h4>Extension Garage</h4>
-                  <span class="etiquette-metier maconnerie">Maçonnerie</span>
-                </div>
-                <p class="meta-opport">
-                  <span
-                    ><i class="fa-solid fa-location-dot"></i> Bingerville</span
-                  >
-                  <span><i class="fa-solid fa-clock"></i> 7 jours</span>
+          <div class="carte-projet">
+            <div class="projet-haut">
+              <div>
+                <h4>Rénovation Immeuble "Le Phare"</h4>
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> Plateau, Abidjan
                 </p>
-                <p class="description-opport">
-                  Agrandissement d'un garage existant pour deux véhicules
-                  supplémentaires, incluant dalle béton.
-                </p>
-                <button class="bouton-repondre">Répondre à l'appel</button>
               </div>
+              <span class="etiquette-urgent">URGENT</span>
             </div>
-
-            <div class="carte-opportunite">
-              <div class="image-opport">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80"
-                  alt=""
-                />
-                <span class="prix sur-devis">Sur Devis</span>
-              </div>
-              <div class="corps-opport">
-                <div class="opport-haut">
-                  <h4>Réfection Fondation</h4>
-                  <span class="etiquette-metier gros-oeuvre">Gros Œuvre</span>
-                </div>
-                <p class="meta-opport">
-                  <span><i class="fa-solid fa-location-dot"></i> Marcory</span>
-                  <span><i class="fa-solid fa-clock"></i> À définir</span>
-                </p>
-                <p class="description-opport">
-                  Reprise en sous-œuvre pour villa présentant des fissures
-                  structurelles importantes.
-                </p>
-                <button class="bouton-repondre">Répondre à l'appel</button>
-              </div>
+            <div class="ligne-progression">
+              <span>Progression</span>
+              <span>20%</span>
+            </div>
+            <div class="barre">
+              <div class="remplissage" style="width: 20%"></div>
+            </div>
+            <div class="projet-bas">
+              <span>3 ouvriers assignés</span>
+              <span>Échéance: 30 Juin</span>
             </div>
           </div>
         </div>
 
-        <footer class="pied">
-          <p>© 2026 Coup de Main. La fondation de vos projets en Afrique.</p>
-        </footer>
-      </div>
-    </main>
+        <!-- MESSAGES -->
+        <div class="bloc">
+          <div class="bloc-entete">
+            <h3>Centre de Messages</h3>
+          </div>
 
-    <script src="../Script/auth.js"></script>
-    <script src="../Script/dashboard.js"></script>
-  </body>
+          <div class="message">
+            <div class="bulle-msg fonce-msg">MK</div>
+            <div class="contenu-msg">
+              <div class="msg-haut">
+                <span class="nom-msg">M. Koffi</span>
+                <span class="heure-msg">10:45</span>
+              </div>
+              <p>Bonjour Jean, avez-vous reçu le devis...</p>
+              <span class="nouveau">Nouveau</span>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="bulle-msg gris-msg">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="contenu-msg">
+              <div class="msg-haut">
+                <span class="nom-msg">Mme. Diallo</span>
+                <span class="heure-msg">Hier</span>
+              </div>
+              <p>Le chantier de Bingerville est prêt pour</p>
+            </div>
+          </div>
+
+          <div class="message">
+            <div class="bulle-msg gris-msg">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="contenu-msg">
+              <div class="msg-haut">
+                <span class="nom-msg">Sékou Coulibaly</span>
+                <span class="heure-msg">Hier</span>
+              </div>
+              <p>Paiement validé pour la phase 1 du...</p>
+            </div>
+          </div>
+
+          <div class="voir-tout">
+            <a href="#">Voir tous les messages</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPPORTUNITES -->
+      <div class="bloc">
+        <div class="bloc-entete">
+          <h3>Opportunités à proximité</h3>
+          <div class="filtres">
+            <span class="filtre">Abidjan</span>
+            <span class="filtre">Maçonnerie</span>
+          </div>
+        </div>
+
+        <div class="grille-opportunites">
+          <div class="carte-opportunite">
+            <div class="image-opport">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="" />
+              <span class="prix">1.200.000 FCFA</span>
+            </div>
+            <div class="corps-opport">
+              <div class="opport-haut">
+                <h4>Extension Garage</h4>
+                <span class="etiquette-metier maconnerie">Maçonnerie</span>
+              </div>
+              <p class="meta-opport">
+                <span><i class="fa-solid fa-location-dot"></i> Bingerville</span>
+                <span><i class="fa-solid fa-clock"></i> 7 jours</span>
+              </p>
+              <p class="description-opport">
+                Agrandissement d'un garage existant pour deux véhicules
+                supplémentaires, incluant dalle béton.
+              </p>
+              <button class="bouton-repondre">Répondre à l'appel</button>
+            </div>
+          </div>
+
+          <div class="carte-opportunite">
+            <div class="image-opport">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="" />
+              <span class="prix sur-devis">Sur Devis</span>
+            </div>
+            <div class="corps-opport">
+              <div class="opport-haut">
+                <h4>Réfection Fondation</h4>
+                <span class="etiquette-metier gros-oeuvre">Gros Œuvre</span>
+              </div>
+              <p class="meta-opport">
+                <span><i class="fa-solid fa-location-dot"></i> Marcory</span>
+                <span><i class="fa-solid fa-clock"></i> À définir</span>
+              </p>
+              <p class="description-opport">
+                Reprise en sous-œuvre pour villa présentant des fissures
+                structurelles importantes.
+              </p>
+              <button class="bouton-repondre">Répondre à l'appel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="pied">
+        <p>© 2026 Coup de Main. La fondation de vos projets en Afrique.</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/dashboard.js"></script>
+</body>
+
 </html>

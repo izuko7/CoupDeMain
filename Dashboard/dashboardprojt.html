@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupdeMain | Mes Projets</title>
+</head>
+
+<body>
+
+    <!-- BARRE LATERALE -->
+    <aside class="barre-laterale">
+        <div class="logo">
+            <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+        </div>
+
+        <div class="carte-profil">
+            <h4 id="sidebar-nom"></h4>
+            <p>Maçonnerie Générale</p>
+            <span id="sidebar-id"></span>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboardPro.html" class="lien">
+                <i class="fa-solid fa-table-columns"></i> Tableau de bord
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-envelope"></i> Mes Messages
+            </a>
+            <a href="dashboardprojt.html" class="lien active">
+                <i class="fa-solid fa-wrench"></i> Mes Projets
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-gear"></i> Paramètres
+            </a>
+        </nav>
+
+        <button class="bouton-poster">Poster une offre</button>
+
+        <div class="liens-bas">
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+            <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="principal">
+
+        <!-- EN-TETE -->
+        <header class="en-tete">
+            <div></div>
+            <div class="icones">
+                <span class="cloche">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="pastille"></span>
+                </span>
+                <span class="icone"><i class="fa-solid fa-message"></i></span>
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <!-- PAGE -->
+        <div class="page">
+
+            <!-- TITRE -->
+            <div class="titre">
+                <h1>Annuaire des projets</h1>
+                <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
+            </div>
+
+            <!-- FILTRES -->
+            <div class="bloc-filtres">
+                <div class="filtre-champ">
+                    <label>Métier</label>
+                    <div class="input-selection">
+                        <select id="filtre-metier">
+                            <option value="">Tous les métiers</option>
+                            <option>Maçonnerie</option>
+                            <option>Plomberie</option>
+                            <option>Électricité</option>
+                            <option>Charpente</option>
+                            <option>Architecture</option>
+                            <option>Génie Civil</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="filtre-champ">
+                    <label>Localisation</label>
+                    <div class="input-info">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="filtre-localisation" placeholder="Dakar, Sénégal" />
+                    </div>
+                </div>
+                <div class="filtre-champ">
+                    <label>Budget Min (FCFA)</label>
+                    <input type="number" id="filtre-budget" placeholder="500,000" />
+                </div>
+                <button class="btn-filtrer" onclick="filtrerProjets()">
+                    <i class="fa-solid fa-sliders"></i> Filtrer
+                </button>
+            </div>
+
+            <!-- GRILLE PROJETS -->
+            <div class="grille-projets" id="grille-projets">
+
+                <div class="carte-projet" data-metier="Maçonnerie" data-ville="Dakar" data-budget="12500000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
+                            alt="Construction Villa R+1" />
+                        <span class="badge-nouveau"><span class="point"></span> NOUVEAU</span>
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette maconnerie">MAÇONNERIE</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Dakar</span>
+                        </div>
+                        <h3>Construction Villa R+1</h3>
+                        <p>Gros œuvre pour une villa individuelle de 250m². Fondations, élévation des...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">12,500,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte-projet" data-metier="Plomberie" data-ville="Abidjan" data-budget="4200000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80"
+                            alt="Réseau Plomberie Immeuble" />
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette plomberie">PLOMBERIE</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Abidjan</span>
+                        </div>
+                        <h3>Réseau Plomberie Immeuble</h3>
+                        <p>Installation complète des réseaux d'eau froide et chaude pour un...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">4,200,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte-projet" data-metier="Électricité" data-ville="Bamako" data-budget="2800000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1668097613572-40b7c11c8727?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Solaire & Électricité Boutique" />
+                        <span class="badge-nouveau"><span class="point"></span> NOUVEAU</span>
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette electricite">ÉLECTRICITÉ</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Bamako</span>
+                        </div>
+                        <h3>Solaire & Électricité Boutique</h3>
+                        <p>Installation d'un système hybride solaire avec onduleur et batteries pour...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">2,800,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte-projet" data-metier="Charpente" data-ville="Douala" data-budget="18000000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+                            alt="Charpente Métallique Entrepôt" />
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette charpente">CHARPENTE</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Douala</span>
+                        </div>
+                        <h3>Charpente Métallique Entrepôt</h3>
+                        <p>Conception et pose d'une structure métallique de 500m² pour un nouvel...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">18,000,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte-projet" data-metier="Maçonnerie" data-ville="Abidjan" data-budget="7500000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=600&q=80"
+                            alt="Réfection Façade Immeuble" />
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette maconnerie">MAÇONNERIE</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Abidjan</span>
+                        </div>
+                        <h3>Réfection Façade Immeuble</h3>
+                        <p>Ravalement complet de façade d'un immeuble R+4 avec enduit projeté...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">7,500,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte-projet" data-metier="Plomberie" data-ville="Lomé" data-budget="1200000">
+                    <div class="image-projet">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80"
+                            alt="Forage & Château d'Eau" />
+                    </div>
+                    <div class="corps-projet">
+                        <div class="projet-meta">
+                            <span class="etiquette plomberie">PLOMBERIE</span>
+                            <span class="ville"><i class="fa-solid fa-location-dot"></i> Lomé</span>
+                        </div>
+                        <h3>Forage & Château d'Eau</h3>
+                        <p>Installation d'un système de pompage solaire avec château d'eau de 5000L...</p>
+                        <div class="projet-bas">
+                            <div>
+                                <span class="label-budget">BUDGET ESTIMÉ</span>
+                                <p class="montant">1,200,000 FCFA</p>
+                            </div>
+                            <button class="btn-postuler">Postuler</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span>...</span>
+                <button class="page-btn">12</button>
+            </div>
+
+            <footer class="pied">
+                <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+                <div class="pied-liens">
+                    <a href="#">À propos</a>
+                    <a href="#">Conditions Générales</a>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Recrutement</a>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="../Script/auth.js"></script>
+    <!-- <script>
+      const user = protegerPage("professionnel");
+      if (user) {
+        document.getElementById("sidebar-nom").textContent = user.nom;
+        document.getElementById("sidebar-id").textContent = "ID: #" + user.id;
+      }
+
+      function filtrerProjets() {
+        const metier = document.getElementById("filtre-metier").value.toLowerCase();
+        const ville = document.getElementById("filtre-localisation").value.toLowerCase();
+        const budget = parseInt(document.getElementById("filtre-budget").value) || 0;
+        const cartes = document.querySelectorAll(".carte-projet");
+
+        cartes.forEach(carte => {
+          const cMetier = carte.dataset.metier.toLowerCase();
+          const cVille = carte.dataset.ville.toLowerCase();
+          const cBudget = parseInt(carte.dataset.budget);
+
+          const okMetier = !metier || cMetier === metier;
+          const okVille = !ville || cVille.includes(ville);
+          const okBudget = !budget || cBudget >= budget;
+
+          carte.style.display = (okMetier && okVille && okBudget) ? "flex" : "none";
+        });
+      }
+    </script> -->
+</body>
+
+</html>
