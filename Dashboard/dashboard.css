@@ -177,6 +177,8 @@ body {
   border-radius: 50%;
   background: #1a3a4a;
   cursor: pointer;
+  background-image: url('https://i.pravatar.cc/36');
+  background-size: cover;
 }
 
 /* PAGE */
