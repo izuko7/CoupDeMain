@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="essages.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupdeMain | Mes Messages</title>
+  </head>
+  <body>
+
+    <!-- BARRE LATERALE -->
+    <aside class="barre-laterale">
+      <div class="logo">
+        <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+      </div>
+
+      <div class="carte-profil">
+        <h4 id="sidebar-nom">Jean Dupont</h4>
+        <p>Maçonnerie Générale</p>
+        <span id="sidebar-id">ID: #882-9410</span>
+      </div>
+
+      <nav class="navigation">
+        <a href="dashboard.html" class="lien">
+          <i class="fa-solid fa-table-columns"></i> Tableau de bord
+        </a>
+        <a href="mes-messages.html" class="lien active">
+          <i class="fa-solid fa-envelope"></i> Mes Messages
+        </a>
+        <a href="mes-projets.html" class="lien">
+          <i class="fa-solid fa-wrench"></i> Mes Projets
+        </a>
+        <a href="#" class="lien">
+          <i class="fa-solid fa-gear"></i> Paramètres
+        </a>
+      </nav>
+
+      <button class="bouton-poster">Poster une offre</button>
+
+      <div class="liens-bas">
+        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+      </div>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="principal">
+
+      <!-- EN-TETE -->
+      <header class="en-tete">
+        <div></div>
+        <div class="icones">
+          <span class="cloche">
+            <i class="fa-solid fa-bell"></i>
+            <span class="pastille"></span>
+          </span>
+          <span class="icone"><i class="fa-solid fa-message"></i></span>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <!-- PAGE -->
+      <div class="page">
+
+        <div class="titre">
+          <h1>Annuaire des projets</h1>
+          <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
+        </div>
+
+        <!-- MESSAGERIE -->
+        <div class="messagerie">
+
+          <!-- COLONNE GAUCHE : liste conversations -->
+          <div class="liste-conversations">
+            <div class="recherche">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Rechercher un client..." id="recherche-input" oninput="rechercherConversation()" />
+            </div>
+
+            <div class="conversations" id="liste-conv">
+
+              <div class="conversation active" onclick="ouvrirConversation(this, 'alice')">
+                <div class="conv-avatar en-ligne">
+                  <img src="https://i.pravatar.cc/40?img=47" alt="Alice Thagro" />
+                  <span class="statut-dot"></span>
+                </div>
+                <div class="conv-info">
+                  <div class="conv-haut">
+                    <span class="conv-nom">Alice Thagro</span>
+                    <span class="conv-heure">10:45</span>
+                  </div>
+                  <p class="conv-apercu">D'accord, j'attends votre devis pour...</p>
+                </div>
+              </div>
+
+              <div class="conversation" onclick="ouvrirConversation(this, 'omar')">
+                <div class="conv-avatar">
+                  <img src="https://i.pravatar.cc/40?img=12" alt="Omar Kane" />
+                </div>
+                <div class="conv-info">
+                  <div class="conv-haut">
+                    <span class="conv-nom">Omar Kane</span>
+                    <span class="conv-heure">Hier</span>
+                  </div>
+                  <p class="conv-apercu">Merci pour les photos du chantier.</p>
+                </div>
+              </div>
+
+              <div class="conversation" onclick="ouvrirConversation(this, 'irie')">
+                <div class="conv-avatar">
+                  <img src="https://i.pravatar.cc/40?img=33" alt="Irie Zan Jr" />
+                </div>
+                <div class="conv-info">
+                  <div class="conv-haut">
+                    <span class="conv-nom">Irie Zan Jr</span>
+                    <span class="conv-heure">Lun</span>
+                  </div>
+                  <p class="conv-apercu">Le projet avance bien comme prévu.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- COLONNE DROITE : fenêtre chat -->
+          <div class="fenetre-chat">
+
+            <!-- En-tête chat -->
+            <div class="chat-entete">
+              <div class="chat-interlocuteur">
+                <img src="https://i.pravatar.cc/40?img=47" alt="Alice Thagro" id="chat-avatar" />
+                <div>
+                  <span class="chat-nom" id="chat-nom">Alice Thagro</span>
+                  <span class="chat-statut" id="chat-statut"><span class="dot-vert"></span> En ligne</span>
+                </div>
+              </div>
+              <div class="chat-actions">
+                <button class="btn-action"><i class="fa-solid fa-phone"></i></button>
+                <button class="btn-action"><i class="fa-solid fa-video"></i></button>
+                <button class="btn-action"><i class="fa-solid fa-circle-info"></i></button>
+              </div>
+            </div>
+
+            <!-- Messages -->
+            <div class="messages-zone" id="messages-zone">
+
+              <div class="separateur-date">AUJOURD'HUI</div>
+
+              <!-- Message reçu -->
+              <div class="message recu">
+                <img src="https://i.pravatar.cc/32?img=47" alt="" class="msg-avatar" />
+                <div class="bulle bulle-recue">
+                  <p>Bonjour Jean, j'ai bien reçu les photos des fondations. C'est du bon travail. Pourriez-vous m'envoyer le devis actualisé pour l'extension de la terrasse ?</p>
+                  <span class="msg-heure">10:30</span>
+                </div>
+              </div>
+
+              <!-- Message envoyé avec fichier -->
+              <div class="message envoye">
+                <div class="bulle bulle-envoyee">
+                  <div class="piece-jointe">
+                    <div class="pj-icone"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="pj-info">
+                      <span class="pj-nom">Devis_Terrasse_V2.pdf</span>
+                      <span class="pj-taille">1.2 MB · PDF Document</span>
+                    </div>
+                    <button class="pj-telecharger"><i class="fa-solid fa-download"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message envoyé avec image -->
+              <div class="message envoye">
+                <div class="bulle bulle-envoyee bulle-image">
+                  <p>Bonjour Alice, avec plaisir. Voici déjà une photo de l'avancement ce matin.</p>
+                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="Chantier" class="msg-image" />
+                  <span class="msg-heure alignee-droite">10:42</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Zone de saisie -->
+            <div class="saisie">
+              <div class="saisie-actions">
+                <button class="btn-saisie"><i class="fa-regular fa-image"></i></button>
+                <button class="btn-saisie"><i class="fa-solid fa-paperclip"></i></button>
+              </div>
+              <input type="text" class="saisie-input" id="saisie-input" placeholder="Écrivez votre message..." onkeydown="envoyerMessage(event)" />
+              <button class="btn-envoyer" onclick="envoyerMessageClick()">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <p class="saisie-info">Format de fichiers supportés : PDF, JPG, PNG (max 10 Mo)</p>
+
+          </div>
+        </div>
+
+        <footer class="pied">
+          <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+          <div class="pied-liens">
+            <a href="#">À propos</a>
+            <a href="#">Conditions Générales</a>
+            <a href="#">Confidentialité</a>
+            <a href="#">Recrutement</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+    <script src="../Script/auth.js"></script>
+    <!-- <script>
+      const user = protegerPage("professionnel");
+      if (user) {
+        document.getElementById("sidebar-nom").textContent = user.nom;
+        document.getElementById("sidebar-id").textContent = "ID: #" + user.id;
+      }
+
+      function ouvrirConversation(el, id) {
+        document.querySelectorAll(".conversation").forEach(c => c.classList.remove("active"));
+        el.classList.add("active");
+      }
+
+      function rechercherConversation() {
+        const q = document.getElementById("recherche-input").value.toLowerCase();
+        document.querySelectorAll(".conversation").forEach(conv => {
+          const nom = conv.querySelector(".conv-nom").textContent.toLowerCase();
+          conv.style.display = nom.includes(q) ? "flex" : "none";
+        });
+      }
+
+      function envoyerMessage(e) {
+        if (e.key === "Enter") envoyerMessageClick();
+      }
+
+      function envoyerMessageClick() {
+        const input = document.getElementById("saisie-input");
+        const texte = input.value.trim();
+        if (!texte) return;
+
+        const zone = document.getElementById("messages-zone");
+        const msg = document.createElement("div");
+        msg.className = "message envoye";
+        msg.innerHTML = `
+          <div class="bulle bulle-envoyee">
+            <p>${texte}</p>
+            <span class="msg-heure alignee-droite">${new Date().toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"})}</span>
+          </div>`;
+        zone.appendChild(msg);
+        zone.scrollTop = zone.scrollHeight;
+        input.value = "";
+      }
+    </script> -->
+  </body>
+</html>

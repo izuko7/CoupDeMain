@@ -27,7 +27,7 @@
             <a href="dashboardPro.html" class="lien">
                 <i class="fa-solid fa-table-columns"></i> Tableau de bord
             </a>
-            <a href="#" class="lien">
+            <a href="messagepro.html" class="lien">
                 <i class="fa-solid fa-envelope"></i> Mes Messages
             </a>
             <a href="dashboardprojt.html" class="lien active">
@@ -267,32 +267,6 @@
 
     <script src="../Script/auth.js"></script>
     <script src="../Script/dashboard.js"></script>
-    <!-- <script>
-      const user = protegerPage("professionnel");
-      if (user) {
-        document.getElementById("sidebar-nom").textContent = user.nom;
-        document.getElementById("sidebar-id").textContent = "ID: #" + user.id;
-      }
-
-      function filtrerProjets() {
-        const metier = document.getElementById("filtre-metier").value.toLowerCase();
-        const ville = document.getElementById("filtre-localisation").value.toLowerCase();
-        const budget = parseInt(document.getElementById("filtre-budget").value) || 0;
-        const cartes = document.querySelectorAll(".carte-projet");
-
-        cartes.forEach(carte => {
-          const cMetier = carte.dataset.metier.toLowerCase();
-          const cVille = carte.dataset.ville.toLowerCase();
-          const cBudget = parseInt(carte.dataset.budget);
-
-          const okMetier = !metier || cMetier === metier;
-          const okVille = !ville || cVille.includes(ville);
-          const okBudget = !budget || cBudget >= budget;
-
-          carte.style.display = (okMetier && okVille && okBudget) ? "flex" : "none";
-        });
-      }
-    </script> -->
 </body>
 
 </html>
