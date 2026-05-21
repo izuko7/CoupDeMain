@@ -1,279 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoupDeMain — Mes Messages</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="essages.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="essages.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupDeMain | Mes Messages</title>
 </head>
 <body>
 
-<!-- TOP NAV -->
-<nav>
-  <div class="nav-logo">
-    <div class="logo-icon">C</div>
-    Coup<br>de Main
-  </div>
-  <div class="nav-actions">
-    <button class="nav-icon-btn" aria-label="Notifications">
-      <span class="nav-notif-dot"></span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-    </button>
-    <button class="nav-icon-btn" aria-label="Messages">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    </button>
-    <div class="nav-avatar">
-      <img src="https://i.pravatar.cc/80?img=12" alt="avatar" />
-    </div>
-  </div>
-</nav>
-
-<div class="app-body">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="user-card">
-      <div class="name">Jean Dupont</div>
-      <div class="role">Maçonnerie Générale</div>
-      <div class="id">ID: #882-9410</div>
-    </div>
-
-    <a class="nav-item" href="#">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      Tableau de bord
-    </a>
-    <a class="nav-item active" href="#">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Mes Messages
-    </a>
-    <a class="nav-item" href="#">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-      Mes Projets
-    </a>
-    <a class="nav-item" href="#">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-      Paramètres
-    </a>
-
-    <div class="sidebar-bottom">
-      <button class="btn-poster">Poster une offre</button>
-      <a class="nav-item" href="#" style="margin-top:8px">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        Centre d'aide
-      </a>
-      <a class="nav-item" href="#">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        Déconnexion
-      </a>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main-panel">
-    <div class="page-header">
-      <h1>Annuaire des projets</h1>
-      <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
-    </div>
-
-    <div class="messaging">
-
-      <!-- CONTACTS LIST -->
-      <div class="contacts-pane">
-        <div class="search-bar">
-          <label>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" placeholder="Rechercher un client..." />
-          </label>
-        </div>
-        <div class="contact-list">
-
-          <!-- Alice Thagro -->
-          <div class="contact-item active">
-            <div class="contact-avatar">
-              <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
-            </div>
-            <div class="contact-info">
-              <div class="cname">Alice Thagro</div>
-              <div class="cpreview">D'accord, j'attends votre devis pour...</div>
-            </div>
-            <div class="contact-time">10:45</div>
-          </div>
-
-          <!-- Omar Kane -->
-          <div class="contact-item">
-            <div class="contact-avatar">
-              <div class="avatar-placeholder">OK</div>
-            </div>
-            <div class="contact-info">
-              <div class="cname">Omar Kane</div>
-              <div class="cpreview">Merci pour les photos du chantier.</div>
-            </div>
-            <div class="contact-time">Hier</div>
-          </div>
-
-          <!-- Irie Zan Jr -->
-          <div class="contact-item">
-            <div class="contact-avatar">
-              <div class="avatar-placeholder">IZ</div>
-            </div>
-            <div class="contact-info">
-              <div class="cname">Irie Zan Jr</div>
-              <div class="cpreview">Le projet avance bien comme prévu.</div>
-            </div>
-            <div class="contact-time">Lun.</div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- CHAT PANE -->
-      <div class="chat-pane">
-
-        <!-- Header -->
-        <div class="chat-header">
-          <div class="chat-header-left">
-            <div class="chat-header-avatar">
-              <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
-              <span class="online-dot"></span>
-            </div>
-            <div class="chat-header-info">
-              <div class="chname">Alice Thagro</div>
-              <div class="ch-status">● En ligne</div>
-            </div>
-          </div>
-          <div class="chat-header-actions">
-            <button class="icon-btn" aria-label="Appel téléphonique">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
-            </button>
-            <button class="icon-btn" aria-label="Appel vidéo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-            </button>
-            <button class="icon-btn" aria-label="Infos">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </button>
-          </div>
+    <!-- BARRE LATERALE -->
+    <aside class="barre-laterale">
+        <div class="logo">
+            <img src="https://via.placeholder.com/120x44?text=CoupDeMain" alt="Coup de Main" />
         </div>
 
-        <!-- Messages -->
-        <div class="messages-area">
-          <div class="date-divider"><span>AUJOURD'HUI</span></div>
+        <div class="carte-profil">
+            <h4>Jean Dupont</h4>
+            <p>Maçonnerie Générale</p>
+            <span>ID: #882-9410</span>
+        </div>
 
-          <!-- Incoming text -->
-          <div class="msg-row in">
-            <div class="msg-avatar">
-              <img src="https://i.pravatar.cc/80?img=47" alt="Alice" />
-            </div>
-            <div>
-              <div class="bubble">
-                Bonjour Jean, j'ai bien reçu les photos des fondations. C'est du bon travail. Pourriez-vous m'envoyer le devis actualisé pour l'extension de la terrasse ?
-              </div>
-              <div class="bubble-time">10:30</div>
-            </div>
-          </div>
+        <nav class="navigation">
+            <a href="#" class="lien">
+                <i class="fa-solid fa-table-columns"></i> Tableau de bord
+            </a>
+            <a href="#" class="lien active">
+                <i class="fa-solid fa-envelope"></i> Mes Messages
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-wrench"></i> Mes Projets
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-gear"></i> Paramètres
+            </a>
+        </nav>
 
-          <!-- Outgoing file -->
-          <div class="msg-row out">
-            <div class="file-bubble">
-              <div class="file-card">
-                <div class="file-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <button class="bouton-poster">Poster une offre</button>
+
+        <div class="liens-bas">
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+            <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- PRINCIPAL -->
+    <main class="principal">
+
+        <!-- EN-TETE -->
+        <header class="en-tete">
+            <div></div>
+            <div class="icones">
+                <span class="cloche">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="pastille"></span>
+                </span>
+                <span class="icone"><i class="fa-solid fa-message"></i></span>
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <!-- PAGE -->
+        <div class="page">
+
+            <div class="titre">
+                <h1>Annuaire des projets</h1>
+                <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
+            </div>
+
+            <!-- MESSAGERIE -->
+            <div class="messagerie">
+
+                <!-- LISTE CONTACTS -->
+                <div class="liste-contacts">
+                    <div class="barre-recherche">
+                        <label>
+                            <i class="fa-solid fa-magnifying-glass" style="color:#aaa;font-size:13px;"></i>
+                            <input type="text" placeholder="Rechercher un client..." />
+                        </label>
+                    </div>
+                    <div class="liste">
+
+                        <div class="contact active">
+                            <div class="contact-avatar">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Alice Thagro</div>
+                                <div class="apercu">D'accord, j'attends votre devis pour...</div>
+                            </div>
+                            <div class="contact-heure">10:45</div>
+                        </div>
+
+                        <div class="contact">
+                            <div class="contact-avatar">
+                                <div class="initiales">OK</div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Omar Kane</div>
+                                <div class="apercu">Merci pour les photos du chantier.</div>
+                            </div>
+                            <div class="contact-heure">Hier</div>
+                        </div>
+
+                        <div class="contact">
+                            <div class="contact-avatar">
+                                <div class="initiales">IZ</div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Irie Zan Jr</div>
+                                <div class="apercu">Le projet avance bien comme prévu.</div>
+                            </div>
+                            <div class="contact-heure">Lun.</div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="file-info">
-                  <div class="fname">Devis_Terrasse_V2.pdf</div>
-                  <div class="fmeta">1.2 MB · PDF Document</div>
+
+                <!-- PANNEAU CHAT -->
+                <div class="panneau-chat">
+
+                    <div class="entete-chat">
+                        <div class="entete-chat-gauche">
+                            <div class="avatar-chat">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
+                                <span class="point-en-ligne"></span>
+                            </div>
+                            <div class="info-chat">
+                                <div class="nom-chat">Alice Thagro</div>
+                                <div class="statut">● En ligne</div>
+                            </div>
+                        </div>
+                        <div class="actions-chat">
+                            <button class="btn-icone"><i class="fa-solid fa-phone"></i></button>
+                            <button class="btn-icone"><i class="fa-solid fa-video"></i></button>
+                            <button class="btn-icone"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- MESSAGES -->
+                    <div class="zone-messages">
+                        <div class="separateur-date"><span>AUJOURD'HUI</span></div>
+
+                        <div class="ligne-msg entrant">
+                            <div class="msg-avatar">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice" />
+                            </div>
+                            <div>
+                                <div class="bulle">
+                                    Bonjour Jean, j'ai bien reçu les photos des fondations. C'est du bon travail. Pourriez-vous m'envoyer le devis actualisé pour l'extension de la terrasse ?
+                                </div>
+                                <div class="heure">10:30</div>
+                            </div>
+                        </div>
+
+                        <div class="ligne-msg sortant">
+                            <div class="bulle-fichier">
+                                <div class="carte-fichier">
+                                    <div class="icone-fichier">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </div>
+                                    <div class="info-fichier">
+                                        <div class="nom-fichier">Devis_Terrasse_V2.pdf</div>
+                                        <div class="meta-fichier">1.2 MB · PDF Document</div>
+                                    </div>
+                                    <button class="btn-dl"><i class="fa-solid fa-download"></i></button>
+                                </div>
+                                <div class="heure" style="text-align:right;margin-top:5px;">10:41</div>
+                            </div>
+                        </div>
+
+                        <div class="ligne-msg sortant">
+                            <div class="bulle-image">
+                                <div class="texte">Bonjour Alice, avec plaisir. Voici déjà une photo de l'avancement ce matin.</div>
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=480&q=70" alt="chantier" />
+                                <div class="heure">10:42</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAISIE -->
+                    <div class="zone-saisie">
+                        <div class="ligne-saisie">
+                            <button class="btn-action"><i class="fa-regular fa-face-smile"></i></button>
+                            <input type="text" placeholder="Écrivez votre message..." />
+                            <button class="btn-action"><i class="fa-solid fa-paperclip"></i></button>
+                            <button class="btn-envoyer"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                        <div class="indice">Format de fichiers supportés : PDF, JPG, PNG (max 10 Mo)</div>
+                    </div>
+
                 </div>
-                <button class="file-dl" aria-label="Télécharger">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
-                </button>
-              </div>
-              <div class="bubble-time" style="text-align:right; padding-right:4px; margin-top:5px;">10:41</div>
             </div>
-          </div>
 
-          <!-- Outgoing image -->
-          <div class="msg-row out">
-            <div class="img-bubble">
-              <div class="bubble-text">Bonjour Alice, avec plaisir. Voici déjà une photo de l'avancement ce matin.</div>
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=480&q=70" alt="chantier fondations" />
-              <div class="bubble-time">10:42</div>
-            </div>
-          </div>
+            <!-- PIED -->
+            <footer class="pied">
+                <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+                <div class="pied-liens">
+                    <a href="#">À propos</a>
+                    <a href="#">Conditions Générales</a>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Recrutement</a>
+                </div>
+            </footer>
+
         </div>
-
-        <!-- Input -->
-        <div class="chat-input-area">
-          <div class="input-row">
-            <button class="input-icon-btn" aria-label="Emoji">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            </button>
-            <input type="text" placeholder="Écrivez votre message..." />
-            <button class="input-icon-btn" aria-label="Joindre fichier">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
-            </button>
-            <button class="send-btn" aria-label="Envoyer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-          </div>
-          <div class="input-hint">Format de fichiers supportés : PDF, JPG, PNG (max 10 Mo)</div>
-        </div>
-
-      </div><!-- /.chat-pane -->
-    </div><!-- /.messaging -->
-  </main>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  &copy; 2026 CDMain Marché. La fondation de vos projets en Afrique.
-  <a href="#">À propos</a>
-  <a href="#">Conditions Générales</a>
-  <a href="#">Confidentialité</a>
-  <a href="#">Recrutement</a>
-</footer>
-<script src="../Script/essentials.js"></script>
- <!-- <script>
-      const user = protegerPage("professionnel");
-      if (user) {
-        document.getElementById("sidebar-nom").textContent = user.nom;
-        document.getElementById("sidebar-id").textContent = "ID: #" + user.id;
-      }
-
-      function ouvrirConversation(el, id) {
-        document.querySelectorAll(".conversation").forEach(c => c.classList.remove("active"));
-        el.classList.add("active");
-      }
-
-      function rechercherConversation() {
-        const q = document.getElementById("recherche-input").value.toLowerCase();
-        document.querySelectorAll(".conversation").forEach(conv => {
-          const nom = conv.querySelector(".conv-nom").textContent.toLowerCase();
-          conv.style.display = nom.includes(q) ? "flex" : "none";
-        });
-      }
-
-      function envoyerMessage(e) {
-        if (e.key === "Enter") envoyerMessageClick();
-      }
-
-      function envoyerMessageClick() {
-        const input = document.getElementById("saisie-input");
-        const texte = input.value.trim();
-        if (!texte) return;
-
-        const zone = document.getElementById("messages-zone");
-        const msg = document.createElement("div");
-        msg.className = "message envoye";
-        msg.innerHTML = `
-          <div class="bulle bulle-envoyee">
-            <p>${texte}</p>
-            <span class="msg-heure alignee-droite">${new Date().toLocaleTimeString("fr-FR", {hour:"2-digit", minute:"2-digit"})}</span>
-          </div>`;
-        zone.appendChild(msg);
-        zone.scrollTop = zone.scrollHeight;
-        input.value = "";
-      }
-    </script> -->
+    </main>
 
 </body>
 </html>
