@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="essages.css" />
+    <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>CoupDeMain | Mes Messages</title>
 </head>
@@ -12,23 +13,23 @@
     <!-- BARRE LATERALE -->
     <aside class="barre-laterale">
         <div class="logo">
-            <img src="https://via.placeholder.com/120x44?text=CoupDeMain" alt="Coup de Main" />
+            <img src="../Ressources/images/logo.png" alt="Coup de Main" />
         </div>
 
         <div class="carte-profil">
-            <h4>Jean Dupont</h4>
-            <p>Maçonnerie Générale</p>
-            <span>ID: #882-9410</span>
+            <h4 id="sidebar-nom"></h4>
+            <p id="sidebar-metier"></p>
+            <span id="sidebar-id"></span>
         </div>
 
         <nav class="navigation">
-            <a href="#" class="lien">
+            <a href="../Dashboard/dashboardPro.html" class="lien">
                 <i class="fa-solid fa-table-columns"></i> Tableau de bord
             </a>
-            <a href="#" class="lien active">
+            <a href="../Dashboard/messagepro.html" class="lien active">
                 <i class="fa-solid fa-envelope"></i> Mes Messages
             </a>
-            <a href="#" class="lien">
+            <a href="../Dashboard/dashboardprojt.html" class="lien">
                 <i class="fa-solid fa-wrench"></i> Mes Projets
             </a>
             <a href="#" class="lien">
@@ -64,7 +65,7 @@
         <div class="page">
 
             <div class="titre">
-                <h1>Annuaire des projets</h1>
+                <h1 id="titre-message"></h1>
                 <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
             </div>
 
@@ -206,6 +207,13 @@
 
         </div>
     </main>
-
+    <script src="../Script/auth.js"></script>
+    <script src="../Script/dashboard.js"></script>
+    <script>
+      const identifiant = JSON.parse(localStorage.getItem("userConnecte"));
+      console.log(identifiant)
+      document.getElementById("titre-message").textContent ="Bonjour " + identifiant.nom + " vos messgaes"
+    </script>
+    
 </body>
 </html>
