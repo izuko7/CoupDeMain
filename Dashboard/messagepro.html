@@ -41,7 +41,7 @@
 
         <div class="liens-bas">
             <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-            <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+            <a href="#"  onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
         </div>
     </aside>
 
@@ -64,11 +64,6 @@
         <!-- PAGE -->
         <div class="page">
 
-            <div class="titre">
-                <h1 id="titre-message"></h1>
-                <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
-            </div>
-
             <!-- MESSAGERIE -->
             <div class="messagerie">
 
@@ -82,7 +77,7 @@
                     </div>
                     <div class="liste">
 
-                        <div class="contact active">
+                        <div class="contact active" onclick="ouvrirConversation(this)">
                             <div class="contact-avatar">
                                 <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
                             </div>
@@ -93,7 +88,7 @@
                             <div class="contact-heure">10:45</div>
                         </div>
 
-                        <div class="contact">
+                        <div class="contact" onclick="ouvrirConversation(this)">
                             <div class="contact-avatar">
                                 <div class="initiales">OK</div>
                             </div>
@@ -104,7 +99,7 @@
                             <div class="contact-heure">Hier</div>
                         </div>
 
-                        <div class="contact">
+                        <div class="contact" onclick="ouvrirConversation(this)">
                             <div class="contact-avatar">
                                 <div class="initiales">IZ</div>
                             </div>
@@ -209,10 +204,11 @@
     </main>
     <script src="../Script/auth.js"></script>
     <script src="../Script/dashboard.js"></script>
-    <script>
+    <script src="../Script/messagefonc.js"></script>
+    <!-- <script>
       const identifiant = JSON.parse(localStorage.getItem("userConnecte"));
       document.getElementById("titre-message").textContent ="Bonjour " + identifiant.nom + " vos messgaes"
-    </script>
+    </script> -->
     
 </body>
 </html>

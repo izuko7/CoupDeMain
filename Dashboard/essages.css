@@ -185,30 +185,22 @@ body {
 .page {
     flex: 1;
     overflow: hidden;
-    padding: 28px 32px;
+    padding: 12px 32px 8px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
-.titre h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #111;
-}
-
-.titre p {
-    font-size: 13px;
-    color: #777;
-    margin-top: 4px;
-    margin-bottom: 16px;
+/* Cache le titre pour maximiser la messagerie */
+.titre {
+    display: none;
 }
 
 /* ── MESSAGERIE ── */
 .messagerie {
     display: flex;
     flex: 1;
-    min-height: 0;
+    min-height: 0;              /* clé pour que flex enfant puisse scroller */
     background: #fff;
     border-radius: 14px;
     border: 1px solid #eee;
@@ -217,8 +209,8 @@ body {
 
 /* ── LISTE CONTACTS ── */
 .liste-contacts {
-    width: 340px;
-    min-width: 340px;
+    width: 300px;              /* CORRECTION : réduit de 340px pour donner plus de place au chat */
+    min-width: 300px;
     border-right: 1px solid #eee;
     display: flex;
     flex-direction: column;
@@ -335,6 +327,7 @@ body {
     justify-content: space-between;
     padding: 14px 20px;
     border-bottom: 1px solid #eee;
+    flex-shrink: 0;
 }
 
 .entete-chat-gauche {
@@ -570,6 +563,7 @@ body {
 .zone-saisie {
     padding: 12px 16px 14px;
     border-top: 1px solid #eee;
+    flex-shrink: 0;
 }
 
 .ligne-saisie {
@@ -648,8 +642,8 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 12px;
-    padding: 12px 0 4px;
+    gap: 4px;
+    padding: 6px 0 2px;
     border-top: 1px solid #eee;
     flex-shrink: 0;
 }
