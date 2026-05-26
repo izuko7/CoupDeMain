@@ -13,7 +13,7 @@ const userDefault = [
   // profil entreprise
   {
     id: 2,
-    entreprisename: "BatiCorp",
+    entreprisename: "Côte d'Ivoire Construction S.A",
     activite: "BTP",
     taille: "11-50",           
     nom: "Bingoto Walebo",
