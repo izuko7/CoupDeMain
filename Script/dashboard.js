@@ -1,4 +1,4 @@
-// Afficher les identifiants des utilisateurs sur le dashboard et protéger la page
+// Afficher les identifiants des utilisateurs sur le dashboard Pro et protéger la page
 
 const user = protegerPage("professionnel");
 

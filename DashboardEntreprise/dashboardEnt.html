@@ -19,9 +19,9 @@
       <input type="text" placeholder="Rechercher des projets..." />
     </div>
     <nav class="nav-liens">
-      <a href="#">Annuaire</a>
+      <!-- <a href="#">Annuaire</a>
       <a href="#">Projets</a>
-      <a href="#">Comment ça marche</a>
+      <a href="#">Comment ça marche</a> -->
     </nav>
     <div class="nav-icones">
       <span class="cloche">
@@ -39,8 +39,8 @@
       <div class="profil">
         <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
         <div>
-          <strong>Jean Dupont</strong>
-          <span>Gestionnaire Entreprise</span>
+          <strong id="sidebar-nom"></strong>
+          <span id="sidebar-activite"></span>
         </div>
       </div>
 
@@ -57,7 +57,7 @@
 
       <div class="liens-bas">
         <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
       </div>
     </aside>
 
@@ -284,6 +284,7 @@
 
     </main>
   </div>
-
+  <script src="../Script/auth.js"></script>
+  <script src=""></script>
 </body>
 </html>

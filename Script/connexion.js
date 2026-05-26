@@ -30,7 +30,7 @@ document.getElementById("btn-connexion")?.addEventListener("click", function (e)
         window.location.href = "../Dashboard/dashboardPro.html"; //"../Dashboard/dashboard_professionnel.html"
         break;
       case "entreprise":
-        window.location.href = ""; // TODO: "../Dashboard/dashboard_entreprise.html"
+        window.location.href = "../DashboardEntreprise/dashboardEnt.html"; //"../Dashboard/dashboard_entreprise.html"
         break;
       case "particulier":
         window.location.href = ""; // TODO: "../Dashboard/dashboard_particulier.html"
