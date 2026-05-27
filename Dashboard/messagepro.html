@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="essages.css" />
+    <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupDeMain | Mes Messages</title>
+</head>
+<body>
+
+    <!-- BARRE LATERALE -->
+    <aside class="barre-laterale">
+        <div class="logo">
+            <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+        </div>
+
+        <div class="carte-profil">
+            <h4 id="sidebar-nom"></h4>
+            <p id="sidebar-metier"></p>
+            <span id="sidebar-id"></span>
+        </div>
+
+        <nav class="navigation">
+            <a href="../Dashboard/dashboardPro.html" class="lien">
+                <i class="fa-solid fa-table-columns"></i> Tableau de bord
+            </a>
+            <a href="../Dashboard/messagepro.html" class="lien active">
+                <i class="fa-solid fa-envelope"></i> Mes Messages
+            </a>
+            <a href="../Dashboard/dashboardprojt.html" class="lien">
+                <i class="fa-solid fa-wrench"></i> Mes Projets
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-gear"></i> Paramètres
+            </a>
+        </nav>
+
+        <button class="bouton-poster">Poster une offre</button>
+
+        <div class="liens-bas">
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+            <a href="#"  onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- PRINCIPAL -->
+    <main class="principal">
+
+        <!-- EN-TETE -->
+        <header class="en-tete">
+            <div></div>
+            <div class="icones">
+                <span class="cloche">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="pastille"></span>
+                </span>
+                <span class="icone"><i class="fa-solid fa-message"></i></span>
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <!-- PAGE -->
+        <div class="page">
+
+            <!-- MESSAGERIE -->
+            <div class="messagerie">
+
+                <!-- LISTE CONTACTS -->
+                <div class="liste-contacts">
+                    <div class="barre-recherche">
+                        <label>
+                            <i class="fa-solid fa-magnifying-glass" style="color:#aaa;font-size:13px;"></i>
+                            <input type="text" placeholder="Rechercher un client..." />
+                        </label>
+                    </div>
+                    <div class="liste">
+
+                        <div class="contact active" onclick="ouvrirConversation(this)">
+                            <div class="contact-avatar">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Alice Thagro</div>
+                                <div class="apercu">D'accord, j'attends votre devis pour...</div>
+                            </div>
+                            <div class="contact-heure">10:45</div>
+                        </div>
+
+                        <div class="contact" onclick="ouvrirConversation(this)">
+                            <div class="contact-avatar">
+                                <div class="initiales">OK</div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Omar Kane</div>
+                                <div class="apercu">Merci pour les photos du chantier.</div>
+                            </div>
+                            <div class="contact-heure">Hier</div>
+                        </div>
+
+                        <div class="contact" onclick="ouvrirConversation(this)">
+                            <div class="contact-avatar">
+                                <div class="initiales">IZ</div>
+                            </div>
+                            <div class="contact-info">
+                                <div class="nom">Irie Zan Jr</div>
+                                <div class="apercu">Le projet avance bien comme prévu.</div>
+                            </div>
+                            <div class="contact-heure">Lun.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PANNEAU CHAT -->
+                <div class="panneau-chat">
+
+                    <div class="entete-chat">
+                        <div class="entete-chat-gauche">
+                            <div class="avatar-chat">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice Thagro" />
+                                <span class="point-en-ligne"></span>
+                            </div>
+                            <div class="info-chat">
+                                <div class="nom-chat">Alice Thagro</div>
+                                <div class="statut">● En ligne</div>
+                            </div>
+                        </div>
+                        <div class="actions-chat">
+                            <button class="btn-icone"><i class="fa-solid fa-phone"></i></button>
+                            <button class="btn-icone"><i class="fa-solid fa-video"></i></button>
+                            <button class="btn-icone"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- MESSAGES -->
+                    <div class="zone-messages">
+                        <div class="separateur-date"><span>AUJOURD'HUI</span></div>
+
+                        <div class="ligne-msg entrant">
+                            <div class="msg-avatar">
+                                <img src="https://i.pravatar.cc/80?img=47" alt="Alice" />
+                            </div>
+                            <div>
+                                <div class="bulle">
+                                    Bonjour Jean, j'ai bien reçu les photos des fondations. C'est du bon travail. Pourriez-vous m'envoyer le devis actualisé pour l'extension de la terrasse ?
+                                </div>
+                                <div class="heure">10:30</div>
+                            </div>
+                        </div>
+
+                        <div class="ligne-msg sortant">
+                            <div class="bulle-fichier">
+                                <div class="carte-fichier">
+                                    <div class="icone-fichier">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </div>
+                                    <div class="info-fichier">
+                                        <div class="nom-fichier">Devis_Terrasse_V2.pdf</div>
+                                        <div class="meta-fichier">1.2 MB · PDF Document</div>
+                                    </div>
+                                    <button class="btn-dl"><i class="fa-solid fa-download"></i></button>
+                                </div>
+                                <div class="heure" style="text-align:right;margin-top:5px;">10:41</div>
+                            </div>
+                        </div>
+
+                        <div class="ligne-msg sortant">
+                            <div class="bulle-image">
+                                <div class="texte">Bonjour Alice, avec plaisir. Voici déjà une photo de l'avancement ce matin.</div>
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=480&q=70" alt="chantier" />
+                                <div class="heure">10:42</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAISIE -->
+                    <div class="zone-saisie">
+                        <div class="ligne-saisie">
+                            <button class="btn-action"><i class="fa-regular fa-face-smile"></i></button>
+                            <input type="text" placeholder="Écrivez votre message..." />
+                            <button class="btn-action"><i class="fa-solid fa-paperclip"></i></button>
+                            <button class="btn-envoyer"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                        <div class="indice">Format de fichiers supportés : PDF, JPG, PNG (max 10 Mo)</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PIED -->
+            <footer class="pied">
+                <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+                <div class="pied-liens">
+                    <a href="#">À propos</a>
+                    <a href="#">Conditions Générales</a>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Recrutement</a>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+    <script src="../Script/auth.js"></script>
+    <script src="../Script/dashboard.js"></script>
+    <script src="../Script/messagefonc.js"></script>
+    <!-- <script>
+      const identifiant = JSON.parse(localStorage.getItem("userConnecte"));
+      document.getElementById("titre-message").textContent ="Bonjour " + identifiant.nom + " vos messgaes"
+    </script> -->
+    
+</body>
+</html>

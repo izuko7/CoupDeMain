@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="annuaire.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+  <title>CoupdeMain | Annuaires</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+    </div>
+    <div class="nav-icones">
+      <span class="cloche">
+        <i class="fa-solid fa-bell"></i>
+        <span class="pastille"></span>
+      </span>
+      <i class="fa-solid fa-message"></i>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profil">
+        <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
+        <div>
+          <strong>Jean Dupont</strong>
+          <span>Gestionnaire Entreprise</span>
+        </div>
+      </div>
+
+      <nav class="nav-sidebar">
+        <a href="dashboardEnt.html" class="lien"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
+        <a href="" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="projet.html" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
+        <a href="annuaire.html" class="lien active"><i class="fa-solid fa-book"></i> Annuaires</a>
+        <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <button class="bouton-poster">Poster une offre</button>
+
+      <div class="liens-bas">
+        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="principal">
+
+      <div class="page-entete">
+        <div>
+          <h1>Côte d'Ivoire Construction SA</h1>
+          <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
+        </div>
+        <button class="bouton-publier"><i class="fa-solid fa-plus"></i> Publier un nouveau projet</button>
+      </div>
+
+      <div class="contenu">
+
+        <!-- FILTRES -->
+        <aside class="filtres-panel">
+          <h3><i class="fa-solid fa-sliders"></i> Filtres</h3>
+
+          <div class="filtre-section">
+            <p class="filtre-titre">Métier</p>
+            <label class="checkbox-label checked"><input type="checkbox" checked /> Maçons</label>
+            <label class="checkbox-label"><input type="checkbox" /> Plombiers</label>
+            <label class="checkbox-label"><input type="checkbox" /> Électriciens</label>
+            <label class="checkbox-label"><input type="checkbox" /> Charpentiers</label>
+          </div>
+
+          <div class="filtre-section">
+            <p class="filtre-titre">Localisation</p>
+            <div class="select-wrap">
+              <select>
+                <option>Abidjan, Côte d'Ivoire</option>
+                <option>Daloa, Côte d'Ivoire</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="filtre-section">
+            <p class="filtre-titre">Note minimale</p>
+            <div class="etoiles">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>4+</span>
+            </div>
+          </div>
+
+          <div class="filtre-section">
+            <p class="filtre-titre">Gamme de prix</p>
+            <input type="range" min="0" max="100" value="40" class="slider" />
+            <div class="slider-labels">
+              <span>Économique</span>
+              <span>Premium</span>
+            </div>
+          </div>
+
+          <button class="bouton-filtrer">Appliquer les filtres</button>
+        </aside>
+
+        <!-- RESULTATS -->
+        <div class="resultats">
+
+          <!-- BARRE DE RECHERCHE -->
+          <div class="barre-recherche">
+            <div class="champ-select">
+              <label>Métier</label>
+              <div class="select-wrap">
+                <select>
+                  <option>Tous les métiers</option>
+                  <option>Maçons</option>
+                  <option>Plombiers</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="champ-input">
+              <label>Localisation</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" value="Abobo, Côte d'Ivoire" />
+              </div>
+            </div>
+            <button class="bouton-filtre-bar"><i class="fa-solid fa-sliders"></i> Filtrer</button>
+          </div>
+
+          <!-- GRILLE PROFILS -->
+          <div class="profils-grid">
+
+            <div class="profil-card">
+              <div class="profil-img-wrap">
+                <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oladipo Adejumo" />
+                <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
+              </div>
+              <div class="profil-body">
+                <div class="profil-haut">
+                  <div>
+                    <h3>Félicien Koffi</h3>
+                    <p class="profil-metier">Expert Maçonnerie & Gros Œuvre</p>
+                  </div>
+                  <span class="note"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="profil-meta">
+                  <span><i class="fa-solid fa-location-dot"></i> Plateau, Abidjan</span>
+                  <span><i class="fa-regular fa-clock"></i> 12 ans d'exp.</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">FONDATIONS</span>
+                  <span class="tag">RÉNOVATION</span>
+                </div>
+                <button class="bouton-profil">Voir le profil</button>
+              </div>
+            </div>
+
+            <div class="profil-card">
+              <div class="profil-img-wrap">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ousmane Sow" />
+                <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
+              </div>
+              <div class="profil-body">
+                <div class="profil-haut">
+                  <div>
+                    <h3>Ousmane Sow</h3>
+                    <p class="profil-metier">Maçonnerie Générale & Finition</p>
+                  </div>
+                  <span class="note"><i class="fa-solid fa-star"></i> 4.7</span>
+                </div>
+                <div class="profil-meta">
+                  <span><i class="fa-solid fa-location-dot"></i> San pedro, Petit quartier</span>
+                  <span><i class="fa-regular fa-clock"></i> 8 ans d'exp.</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">CARRELAGE</span>
+                  <span class="tag">BRIQUES</span>
+                </div>
+                <button class="bouton-profil">Voir le profil</button>
+              </div>
+            </div>
+
+            <div class="profil-card">
+              <div class="profil-img-wrap">
+                <img src="https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oladipo Adejumo" />
+              </div>
+              <div class="profil-body">
+                <div class="profil-haut">
+                  <div>
+                    <h3>Oladipo Adejumo</h3>
+                    <p class="profil-metier">Maçonnerie Décorative</p>
+                  </div>
+                  <span class="note"><i class="fa-solid fa-star"></i> 4.6</span>
+                </div>
+                <div class="profil-meta">
+                  <span><i class="fa-solid fa-location-dot"></i> Ouakam, Korogho</span>
+                  <span><i class="fa-regular fa-clock"></i> 6 ans d'exp.</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">PIERRE TAILLÉE</span>
+                  <span class="tag">ENDUITS</span>
+                </div>
+                <button class="bouton-profil">Voir le profil</button>
+              </div>
+            </div>
+
+            <div class="profil-card">
+              <div class="profil-img-wrap">
+                <img src="https://images.unsplash.com/photo-1587052694737-a972e4186288?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pierre LeVert" />
+              </div>
+              <div class="profil-body">
+                <div class="profil-haut">
+                  <div>
+                    <h3>Pierre LeVert</h3>
+                    <p class="profil-metier">Spécialiste Béton Armé</p>
+                  </div>
+                  <span class="note"><i class="fa-solid fa-star"></i> 4.8</span>
+                </div>
+                <div class="profil-meta">
+                  <span><i class="fa-solid fa-location-dot"></i> Pikine, Chine</span>
+                  <span><i class="fa-regular fa-clock"></i> 15 ans d'exp.</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">GROS ŒUVRE</span>
+                  <span class="tag">ÉTANCHÉITÉ</span>
+                </div>
+                <button class="bouton-profil">Voir le profil</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- PAGINATION -->
+          <div class="pagination">
+            <button class="page-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-btn">12</button>
+            <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <footer class="pied">
+        <p>© 2024 Coup de Main. La fondation de vos projets en Afrique.</p>
+        <div class="pied-liens">
+          <a href="#">À propos</a>
+          <a href="#">Conditions Générales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Recrutement</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+</body>
+</html>

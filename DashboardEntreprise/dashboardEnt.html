@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styledash.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+  <title>CoupdeMain | Tableau de bord</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+    </div>
+    <div class="nav-recherche">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Rechercher des projets..." />
+    </div>
+    <nav class="nav-liens">
+      <!-- <a href="#">Annuaire</a>
+      <a href="#">Projets</a>
+      <a href="#">Comment ça marche</a> -->
+    </nav>
+    <div class="nav-icones">
+      <span class="cloche">
+        <i class="fa-solid fa-bell"></i>
+        <span class="pastille"></span>
+      </span>
+      <i class="fa-solid fa-message"></i>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profil">
+        <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
+        <div>
+          <strong id="sidebar-nom"></strong>
+          <span id="sidebar-activite"></span>
+          <span id="sidebar-id"></span>
+        </div>
+      </div>
+
+      <nav class="nav-sidebar">
+        <a href="dashboardEnt.html" class="lien active"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
+        <a href="#" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="projet.html" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
+        <a href="annuaire.html" class="lien"><i class="fa-solid fa-address-book"></i> Annuaires</a>
+        <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <button class="bouton-poster">Poster une offre</button>
+
+      <div class="liens-bas">
+        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="principal">
+
+      <!-- EN-TETE PAGE -->
+      <div class="page-entete">
+        <div>
+          <h1 id="titre-bienvenue"></h1>
+          <p>Bienvenue dans votre espace de pilotage. Voici l'état de vos chantiers aujourd'hui.</p>
+        </div>
+        <button class="bouton-publier"><i class="fa-solid fa-plus"></i> Publier un nouveau projet</button>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-building stat-icon"></i>
+            <span class="badge-vert">+2 cette semaine</span>
+          </div>
+          <p class="stat-label">CHANTIERS ACTIFS</p>
+          <p class="stat-valeur">14</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-users stat-icon teal"></i>
+          </div>
+          <p class="stat-label">EFFECTIFS GÉRÉS</p>
+          <p class="stat-valeur">248</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-money-bill-wave stat-icon teal"></i>
+            <span class="badge-vert">+12% vs M-1</span>
+          </div>
+          <p class="stat-label">VALEUR D'APPELS D'OFFRES</p>
+          <p class="stat-valeur">4.2M <small>€</small></p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-trophy stat-icon violet"></i>
+          </div>
+          <p class="stat-label">TAUX DE RÉUSSITE</p>
+          <p class="stat-valeur">68<small>%</small></p>
+        </div>
+      </div>
+
+      <!-- CONTENU PRINCIPAL : projets + sidebar droite -->
+      <div class="contenu">
+
+        <div class="gauche">
+
+          <!-- PROJETS ACTIFS -->
+          <section>
+            <div class="section-entete">
+              <h2>Gestion des Projets Actifs</h2>
+              <a href="#" class="voir-tout">Voir tout</a>
+            </div>
+            <div class="projets-grid">
+
+              <div class="projet-card">
+                <div class="projet-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Résidence Azur" />
+                  <span class="badge-projet construction">CONSTRUCTION</span>
+                </div>
+                <div class="projet-body">
+                  <h3><a href="#">Résidence Azur - Phase 2</a></h3>
+                  <p class="projet-lieu"><i class="fa-solid fa-location-dot"></i> Dakar, Almadies</p>
+                  <div class="progression-ligne">
+                    <span>Progression</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="barre"><div class="barre-fill bleu" style="width:75%"></div></div>
+                  <div class="projet-bas">
+                    <span class="avatar-initiales">MK</span>
+                    <span class="projet-client">Moussa Kane (Client)</span>
+                    <span class="projet-montant">1.2M FrancCfa</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projet-card">
+                <div class="projet-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Pont Gambie" />
+                  <span class="badge-projet infra">INFRASTRUCTURE</span>
+                </div>
+                <div class="projet-body">
+                  <h3><a href="#">Réhabilitation Pont Gambie</a></h3>
+                  <p class="projet-lieu"><i class="fa-solid fa-location-dot"></i> Frontière Kaolack</p>
+                  <div class="progression-ligne">
+                    <span>Progression</span>
+                    <span>32%</span>
+                  </div>
+                  <div class="barre"><div class="barre-fill rouge" style="width:32%"></div></div>
+                  <div class="projet-bas">
+                    <span class="avatar-initiales teal">ET</span>
+                    <span class="projet-client">État du Sénégal</span>
+                    <span class="projet-montant">850k FrancCfa</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- FLOTTE -->
+          <section>
+            <h2>Flotte &amp; Ressources Spécialisées</h2>
+            <div class="table-wrap">
+              <table class="flotte-table">
+                <thead>
+                  <tr>
+                    <th>MATÉRIEL / ÉQUIPE</th>
+                    <th>TYPE</th>
+                    <th>LOCALISATION</th>
+                    <th>STATUT</th>
+                    <th>OPÉRATEUR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fa-solid fa-tractor icon-table"></i> Pelle Hydraulique Cat 320</td>
+                    <td>Lourd</td>
+                    <td>Chantier Azur</td>
+                    <td><span class="statut vert">● Opérationnel</span></td>
+                    <td>Ibrahima Fall</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-solid fa-truck icon-table"></i> Niveleuse Komatsu GD655</td>
+                    <td>Voirie</td>
+                    <td>Pont Gambie</td>
+                    <td><span class="statut orange">● Maintenance</span></td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-solid fa-hard-hat icon-table"></i> Équipe Structure (H12)</td>
+                    <td>Main d'œuvre</td>
+                    <td>Chantier Azur</td>
+                    <td><span class="statut vert">● Déployé</span></td>
+                    <td>Chef Sarr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- SIDEBAR DROITE -->
+        <aside class="droite">
+
+          <div class="widget">
+            <h2>Appels d'Offres</h2>
+            <div class="offre">
+              <div class="offre-info">
+                <strong>Lycée d'Excellence Mbour</strong>
+                <span class="offre-date">Échéance: 12 Oct. 2024</span>
+              </div>
+              <span class="badge-statut bleu">EN REVUE</span>
+            </div>
+            <div class="offre">
+              <div class="offre-info">
+                <strong>Hôpital Militaire Ouakam</strong>
+                <span class="offre-date">Échéance: 05 Nov. 2024</span>
+              </div>
+              <span class="badge-statut jaune">BROUILLON</span>
+            </div>
+            <div class="offre">
+              <div class="offre-info">
+                <strong>Siège Banque Centrale</strong>
+                <span class="offre-date">Soumis le 20 Sep. 2024</span>
+              </div>
+              <span class="badge-statut vert">GAGNÉ</span>
+            </div>
+            <button class="bouton-explorer">Explorer plus d'offres</button>
+          </div>
+
+          <div class="widget">
+            <div class="widget-entete">
+              <h2>Notifications Urgentes</h2>
+              <span class="badge-notif">3</span>
+            </div>
+            <div class="notif">
+              <i class="fa-solid fa-triangle-exclamation notif-icon rouge"></i>
+              <div>
+                <strong>Alerte Sécurité - Chantier Azur</strong>
+                <p>Vent violent détecté. Sécurisez les grues immédiatement.</p>
+                <span class="notif-time">Il y a 10 minutes</span>
+              </div>
+            </div>
+            <div class="notif">
+              <i class="fa-solid fa-message notif-icon bleu"></i>
+              <div>
+                <strong>Nouveau Message</strong>
+                <p>Moussa Kane a commenté les plans de la Phase 2.</p>
+                <span class="notif-time">Il y a 2 heures</span>
+              </div>
+            </div>
+            <div class="notif">
+              <i class="fa-solid fa-circle-check notif-icon vert"></i>
+              <div>
+                <strong>Paiement Reçu</strong>
+                <p>Le virement de 45,000 € a été validé.</p>
+                <span class="notif-time">Hier, 16:45</span>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <footer class="pied">
+        <p>© 2024 BTP Marché. La fondation de vos projets en Afrique.</p>
+        <div class="pied-liens">
+          <a href="#">À propos</a>
+          <a href="#">Conditions Générales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Recrutement</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/connexion.js"></script>
+  <script src="../Script/entreprise.js"></script>
+</body>
+</html>

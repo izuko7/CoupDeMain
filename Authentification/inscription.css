@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.onglets {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.onglets a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.btn-dark {
+  background: #1a3a4a;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* LAYOUT */
+.contenu {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* GAUCHE */
+.gauche {
+  position: relative;
+  width: 42%;
+  flex-shrink: 0;
+}
+
+.gauche-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gauche-fond {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 60, 0.82);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.gauche-contenu {
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+}
+
+.gauche-contenu h1 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.gauche-contenu > p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.avantages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.avantages-contenu {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: rgba(182, 176, 176, 0.295);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.icon-avantages {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.icon-avantages.orange {
+  background: rgba(232, 96, 28, 0.25);
+  color: #e8601c;
+}
+.icon-avantages.blue {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+.icon-avantages.green {
+  background: rgba(42, 157, 92, 0.25);
+  color: #2a9d5c;
+}
+
+.avantages-contenu h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.avantages-contenu p {
+  font-size: 13px;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+/* DROITE */
+.droite {
+  flex: 1;
+  overflow-y: auto;
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.formulaire,
+.profil-selection,
+.formulaire-label,
+.champs-grille {
+  width: 100%;
+  max-width: 520px;
+}
+
+.formulaire h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.sous-titre {
+  font-size: 14px;
+  color: #666;
+}
+
+/* SÉLECTEUR PROFIL */
+.profil-selection {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+}
+
+.profil-item {
+  flex: 1;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.profil-item i {
+  font-size: 20px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.profil-item span a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+
+.profil-item small {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.3;
+}
+
+.profil-item.active {
+  border-color: #1a3a4a;
+  background: #f0f5f8;
+}
+
+.profil-item.active i {
+  color: #1a3a4a;
+}
+
+/* LABEL FORMULAIRE */
+.formulaire-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 500px;
+}
+
+.badge-orange {
+  display: inline-block;
+  background: #fff0e8;
+  color: #e8601c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.formulaire-label h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.formulaire-label p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* CHAMPS */
+.champs-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 500px;
+}
+
+.champs,
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.champs label,
+.champ label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.champs input,
+.champ input,
+.champ select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  appearance: none;
+}
+
+.input-selection {
+  position: relative;
+}
+
+.input-selection select {
+  width: 100%;
+}
+
+.input-selection i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.input-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #888;
+}
+
+.input-info input {
+  border: none;
+  padding: 11px 0;
+}
+
+/* CGU */
+.cgu {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.5;
+  grid-column: 1 / -1;
+}
+
+.cgu input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.cgu a {
+  color: #e8601c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* BOUTON */
+.btn-submit {
+  background: #1a3a4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s;
+  font-family: "Poppins", sans-serif;
+  grid-column: 1 / -1;
+}
+
+.btn-submit:hover {
+  background: #0f2533;
+}
+
+.deja-compte {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.deja-compte a {
+  color: #e8601c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* SECTION TITRE */
+.section-titre {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #888;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* PLEINE LARGEUR */
+.pleine-largeur {
+  grid-column: 1 / -1;
+}
