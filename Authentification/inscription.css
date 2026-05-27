@@ -41,6 +41,10 @@ nav {
   font-size: 15px;
 }
 
+#lang-select{
+  display: none;
+}
+
 .btn-dark {
   background: #1a3a4a;
   color: #fff !important;
@@ -86,7 +90,7 @@ nav {
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 85px;
+  gap: 10px;
 }
 
 .gauche-contenu h1 {

@@ -17,8 +17,12 @@
             <img src="../Ressources/images/logo.png" alt="" />
         </div>
         <div class="onglets">
-            <a href="connexion.html">Connexion</a>
-            <a href="../index.html" class="btn-dark">Accueil</a>
+            <a href="connexion.html" data-i18n="nav.connexion">Connexion</a>
+            <a href="../index.html" class="btn-dark" data-i18n="footer.nav.accueil">Accueil</a>
+            <select id="lang-select">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+            </select>
         </div>
     </nav>
 
@@ -27,61 +31,18 @@
         <div class="gauche">
             <img src="../Ressources/images/Background construction.png" alt="" class="gauche-bg" />
             <div class="gauche-fond">
-                <!-- contenu gauche particulier -->
-                <div class="gauche-contenu" id="gauche-particulier" style="display: none">
-                    <h1>Bâtissez votre avenir en toute sérénité.</h1>
-                    <div class="avantages">
-                        <div class="avantages-contenu">
-                            <div class="icon-avantages blue">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <div>
-                                <h4>Trouvez des pros facilement</h4>
-                                <p>
-                                    Accédez à un réseau d'artisans qualifiés et vérifiés pour
-                                    tous vos travaux de maçonnerie, plomberie et électricité.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="avantages-contenu">
-                            <div class="icon-avantages green">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <h4>Paiements sécurisés</h4>
-                                <p>
-                                    Bénéficiez de notre système de tiers de confiance pour
-                                    garantir que votre argent n'est libéré qu'une fois
-                                    satisfait.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="avantages-contenu">
-                            <div class="icon-avantages orange">
-                                <i class="fa-solid fa-list-check"></i>
-                            </div>
-                            <div>
-                                <h4>Suivi de projet transparent</h4>
-                                <p>
-                                    Suivez l'avancement de vos travaux étape par étape grâce à
-                                    notre interface intuitive dédiée aux particuliers.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- contenu gauche particulier -->
                 <div class="gauche-contenu" id="gauche-particulier" style="display: none">
-                    <h1>Bâtissez votre avenir en toute sérénité.</h1>
+                    <h1 data-i18n="inscription.particulier.hero.titre">Bâtissez votre avenir en toute sérénité.</h1>
                     <div class="avantages">
                         <div class="avantages-contenu">
                             <div class="icon-avantages blue">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <div>
-                                <h4>Trouvez des pros facilement</h4>
-                                <p>
+                                <h4 data-i18n="inscription.particulier.avantage1.titre">Trouvez des pros facilement</h4>
+                                <p data-i18n="inscription.particulier.avantage1.desc">
                                     Accédez à un réseau d'artisans qualifiés et vérifiés pour
                                     tous vos travaux de maçonnerie, plomberie et électricité.
                                 </p>
@@ -92,8 +53,8 @@
                                 <i class="fa-solid fa-shield-halved"></i>
                             </div>
                             <div>
-                                <h4>Paiements sécurisés</h4>
-                                <p>
+                                <h4 data-i18n="inscription.particulier.avantage2.titre">Paiements sécurisés</h4>
+                                <p data-i18n="inscription.particulier.avantage2.desc">
                                     Bénéficiez de notre système de tiers de confiance pour
                                     garantir que votre argent n'est libéré qu'une fois
                                     satisfait.
@@ -105,8 +66,8 @@
                                 <i class="fa-solid fa-list-check"></i>
                             </div>
                             <div>
-                                <h4>Suivi de projet transparent</h4>
-                                <p>
+                                <h4 data-i18n="inscription.particulier.avantage3.titre">Suivi de projet transparent</h4>
+                                <p data-i18n="inscription.particulier.avantage3.desc">
                                     Suivez l'avancement de vos travaux étape par étape grâce à
                                     notre interface intuitive dédiée aux particuliers.
                                 </p>
@@ -117,8 +78,8 @@
 
                 <!-- contenu gauche professionnel -->
                 <div class="gauche-contenu" id="gauche-professionnel">
-                    <h1>Rejoignez le premier réseau de professionels du BTP.</h1>
-                    <p>
+                    <h1 data-i18n="inscription.pro.hero.titre">Rejoignez le premier réseau de professionels du BTP.</h1>
+                    <p data-i18n="inscription.pro.hero.desc">
                         Développez votre entreprise avec des outils conçus pour les
                         bâtisseurs d'aujourd'hui.
                     </p>
@@ -128,8 +89,8 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <div>
-                                <h4>Trouver plus de chantiers</h4>
-                                <p>
+                                <h4 data-i18n="inscription.pro.avantage1.titre">Trouver plus de chantiers</h4>
+                                <p data-i18n="inscription.pro.avantage1.desc">
                                     Accédez en temps réel aux offres d'autres acteurs locaux et
                                     aux projets vérifiés dans votre région.
                                 </p>
@@ -140,8 +101,8 @@
                                 <i class="fa-solid fa-briefcase"></i>
                             </div>
                             <div>
-                                <h4>Gérez votre activité</h4>
-                                <p>
+                                <h4 data-i18n="inscription.pro.avantage2.titre">Gérez votre activité</h4>
+                                <p data-i18n="inscription.pro.avantage2.desc">
                                     Devis, factures et suivi de projet simplifiés pour vous
                                     concentrer sur votre savoir-faire.
                                 </p>
@@ -152,8 +113,8 @@
                                 <i class="fa-solid fa-shield-halved"></i>
                             </div>
                             <div>
-                                <h4>Visibilité certifiée</h4>
-                                <p>
+                                <h4 data-i18n="inscription.pro.avantage3.titre">Visibilité certifiée</h4>
+                                <p data-i18n="inscription.pro.avantage3.desc">
                                     Obtenez le badge "Pro Vérifié" et gagnez la confiance
                                     instantanée des clients.
                                 </p>
@@ -164,8 +125,8 @@
 
                 <!-- contenu gauche entreprise -->
                 <div class="gauche-contenu" id="gauche-entreprise" style="display: none">
-                    <h1>La fondation numérique de vos projets d'envergure.</h1>
-                    <p>
+                    <h1 data-i18n="inscription.ent.hero.titre">La fondation numérique de vos projets d'envergure.</h1>
+                    <p data-i18n="inscription.ent.hero.desc">
                         Rejoignez le premier écosystème BTP en Afrique conçu pour les
                         entreprises qui exigent précision et fiabilité.
                     </p>
@@ -175,8 +136,8 @@
                                 <i class="fa-solid fa-file-contract"></i>
                             </div>
                             <div>
-                                <h4>Appels d'offres exclusifs</h4>
-                                <p>
+                                <h4 data-i18n="inscription.ent.avantage1.titre">Appels d'offres exclusifs</h4>
+                                <p data-i18n="inscription.ent.avantage1.desc">
                                     Accédez en priorité aux marchés publics et privés certifiés.
                                 </p>
                             </div>
@@ -186,8 +147,8 @@
                                 <i class="fa-solid fa-users"></i>
                             </div>
                             <div>
-                                <h4>Gestion d'équipes</h4>
-                                <p>
+                                <h4 data-i18n="inscription.ent.avantage2.titre">Gestion d'équipes</h4>
+                                <p data-i18n="inscription.ent.avantage2.desc">
                                     Outils intégrés de planification et suivi de chantier en
                                     temps réel.
                                 </p>
@@ -201,8 +162,8 @@
         <!-- droite -->
         <div class="droite">
             <div class="formulaire">
-                <h2>Créer votre compte</h2>
-                <p class="sous-titre">
+                <h2 data-i18n="inscription.titre">Créer votre compte</h2>
+                <p class="sous-titre" data-i18n="inscription.soustitre">
                     Sélectionnez votre profil pour personnaliser votre expérience.
                 </p>
             </div>
@@ -210,64 +171,64 @@
             <div class="profil-selection">
                 <div class="profil-item active" onclick="selectionProfil(this, 'professionnel')">
                     <i class="fa-solid fa-wrench"></i>
-                    <span>Professionnel</span>
-                    <small>Je propose des services</small>
+                    <span data-i18n="inscription.profil.pro.titre">Professionnel</span>
+                    <small data-i18n="inscription.profil.pro.desc">Je propose des services</small>
                 </div>
                 <div class="profil-item" onclick="selectionProfil(this, 'entreprise')">
                     <i class="fa-solid fa-building"></i>
-                    <span>Entreprise</span>
-                    <small>Gestion d'équipes & appels d'offres</small>
+                    <span data-i18n="inscription.profil.entreprise.titre">Entreprise</span>
+                    <small data-i18n="inscription.profil.entreprise.desc">Gestion d'équipes & appels d'offres</small>
                 </div>
                 <div class="profil-item" onclick="selectionProfil(this, 'particulier')">
                     <i class="fa-solid fa-user"></i>
-                    <span>Particulier</span>
-                    <small>Je cherche un pro</small>
+                    <span data-i18n="inscription.profil.particulier.titre">Particulier</span>
+                    <small data-i18n="inscription.profil.particulier.desc">Je cherche un pro</small>
                 </div>
             </div>
 
             <!-- formulaire professionnel -->
             <div id="form-professionnel">
                 <div class="formulaire-label">
-                    <span class="badge-orange">INSCRIPTION PROFESSIONNEL</span>
-                    <h3>Créez votre profil d'expert</h3>
-                    <p>Remplissez les informations ci-dessous pour commencer.</p>
+                    <span class="badge-orange" data-i18n="inscription.pro.badge">INSCRIPTION PROFESSIONNEL</span>
+                    <h3 data-i18n="inscription.pro.h3">Créez votre profil d'expert</h3>
+                    <p data-i18n="inscription.pro.intro">Remplissez les informations ci-dessous pour commencer.</p>
                 </div>
                 <div class="champs-grille">
                     <div class="champs">
-                        <label>Nom Complet</label>
-                        <input type="text" placeholder="Salif Doumbia" />
+                        <label data-i18n="inscription.pro.nom">Nom Complet</label>
+                        <input type="text" data-i18n-placeholder="inscription.pro.nom.placeholder" placeholder="Salif Doumbia" />
                     </div>
                     <div class="champ">
-                        <label>Email Professionnel</label>
-                        <input type="email" placeholder="Salifoud@pro.com" />
+                        <label data-i18n="inscription.pro.email">Email Professionnel</label>
+                        <input type="email" data-i18n-placeholder="inscription.pro.email.placeholder" placeholder="Salifoud@pro.com" />
                     </div>
                     <div class="champ">
-                        <label>Corps de métiers</label>
+                        <label data-i18n="inscription.pro.metier">Corps de métiers</label>
                         <div class="input-selection">
                             <select>
-                                <option value="">Sélectionner votre métier</option>
-                                <option>Architecture</option>
-                                <option>Maçonnerie</option>
-                                <option>Électricité</option>
-                                <option>Plomberie</option>
-                                <option>Aide maçon</option>
+                                <option value="" data-i18n="inscription.pro.metier.placeholder">Sélectionner votre métier</option>
+                                <option data-i18n="inscription.metier.archi">Architecture</option>
+                                <option data-i18n="inscription.metier.macon">Maçonnerie</option>
+                                <option data-i18n="inscription.metier.elec">Électricité</option>
+                                <option data-i18n="inscription.metier.plomb">Plomberie</option>
+                                <option data-i18n="inscription.metier.aide">Aide maçon</option>
                             </select>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
                     <div class="champ">
-                        <label>Années d'expérience</label>
-                        <input type="number" placeholder="ex: 5" />
+                        <label data-i18n="inscription.pro.experience">Années d'expérience</label>
+                        <input type="number" data-i18n-placeholder="inscription.pro.experience.placeholder" placeholder="ex: 5" />
                     </div>
                     <div class="champ">
-                        <label>Localisation (Ville / Pays)</label>
+                        <label data-i18n="inscription.pro.localisation">Localisation (Ville / Pays)</label>
                         <div class="input-info">
                             <i class="fa-solid fa-location-dot"></i>
-                            <input type="text" placeholder="Daoukro, Abidjan" />
+                            <input type="text" data-i18n-placeholder="inscription.pro.localisation.placeholder" placeholder="Daoukro, Abidjan" />
                         </div>
                     </div>
                     <div class="champ">
-                        <label>Mot de passe</label>
+                        <label data-i18n="inscription.pro.mdp">Mot de passe</label>
                         <div class="input-info">
                             <i class="fa-solid fa-lock"></i>
                             <input type="password" id="mdp" placeholder="••••••••" />
@@ -276,16 +237,16 @@
                     </div>
                     <div class="cgu">
                         <input type="checkbox" id="cgu-pro" />
-                        <label for="cgu-pro">J'accepte les
+                        <label for="cgu-pro" data-i18n="inscription.pro.cgu">J'accepte les
                             <a href="#">Conditions Générales d'Utilisation</a> et la
-                            <a href="#">Politique de Confidentialité</a> du BTP
-                            Marché.</label>
+                            <a href="#">Politique de Confidentialité</a> du BTP Marché.</label>
                     </div>
-                    <button class="btn-submit" >
+                    <button class="btn-submit" data-i18n="inscription.pro.bouton">
                         Finaliser mon inscription <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <p class="deja-compte">
-                        Vous avez déjà un compte ? <a href="#">Connectez-vous ici</a>
+                        <span data-i18n="inscription.pro.dejacompte">Vous avez déjà un compte ?</span>
+                        <a href="#" data-i18n="inscription.pro.connexion">Connectez-vous ici</a>
                     </p>
                 </div>
             </div>
@@ -293,36 +254,36 @@
             <!-- formulaire entreprise -->
             <div id="form-entreprise" style="display: none">
                 <div class="formulaire-label">
-                    <span class="badge-orange">INSCRIPTION ENTREPRISE</span>
-                    <p>Complétez les informations de votre structure pour commencer.</p>
+                    <span class="badge-orange" data-i18n="inscription.ent.badge">INSCRIPTION ENTREPRISE</span>
+                    <p data-i18n="inscription.ent.intro">Complétez les informations de votre structure pour commencer.</p>
                 </div>
                 <div class="champs-grille">
-                    <p class="section-titre">INFORMATIONS SOCIÉTÉ</p>
+                    <p class="section-titre" data-i18n="inscription.ent.section1">INFORMATIONS SOCIÉTÉ</p>
                     <div class="champs">
-                        <label>Nom de l'entreprise</label>
-                        <input type="text" placeholder="Ex: BatiCorp SARL" />
+                        <label data-i18n="inscription.ent.nom">Nom de l'entreprise</label>
+                        <input type="text" data-i18n-placeholder="inscription.ent.nom.placeholder" placeholder="Ex: BatiCorp SARL" />
                     </div>
                     <div class="champ">
-                        <label>Numéro SIRET / Registre</label>
-                        <input type="text" placeholder="Numéro officiel" />
+                        <label data-i18n="inscription.ent.siret">Numéro SIRET / Registre</label>
+                        <input type="text" data-i18n-placeholder="inscription.ent.siret.placeholder" placeholder="Numéro officiel" />
                     </div>
                     <div class="champ">
-                        <label>Secteur d'activité</label>
+                        <label data-i18n="inscription.ent.secteur">Secteur d'activité</label>
                         <div class="input-selection">
                             <select>
-                                <option value="">Sélectionnez un secteur</option>
-                                <option>BTP</option>
-                                <option>Architecture</option>
-                                <option>Génie civil</option>
+                                <option value="" data-i18n="inscription.ent.secteur.placeholder">Sélectionnez un secteur</option>
+                                <option data-i18n="inscription.secteur.btp">BTP</option>
+                                <option data-i18n="inscription.metier.archi">Architecture</option>
+                                <option data-i18n="inscription.secteur.genie">Génie civil</option>
                             </select>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
                     <div class="champ">
-                        <label>Taille de l'entreprise</label>
+                        <label data-i18n="inscription.ent.taille">Taille de l'entreprise</label>
                         <div class="input-selection">
                             <select>
-                                <option value="">Nombre d'employés</option>
+                                <option value="" data-i18n="inscription.ent.taille.placeholder">Nombre d'employés</option>
                                 <option>1-10</option>
                                 <option>11-50</option>
                                 <option>51-200</option>
@@ -331,13 +292,13 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
-                    <p class="section-titre">PERSONNE DE CONTACT</p>
+                    <p class="section-titre" data-i18n="inscription.ent.section2">PERSONNE DE CONTACT</p>
                     <div class="champs pleine-largeur">
-                        <label>Nom complet du responsable</label>
-                        <input type="text" placeholder="Prénom et Nom" />
+                        <label data-i18n="inscription.ent.responsable">Nom complet du responsable</label>
+                        <input type="text" data-i18n-placeholder="inscription.ent.responsable.placeholder" placeholder="Prénom et Nom" />
                     </div>
                     <div class="champs pleine-largeur">
-                        <label>Mot de passe</label>
+                        <label data-i18n="inscription.ent.mdp">Mot de passe</label>
                         <div class="input-info">
                             <i class="fa-solid fa-lock"></i>
                             <input type="password" id="mdp-ent" placeholder="••••••••" />
@@ -345,25 +306,26 @@
                         </div>
                     </div>
                     <div class="champ">
-                        <label>Email professionnel</label>
-                        <input type="email" placeholder="contact@entreprise.com" />
+                        <label data-i18n="inscription.ent.email">Email professionnel</label>
+                        <input type="email" data-i18n-placeholder="inscription.ent.email.placeholder" placeholder="contact@entreprise.com" />
                     </div>
                     <div class="champ">
-                        <label>Téléphone</label>
-                        <input type="tel" placeholder="+225..." />
+                        <label data-i18n="inscription.ent.telephone">Téléphone</label>
+                        <input type="tel" data-i18n-placeholder="inscription.ent.telephone.placeholder" placeholder="+225..." />
                     </div>
                     <div class="cgu">
                         <input type="checkbox" id="cgu-ent" />
-                        <label for="cgu-ent">J'accepte les
+                        <label for="cgu-ent" data-i18n="inscription.ent.cgu">J'accepte les
                             <a href="#">Conditions Générales d'Utilisation</a> et la
                             <a href="#">Politique de Confidentialité</a>.</label>
                     </div>
-                    <button class="btn-submit">
+                    <button class="btn-submit" data-i18n="inscription.ent.bouton">
                         Créer mon compte entreprise
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                     <p class="deja-compte">
-                        Vous avez déjà un compte ? <a href="#">Connectez-vous ici</a>
+                        <span data-i18n="inscription.ent.dejacompte">Vous avez déjà un compte ?</span>
+                        <a href="#" data-i18n="inscription.ent.connexion">Connectez-vous ici</a>
                     </p>
                 </div>
             </div>
@@ -371,46 +333,46 @@
             <!-- formulaire particulier -->
             <div id="form-particulier" style="display: none">
                 <div class="formulaire-label">
-                    <span class="badge-orange">COMPTE PARTICULIER</span>
-                    <h3>Créez votre compte</h3>
+                    <span class="badge-orange" data-i18n="inscription.part.badge">COMPTE PARTICULIER</span>
+                    <h3 data-i18n="inscription.part.h3">Créez votre compte</h3>
                 </div>
                 <div class="champs-grille">
                     <div class="champs pleine-largeur">
-                        <label>Nom complet</label>
-                        <input type="text" placeholder="Ex: Jean Kouadio" />
+                        <label data-i18n="inscription.part.nom">Nom complet</label>
+                        <input type="text" data-i18n-placeholder="inscription.part.nom.placeholder" placeholder="Ex: Jean Kouadio" />
                     </div>
                     <div class="champ">
-                        <label>Email</label>
-                        <input type="email" placeholder="jean@email.com" />
+                        <label data-i18n="inscription.part.email">Email</label>
+                        <input type="email" data-i18n-placeholder="inscription.part.email.placeholder" placeholder="jean@email.com" />
                     </div>
                     <div class="champ">
-                        <label>Type de projet</label>
+                        <label data-i18n="inscription.part.projet">Type de projet</label>
                         <div class="input-selection">
                             <select>
-                                <option value="">Sélectionnez le type</option>
-                                <option>Maçonnerie</option>
-                                <option>Plomberie</option>
-                                <option>Électricité</option>
-                                <option>Architecture</option>
+                                <option value="" data-i18n="inscription.part.projet.placeholder">Sélectionnez le type</option>
+                                <option data-i18n="inscription.metier.macon">Maçonnerie</option>
+                                <option data-i18n="inscription.metier.plomb">Plomberie</option>
+                                <option data-i18n="inscription.metier.elec">Électricité</option>
+                                <option data-i18n="inscription.metier.archi">Architecture</option>
                             </select>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
                     <div class="champ pleine-largeur">
-                        <label>Délai souhaité</label>
+                        <label data-i18n="inscription.part.delai">Délai souhaité</label>
                         <div class="input-selection">
                             <select>
-                                <option value="">Quand souhaitez-vous commencer ?</option>
-                                <option>Dès que possible</option>
-                                <option>Dans 1 mois</option>
-                                <option>Dans 3 mois</option>
-                                <option>Dans 6 mois</option>
+                                <option value="" data-i18n="inscription.part.delai.placeholder">Quand souhaitez-vous commencer ?</option>
+                                <option data-i18n="inscription.part.delai.asap">Dès que possible</option>
+                                <option data-i18n="inscription.part.delai.1mois">Dans 1 mois</option>
+                                <option data-i18n="inscription.part.delai.3mois">Dans 3 mois</option>
+                                <option data-i18n="inscription.part.delai.6mois">Dans 6 mois</option>
                             </select>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
                     <div class="champ pleine-largeur">
-                        <label>Mot de passe</label>
+                        <label data-i18n="inscription.part.mdp">Mot de passe</label>
                         <div class="input-info">
                             <i class="fa-solid fa-lock"></i>
                             <input type="password" id="mdp-part" placeholder="••••••••" />
@@ -419,14 +381,14 @@
                     </div>
                     <div class="cgu">
                         <input type="checkbox" id="cgu-part" />
-                        <label for="cgu-part">J'accepte les
+                        <label for="cgu-part" data-i18n="inscription.part.cgu">J'accepte les
                             <a href="#">Conditions Générales d'Utilisation</a> et la
                             <a href="#">Politique de Confidentialité</a>.</label>
                     </div>
-                    <button class="btn-submit">
+                    <button class="btn-submit" data-i18n="inscription.part.bouton">
                         Créer mon compte <i class="fa-solid fa-arrow-right"></i>
                     </button>
-                    <p class="deja-compte">
+                    <p class="deja-compte" data-i18n="inscription.part.aide">
                         Précisez votre projet pour un meilleur accompagnement.
                     </p>
                 </div>
@@ -435,6 +397,7 @@
     </div>
 
     <script src="../Script/essentials.js"></script>
+    <script src="../Script/traduction.js"></script>
     <script src="../Script/auth.js"></script>
     <script src="../Script/inscription.js"></script>
     <script>
