@@ -166,3 +166,8 @@ Avec **Coup de Main** :
 # Auteur
 
 Projet développé dans le cadre d’un projet visant à moderniser les services du bâtiment grâce au digital.
+
+# Voir le projet
+
+[Coup de Main Live Preview](https://izuko7.github.io/CoupDeMain/).
+
