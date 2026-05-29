@@ -3,9 +3,15 @@
 const user = protegerPage("entreprise");
 
 if (user) {
-  document.getElementById("sidebar-nom").textContent = user.nom;
-  document.getElementById("sidebar-activite").textContent = user.activite;
-  document.getElementById("sidebar-id").textContent = "ID: " + user.id;
-  document.getElementById("titre-bienvenue").textContent ="Bonjour, " + user.entreprisename;
-  document.getElementById("nom-entrepise").textContent = user.entreprisename;
+  const sidebarNom = document.getElementById("sidebar-nom");
+  const sidebarActivite = document.getElementById("sidebar-activite");
+  const sidebarId = document.getElementById("sidebar-id");
+  const welcoming = document.getElementById("titre-bienvenue");
+  const entrepise = document.getElementById("entrepise");
+
+  if (sidebarNom) sidebarNom.textContent = user.nom;
+  if (sidebarActivite) sidebarActivite.textContent = user.activite;
+  if (sidebarId) sidebarId.textContent = "ID: " + user.id;
+  if (welcoming) welcoming.textContent ="Bonjour, " + user.entreprisename;
+  if (entrepise) entrepise.textContent = user.entreprisename;
 }
