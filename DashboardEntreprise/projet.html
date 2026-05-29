@@ -27,8 +27,9 @@
       <div class="profil">
         <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
         <div>
-          <strong>Jean Dupont</strong>
-          <span>Gestionnaire Entreprise</span>
+          <strong id="sidebar-nom"></strong>
+          <span id="sidebar-activite"></span>
+          <span id="sidebar-id"></span>
         </div>
       </div>
       <nav class="nav-sidebar">
@@ -50,7 +51,7 @@
 
       <div class="page-entete">
         <div>
-          <h1>Côte d'Ivoire Construction SA</h1>
+          <h1 id="nom-entrepise"></h1>
           <p>Bienvenue dans votre espace de pilotage. Voici l'état de vos chantiers aujourd'hui.</p>
         </div>
       </div>
@@ -110,6 +111,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="../Script/localisationProj.js"></script>
+  <script src="../Script/entreprise.js"></script>
   <script src="../Script/auth.js"></script>
 </body>
 </html>

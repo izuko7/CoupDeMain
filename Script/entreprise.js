@@ -7,5 +7,5 @@ if (user) {
   document.getElementById("sidebar-activite").textContent = user.activite;
   document.getElementById("sidebar-id").textContent = "ID: " + user.id;
   document.getElementById("titre-bienvenue").textContent ="Bonjour, " + user.entreprisename;
-
+  document.getElementById("nom-entrepise").textContent = user.entreprisename;
 }
