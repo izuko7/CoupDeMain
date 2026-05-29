@@ -191,11 +191,11 @@ body {
 /* ── CARTE + PANEL ── */
 .carte-wrap {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 300px 1fr;
     border-radius: 14px;
     overflow: hidden;
     border: 1px solid #ddd;
-    height: 520px;
+    height: 580px;
     flex-shrink: 0;
 }
 
@@ -214,6 +214,7 @@ body {
     justify-content: space-between;
     padding: 16px 16px 12px;
     border-bottom: 1px solid #eee;
+    flex-shrink: 0;
 }
 
 .panel-entete h2 {
@@ -228,6 +229,10 @@ body {
     font-weight: 700;
     padding: 3px 10px;
     border-radius: 20px;
+}
+
+.projets-liste {
+    overflow-y: auto;
 }
 
 .projet-item {
@@ -318,27 +323,92 @@ body {
     color: #3b5bdb;
 }
 
-.mini-barre {
-    height: 4px;
-    background: #eee;
-    border-radius: 99px;
-    overflow: hidden;
+/* ── SECTION AJOUT ── */
+.ajout-section {
+    padding: 14px 16px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
-.mini-fill {
-    height: 100%;
-    border-radius: 99px;
+.ajout-titre {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1a3a4a;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.mini-fill.vert {
-    background: #22c55e;
+.ajout-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #111;
+    outline: none;
+    background: #f7f9fb;
 }
 
-/* PROGRESSION GLOBALE */
+.ajout-input:focus {
+    border-color: #1a3a4a;
+    background: #fff;
+}
+
+.ajout-input::placeholder {
+    color: #bbb;
+}
+
+.ajout-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #f7f9fb;
+    outline: none;
+    cursor: pointer;
+}
+
+.ajout-hint {
+    font-size: 11px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bouton-ajout {
+    width: 100%;
+    padding: 9px;
+    background: #1a3a4a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.bouton-ajout:hover {
+    background: #24536b;
+}
+
+/* ── PROGRESSION GLOBALE ── */
 .progression-globale {
     margin-top: auto;
     padding: 16px;
     border-top: 1px solid #eee;
+    flex-shrink: 0;
 }
 
 .prog-entete {
@@ -374,148 +444,11 @@ body {
     border-radius: 99px;
 }
 
-/* ── CARTE ── */
-.carte {
-    position: relative;
-    overflow: hidden;
-}
-
-.carte-fond {
+/* ── CARTE LEAFLET ── */
+#map {
     width: 100%;
     height: 100%;
-    background:
-        radial-gradient(ellipse at 55% 50%, #1e3a5f 0%, #0d1f35 60%, #060f1f 100%);
-    position: relative;
-}
-
-/* Simuler les routes avec des pseudo-éléments */
-.carte-fond::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(35deg, transparent 45%, rgba(255, 255, 255, 0.06) 46%, rgba(255, 255, 255, 0.06) 47%, transparent 48%),
-        linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.05) 31%, rgba(255, 255, 255, 0.05) 32%, transparent 33%),
-        linear-gradient(80deg, transparent 55%, rgba(255, 255, 255, 0.04) 56%, rgba(255, 255, 255, 0.04) 58%, transparent 59%),
-        linear-gradient(160deg, transparent 40%, rgba(255, 255, 255, 0.04) 41%, rgba(255, 255, 255, 0.04) 43%, transparent 44%);
-}
-
-/* Contrôles */
-.carte-controles {
-    position: absolute;
-    right: 16px;
-    bottom: 48px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    z-index: 5;
-}
-
-.ctrl-btn {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 34px;
-    height: 34px;
-    font-size: 13px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    transition: background 0.15s;
-}
-
-.ctrl-btn:hover {
-    background: #f2f4f7;
-}
-
-.ctrl-btn.calque {
-    width: auto;
-    padding: 0 12px;
-    font-size: 11px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    gap: 6px;
-}
-
-/* Légende */
-.carte-legende {
-    position: absolute;
-    bottom: 14px;
-    left: 16px;
-    display: flex;
-    gap: 14px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(4px);
-    padding: 6px 12px;
-    border-radius: 8px;
-    z-index: 5;
-}
-
-.leg-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    color: #fff;
-}
-
-.leg-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-}
-
-.leg-dot.vert {
-    background: #22c55e;
-}
-
-.leg-dot.bleu {
-    background: #60a5fa;
-}
-
-.leg-dot.orange {
-    background: #f97316;
-}
-
-/* Marqueurs */
-.marqueur {
-    position: absolute;
-    z-index: 4;
-    cursor: pointer;
-}
-
-.marqueur i {
-    font-size: 22px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-}
-
-.marqueur.vert i {
-    color: #22c55e;
-}
-
-.marqueur.bleu i {
-    color: #60a5fa;
-}
-
-.marqueur.orange i {
-    color: #f97316;
-}
-
-.tooltip-carte {
-    position: absolute;
-    bottom: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    color: #111;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 6px;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* ── FOOTER ── */
