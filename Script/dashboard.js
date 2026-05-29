@@ -1,8 +1,8 @@
 // Afficher les identifiants des utilisateurs sur le dashboard Pro et protéger la page
 
-const user1 = protegerPage("professionnel");
+const user = protegerPage("professionnel");
 
-if (user1) {
+if (user) {
   document.getElementById("sidebar-nom").textContent = user.nom;
   document.getElementById("sidebar-metier").textContent = user.metier;
   document.getElementById("sidebar-id").textContent = "ID: " + user.id;
@@ -12,9 +12,6 @@ if (user1) {
   document.getElementById("mois-actuel").textContent = mois.toUpperCase();
 }
 
-// Afficher les identifiants des utilisateurs sur le dashboard Entreprise et protéger la page
-
-// const user2 = protegerPage("")
 
 
 // Filtrage des projets
