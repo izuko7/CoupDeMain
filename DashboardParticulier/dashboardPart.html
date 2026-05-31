@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="dashboardPart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>CoupdeMain | Tableau de bord</title>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+    </div>
+    <div class="nav-icones">
+      <span class="cloche"><i class="fa-solid fa-bell"></i><span class="pastille"></span></span>
+      <i class="fa-solid fa-message"></i>
+      <div class="avatar"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="carte-profil">
+        <strong id="sidebar-nom">Jean Dupont</strong>
+        <span id="sidebar-activite">Maçonnerie Générale</span>
+        <span id="sidebar-id">ID: #882-9410</span>
+      </div>
+
+      <nav class="nav-sidebar">
+        <a href="#" class="lien active"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
+        <a href="#" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="#" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
+        <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <button class="bouton-poster"><i class="fa-solid fa-plus"></i> Nouveau Projet</button>
+
+      <div class="liens-bas">
+        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+      </div>
+    </aside>
+
+    <main class="principal">
+
+      <!-- EN-TETE -->
+      <div class="page-entete">
+        <div>
+          <h1 id="titre-bienvenue">Bonjour, Moussa 👋</h1>
+          <p>Voici l'état d'avancement de vos travaux et vos dernières opportunités.</p>
+        </div>
+        <button class="bouton-telecharger"><i class="fa-solid fa-download"></i> Télécharger rapports</button>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-house-chimney stat-icon"></i>
+            <span class="badge-vert">+1 cette semaine</span>
+          </div>
+          <p class="stat-label">Projets en cours</p>
+          <p class="stat-valeur">03</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <i class="fa-solid fa-file-lines stat-icon orange"></i>
+            <span class="badge-orange">Urgent</span>
+          </div>
+          <p class="stat-label">Devis en attente</p>
+          <p class="stat-valeur">07</p>
+        </div>
+
+        <div class="stat-card dark">
+          <div class="stat-top-dark">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <p class="stat-label-dark">Budget total engagé</p>
+          <p class="stat-valeur-dark">4.2M <small>CFA</small></p>
+        </div>
+      </div>
+
+      <!-- CONTENU -->
+      <div class="contenu">
+        <div class="gauche">
+
+          <!-- PROJETS ACTIFS -->
+          <section>
+            <div class="section-entete">
+              <h2>Projets Actifs</h2>
+              <a href="#" class="voir-tout">Voir tout →</a>
+            </div>
+            <div class="projets-grid">
+
+              <div class="projet-card">
+                <div class="projet-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Rénovation Cuisine" />
+                  <span class="badge-ok"><i class="fa-solid fa-circle-check"></i></span>
+                </div>
+                <div class="projet-body">
+                  <h3>Rénovation Cuisine</h3>
+                  <p class="projet-lieu">Dakar, Almadies · Plomberie & Électricité</p>
+                  <div class="progression-ligne">
+                    <span>Progression</span>
+                    <span>65%</span>
+                  </div>
+                  <div class="barre"><div class="barre-fill bleu" style="width:65%"></div></div>
+                </div>
+              </div>
+
+              <div class="projet-card">
+                <div class="projet-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80" alt="Villa Dakar" />
+                  <span class="badge-action">ACTION REQUISE</span>
+                </div>
+                <div class="projet-body">
+                  <h3>Villa Dakar</h3>
+                  <p class="projet-lieu">Dakar, Plateau · Gros Œuvre</p>
+                  <div class="progression-ligne">
+                    <span>Progression</span>
+                    <span>20%</span>
+                  </div>
+                  <div class="barre"><div class="barre-fill rouge" style="width:20%"></div></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- DEVIS -->
+          <section>
+            <h2>Derniers Devis Reçus</h2>
+            <div class="devis-liste">
+
+              <div class="devis-item">
+                <div class="devis-icone"><i class="fa-solid fa-wrench"></i></div>
+                <div class="devis-info">
+                  <strong>Installation Sanitaire</strong>
+                  <span>Sarr & Fils · Expert Plombier</span>
+                </div>
+                <div class="devis-droite">
+                  <span class="devis-montant">850,000 CFA</span>
+                  <span class="badge-verifie">Vérifié</span>
+                </div>
+              </div>
+
+              <div class="devis-item">
+                <div class="devis-icone"><i class="fa-solid fa-wrench"></i></div>
+                <div class="devis-info">
+                  <strong>Maçonnerie Clôture</strong>
+                  <span>BTP Afrique SARL</span>
+                </div>
+                <div class="devis-droite">
+                  <span class="devis-montant">1,200,000 CFA</span>
+                  <span class="devis-time">Il y a 2h</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+        <!-- SIDEBAR DROITE -->
+        <aside class="droite">
+
+          <div class="widget">
+            <div class="widget-entete">
+              <h2>Messages récents</h2>
+              <span class="badge-notif">●</span>
+            </div>
+
+            <div class="message-item">
+              <img src="https://i.pravatar.cc/36?img=47" alt="Fatou Diop" />
+              <div class="msg-info">
+                <div class="msg-haut">
+                  <strong>Fatou Diop</strong>
+                  <span class="msg-heure">10:45</span>
+                </div>
+                <p>Les plans de la villa ont été...</p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img src="https://i.pravatar.cc/36?img=12" alt="Jean Kambou" />
+              <div class="msg-info">
+                <div class="msg-haut">
+                  <strong>Jean Kambou</strong>
+                  <span class="msg-heure">Hier</span>
+                </div>
+                <p>Le matériel pour la cuisine...</p>
+              </div>
+            </div>
+
+            <button class="bouton-messagerie">Ouvrir la messagerie</button>
+          </div>
+
+          <div class="widget dark">
+            <p class="widget-accroche">Assurez votre chantier</p>
+            <p class="widget-desc">Bénéficiez de 15% de réduction sur l'assurance dommages-ouvrage avec notre partenaire AXA.</p>
+            <button class="bouton-savoir">En savoir plus</button>
+          </div>
+
+        </aside>
+      </div>
+
+      <footer class="pied">
+        <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+        <div class="pied-liens">
+          <a href="#">À propos</a>
+          <a href="#">Conditions Générales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Recrutement</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/connexion.js"></script>
+</body>
+</html>
