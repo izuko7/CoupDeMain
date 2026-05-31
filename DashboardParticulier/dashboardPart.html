@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="dashboardPart.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>CoupdeMain | Tableau de bord</title>
 </head>
+
 <body>
 
   <header class="navbar">
@@ -24,9 +27,9 @@
 
     <aside class="sidebar">
       <div class="carte-profil">
-        <strong id="sidebar-nom">Jean Dupont</strong>
-        <span id="sidebar-activite">Maçonnerie Générale</span>
-        <span id="sidebar-id">ID: #882-9410</span>
+        <h4 id="sidebar-nom"></h4>
+        <p id="sidebar-projet"></p>
+        <span id="sidebar-ide"></span>
       </div>
 
       <nav class="nav-sidebar">
@@ -42,7 +45,7 @@
 
       <div class="liens-bas">
         <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
       </div>
     </aside>
 
@@ -51,7 +54,7 @@
       <!-- EN-TETE -->
       <div class="page-entete">
         <div>
-          <h1 id="titre-bienvenue">Bonjour, Moussa 👋</h1>
+          <h1 id="titre-bienvenue"></h1>
           <p>Voici l'état d'avancement de vos travaux et vos dernières opportunités.</p>
         </div>
         <button class="bouton-telecharger"><i class="fa-solid fa-download"></i> Télécharger rapports</button>
@@ -100,7 +103,8 @@
 
               <div class="projet-card">
                 <div class="projet-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Rénovation Cuisine" />
+                  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80"
+                    alt="Rénovation Cuisine" />
                   <span class="badge-ok"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="projet-body">
@@ -110,13 +114,16 @@
                     <span>Progression</span>
                     <span>65%</span>
                   </div>
-                  <div class="barre"><div class="barre-fill bleu" style="width:65%"></div></div>
+                  <div class="barre">
+                    <div class="barre-fill bleu" style="width:65%"></div>
+                  </div>
                 </div>
               </div>
 
               <div class="projet-card">
                 <div class="projet-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80" alt="Villa Dakar" />
+                  <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80"
+                    alt="Villa Dakar" />
                   <span class="badge-action">ACTION REQUISE</span>
                 </div>
                 <div class="projet-body">
@@ -126,7 +133,9 @@
                     <span>Progression</span>
                     <span>20%</span>
                   </div>
-                  <div class="barre"><div class="barre-fill rouge" style="width:20%"></div></div>
+                  <div class="barre">
+                    <div class="barre-fill rouge" style="width:20%"></div>
+                  </div>
                 </div>
               </div>
 
@@ -203,7 +212,8 @@
 
           <div class="widget dark">
             <p class="widget-accroche">Assurez votre chantier</p>
-            <p class="widget-desc">Bénéficiez de 15% de réduction sur l'assurance dommages-ouvrage avec notre partenaire AXA.</p>
+            <p class="widget-desc">Bénéficiez de 15% de réduction sur l'assurance dommages-ouvrage avec notre partenaire
+              AXA.</p>
             <button class="bouton-savoir">En savoir plus</button>
           </div>
 
@@ -223,6 +233,7 @@
     </main>
   </div>
   <script src="../Script/auth.js"></script>
-  <script src="../Script/connexion.js"></script>
+  <script src="../Script/particulier.js"></script>
 </body>
+
 </html>
