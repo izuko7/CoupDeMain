@@ -16,12 +16,3 @@ if (user) {
   if (welcoming) welcoming.textContent ="Bonjour, " + user.nom + "👋";
   if (entrepise) entrepise.textContent = user.nom;
 }
-
-// if (user) {
-//   document.getElementById("sidebar-nom").textContent = user.nom;
-//   document.getElementById("sidebar-metier").textContent = user.metier;
-//   document.getElementById("sidebar-id").textContent = "ID: " + user.id;
-//   document.getElementById("titre-bienvenue").textContent ="Bonjour, " + user.nom;
-
- 
-// }

@@ -24,9 +24,9 @@
 
     <aside class="sidebar">
       <div class="carte-profil">
-        <strong id="sidebar-nom">Jean Dupont</strong>
-        <span id="sidebar-activite">Maçonnerie Générale</span>
-        <span id="sidebar-id">ID: #882-9410</span>
+        <h4 id="sidebar-nom"></h4>
+        <p id="sidebar-projet"></p>
+        <span id="sidebar-ide"></span>
       </div>
 
       <nav class="nav-sidebar">
@@ -42,7 +42,7 @@
 
       <div class="liens-bas">
         <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
       </div>
     </aside>
 
@@ -219,6 +219,7 @@
       <a href="#">Recrutement</a>
     </div>
   </footer>
-
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/particulier.js"></script>
 </body>
 </html>

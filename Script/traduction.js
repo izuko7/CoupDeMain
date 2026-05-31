@@ -4,9 +4,9 @@ const traductions = {
     "nav.inscrire": "S'inscrire",
 
     "hero.titre":
-      "Trouvez le bon professionnel pour vos travaux en quelques clics",
+    "Trouvez le bon professionnel pour vos travaux en quelques clics",
     "hero.description":
-      "La plateforme de confiance qui connecte les particuliers et entreprises avec les meilleurs artisans certifiés du BTP en Afrique.",
+    "La plateforme de confiance qui connecte les particuliers et entreprises avec les meilleurs artisans certifiés du BTP en Afrique.",
     "hero.search.metier": "Quel métier recherchez-vous ?",
     "hero.search.localisation": "Localisation",
     "hero.search.bouton": "Rechercher",
