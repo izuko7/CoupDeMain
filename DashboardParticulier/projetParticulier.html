@@ -11,14 +11,11 @@
 
 <body>
 
-    <!-- menu burgur Overlay -->
-
-    <div class="overlay" id="overlay" onclick="fermerMenu()">
-        <i class="fa-solid fa-bars-staggered"></i>
-    </div>
+    <!-- Overlay menu burger -->
+    <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
 
     <!-- BARRE LATERALE -->
-    <aside class="barre-laterale">
+    <aside class="barre-laterale" id="sidebar">
         <div class="logo">
             <img src="../Ressources/images/logo.png" alt="Coup de Main" />
         </div>
@@ -59,7 +56,10 @@
 
         <!-- EN-TETE -->
         <header class="en-tete">
-            <div></div>
+            <!-- Bouton burger (visible sur mobile uniquement) -->
+            <button class="btn-burger" onclick="ouvrirMenu()" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
             <div class="icones">
                 <span class="icone"><i class="fa-regular fa-bell"></i></span>
                 <div class="avatar"></div>
@@ -224,8 +224,7 @@
             <div class="cta-bloc">
                 <div class="cta-icone"><i class="fa-solid fa-location-dot"></i></div>
                 <h3>Un nouveau besoin ?</h3>
-                <p>Décrivez votre projet et trouvez les meilleurs artisans de professionnels vérifiés dans votre région.
-                </p>
+                <p>Décrivez votre projet et trouvez les meilleurs artisans de professionnels vérifiés dans votre région.</p>
                 <button class="btn-cta">
                     <i class="fa-solid fa-plus"></i> Publier un nouveau projet
                 </button>
@@ -236,13 +235,7 @@
 
     <script src="../Script/auth.js"></script>
     <script src="../Script/particulier.js"></script>
-    <!-- <script>
-        const user = protegerPage("particulier");
-        if (user) {
-            document.getElementById("sidebar-nom").textContent = user.nom;
-            document.getElementById("sidebar-id").textContent = "ID: #" + user.id;
-        }
-    </script> -->
+    <script src="../Script/burgurMenu.js"></script>
 </body>
 
 </html>

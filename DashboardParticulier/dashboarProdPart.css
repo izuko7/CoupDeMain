@@ -14,6 +14,24 @@ body {
     overflow: hidden;
 }
 
+/* ── OVERLAY (menu burger mobile) ── */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 90;
+    cursor: pointer;
+}
+
+.overlay i {
+    display: none; 
+}
+
+.overlay.actif {
+    display: block;
+}
+
 /* ── SIDEBAR ── */
 .barre-laterale {
     width: 220px;
@@ -24,6 +42,8 @@ body {
     padding: 24px 16px;
     gap: 20px;
     border-right: 1px solid #eee;
+    /* transition pour le slide mobile */
+    transition: transform 0.28s ease;
 }
 
 .logo img {
@@ -133,6 +153,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-width: 0; /* empêche le débordement en flexbox */
 }
 
 .en-tete {
@@ -163,6 +184,22 @@ body {
     border-radius: 50%;
     background: #1a3a4a url('https://i.pravatar.cc/36') center/cover;
     cursor: pointer;
+}
+
+/* ── BURGER (caché sur desktop) ── */
+.btn-burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 16px;
+    color: #1a3a4a;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
 /* ── PAGE ── */
@@ -246,6 +283,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
 .btn-filtrer:hover {
@@ -511,6 +549,7 @@ body {
     display: flex;
     align-items: center;
     gap: 28px;
+    flex-wrap: wrap;
 }
 
 .stat-item {
@@ -608,7 +647,9 @@ body {
     border-radius: 4px;
 }
 
-/* ── RESPONSIVE ── */
+/* ════════════════════════════════
+   RESPONSIVE – Tablette (≤ 900px)
+   ════════════════════════════════ */
 @media (max-width: 900px) {
     .grille-chantiers {
         grid-template-columns: 1fr;
@@ -620,14 +661,17 @@ body {
 
     .carte-chantier.large .carte-image {
         width: 100%;
-        height: 180px;
+        height: 200px;
+        min-width: unset;
     }
 }
 
-/* ── RESPONSIVE ── */
+/* ════════════════════════════════
+   RESPONSIVE – Mobile (≤ 768px)
+   ════════════════════════════════ */
 @media (max-width: 768px) {
 
-    /* Sidebar cachée par défaut, slide depuis la gauche */
+    /* Sidebar : cachée, slide depuis la gauche */
     .barre-laterale {
         position: fixed;
         top: 0;
@@ -635,36 +679,28 @@ body {
         height: 100vh;
         z-index: 100;
         transform: translateX(-100%);
-        transition: transform 0.28s ease;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
     }
 
     .barre-laterale.ouvert {
         transform: translateX(0);
     }
 
-    /* Le contenu prend toute la largeur */
-    .principal {
-        margin-left: 0;
-    }
-
     /* Burger visible */
     .btn-burger {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        background: #fff;
-        font-size: 16px;
-        color: #1a3a4a;
-        cursor: pointer;
     }
 
-    /* En-tête : burger à gauche, icones à droite */
+    /* En-tête */
     .en-tete {
+        padding: 12px 16px;
         justify-content: space-between;
+    }
+
+    /* Page padding réduit */
+    .page {
+        padding: 20px 16px;
+        gap: 16px;
     }
 
     /* Page haut en colonne */
@@ -673,16 +709,22 @@ body {
         gap: 12px;
     }
 
+    .page-haut h1 {
+        font-size: 20px;
+    }
+
     .barre-droite {
         width: 100%;
     }
 
     .recherche {
         flex: 1;
+        min-width: 0;
     }
 
     .recherche input {
         width: 100%;
+        min-width: 0;
     }
 
     /* Grille 1 colonne */
@@ -698,14 +740,76 @@ body {
     .carte-chantier.large .carte-image {
         width: 100%;
         height: 180px;
+        min-width: unset;
     }
 
-    /* Page padding réduit */
-    .page {
-        padding: 20px 16px;
+    /* Resume stats sur mobile */
+    .separateur-vertical {
+        display: none;
     }
 
-    .en-tete {
-        padding: 12px 16px;
+    .resume-stats {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    /* CTA padding réduit */
+    .cta-bloc {
+        padding: 24px 16px;
+    }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Petit mobile (≤ 480px)
+   ════════════════════════════════ */
+@media (max-width: 480px) {
+
+    .page-haut h1 {
+        font-size: 18px;
+    }
+
+    .barre-droite {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-filtrer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carte-haut {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .ref {
+        font-size: 10px;
+    }
+
+    .stat-val {
+        font-size: 17px;
+    }
+
+    .resume {
+        padding: 18px 16px;
+    }
+
+    .resume-stats {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .separateur-vertical {
+        display: none;
+    }
+
+    .cta-bloc {
+        padding: 20px 14px;
+    }
+
+    .btn-cta {
+        width: 100%;
+        justify-content: center;
     }
 }
