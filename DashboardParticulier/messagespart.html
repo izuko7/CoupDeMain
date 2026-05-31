@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Messagespart.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>CoupdeMain | Mes Messages</title>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+    </div>
+    <div class="nav-icones">
+      <span class="cloche"><i class="fa-solid fa-bell"></i><span class="pastille"></span></span>
+      <div class="avatar"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="carte-profil">
+        <strong id="sidebar-nom">Jean Dupont</strong>
+        <span id="sidebar-activite">Maçonnerie Générale</span>
+        <span id="sidebar-id">ID: #882-9410</span>
+      </div>
+
+      <nav class="nav-sidebar">
+        <a href="dashboardPart.html" class="lien"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
+        <a href="messagespart.html" class="lien active"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="#" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
+        <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <button class="bouton-poster"><i class="fa-solid fa-plus"></i> Nouveau Projet</button>
+
+      <div class="liens-bas">
+        <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+      </div>
+    </aside>
+
+    <main class="principal">
+
+      <!-- BARRE RECHERCHE -->
+      <div class="barre-recherche">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Rechercher une conversation..." />
+      </div>
+
+      <div class="messagerie">
+
+        <!-- COLONNE 1 : conversations -->
+        <div class="col-conv">
+          <p class="col-titre">Conversations</p>
+          <div class="conversations">
+
+            <div class="conv active">
+              <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Jean Dupont</span>
+                  <span class="conv-heure">14:20</span>
+                </div>
+                <span class="conv-metier maconnerie">Maçonnerie</span>
+                <p class="conv-apercu">"Voici le devis mis à jour..."</p>
+              </div>
+            </div>
+
+            <div class="conv">
+              <img src="https://i.pravatar.cc/40?img=12" alt="Sékou Coulibaly" />
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Sékou Coulibaly</span>
+                  <span class="conv-heure">Hier</span>
+                </div>
+                <span class="conv-metier electricien">Électricien</span>
+                <p class="conv-apercu">C'est noté pour mardi 9h.</p>
+              </div>
+            </div>
+
+            <div class="conv">
+              <img src="https://i.pravatar.cc/40?img=47" alt="Marie Curie" />
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Marie Curie</span>
+                  <span class="conv-heure">Lun</span>
+                </div>
+                <span class="conv-metier plomberie">Plomberie</span>
+                <p class="conv-apercu">Les tuyaux sont arrivés.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLONNE 2 : chat -->
+        <div class="col-chat">
+
+          <div class="chat-entete">
+            <div class="chat-interlocuteur">
+              <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
+              <div>
+                <span class="chat-nom">Jean Dupont · <span class="chat-metier">Maçon</span></span>
+                <span class="chat-statut"><span class="dot-vert"></span> En ligne</span>
+              </div>
+            </div>
+            <div class="chat-actions">
+              <button class="btn-action"><i class="fa-solid fa-folder-open"></i> Voir le projet</button>
+              <button class="btn-action dark"><i class="fa-solid fa-check"></i> Valider Devis</button>
+            </div>
+          </div>
+
+          <div class="messages-zone">
+            <div class="separateur-date">Aujourd'hui</div>
+
+            <div class="message systeme">
+              <div class="bulle-systeme">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                  <strong>Contexte du Projet : Rénovation Mur Clôture</strong>
+                  <p>Discussion relative à l'agrandissement de l'ouverture principale et au renforcement des fondations côté est.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="message recu">
+              <img src="https://i.pravatar.cc/32?img=3" alt="" class="msg-avatar" />
+              <div class="bulle bulle-recue">
+                <p>Bonjour M. Leroy, j'ai bien pris en compte vos remarques sur le chaînage horizontal. C'est tout à fait faisable.</p>
+                <span class="msg-heure">9:14</span>
+              </div>
+            </div>
+
+            <div class="message envoye">
+              <div class="bulle bulle-envoyee">
+                <p>Super. Avez-vous pu estimer le surplus de matériaux pour cette modification ? Voici une photo du coin dont je parlais.</p>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80" alt="Chantier" class="msg-image" />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="saisie-wrap">
+            <div class="saisie">
+              <button class="btn-saisie"><i class="fa-solid fa-circle-plus"></i></button>
+              <button class="btn-saisie"><i class="fa-regular fa-image"></i></button>
+              <input type="text" placeholder="Écrire un message..." class="saisie-input" />
+              <button class="btn-saisie"><i class="fa-regular fa-face-smile"></i></button>
+              <button class="btn-envoyer"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <p class="saisie-info">© Communications sécurisées et archivées par BTP Marché.</p>
+          </div>
+        </div>
+
+        <!-- COLONNE 3 : détails -->
+        <div class="col-details">
+          <p class="col-titre">Détails du projet</p>
+
+          <div class="statut-row">
+            <span class="statut-label">STATUT</span>
+            <span class="statut-badge">En cours</span>
+          </div>
+
+          <div class="details-section">
+            <div class="details-entete">
+              <span>Documents (12)</span>
+              <a href="#" class="voir-tout">Voir tout</a>
+            </div>
+            <div class="fichier">
+              <i class="fa-solid fa-file-pdf fichier-icon rouge"></i>
+              <div>
+                <p class="fichier-nom">Plan_Fondations.pdf</p>
+                <p class="fichier-date">2.4 MB · 12/11/23</p>
+              </div>
+            </div>
+            <div class="fichier">
+              <i class="fa-solid fa-file-image fichier-icon bleu"></i>
+              <div>
+                <p class="fichier-nom">Vue_Angle_Nord.jpg</p>
+                <p class="fichier-date">1.1 MB · 15/12/23</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="artisan-card">
+            <div class="artisan-haut">
+              <i class="fa-solid fa-circle-check artisan-check"></i>
+              <strong>Artisan Vérifié</strong>
+            </div>
+            <p class="artisan-desc">Jean Dupont est un expert en maçonnerie avec 15 ans d'expérience. Note moyenne : 4.9/5.</p>
+            <div class="etoiles">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="pied">
+    <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+    <div class="pied-liens">
+      <a href="#">À propos</a>
+      <a href="#">Conditions Générales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">Recrutement</a>
+    </div>
+  </footer>
+
+</body>
+</html>

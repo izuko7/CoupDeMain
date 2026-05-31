@@ -1,0 +1,773 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f2f4f7;
+    color: #111;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    height: 44px;
+}
+
+.nav-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.cloche {
+    position: relative;
+    cursor: pointer;
+}
+
+.pastille {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background: #e8601c;
+    border-radius: 50%;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1a3a4a url("https://i.pravatar.cc/36") center/cover;
+    cursor: pointer;
+}
+
+/* ── LAYOUT ── */
+.layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+    width: 170px;
+    min-width: 170px;
+    background: #fff;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 14px;
+    gap: 16px;
+}
+
+.carte-profil {
+    background: #f7f9fb;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.carte-profil strong {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.carte-profil span {
+    font-size: 11px;
+    color: #888;
+}
+
+.nav-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lien {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #555;
+    transition: background 0.15s;
+}
+
+.lien:hover {
+    background: #f2f4f7;
+}
+
+.lien.active {
+    background: #f0f5f8;
+    color: #1a3a4a;
+    font-weight: 600;
+}
+
+.lien i {
+    font-size: 13px;
+    width: 15px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.bouton-poster {
+    background: #c0442a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.bouton-poster:hover {
+    background: #a83820;
+}
+
+.liens-bas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.liens-bas a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+}
+
+.liens-bas a:hover {
+    color: #333;
+}
+
+/* ── PRINCIPAL ── */
+.principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px 20px 0;
+    gap: 14px;
+}
+
+.barre-recherche {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 16px;
+    flex-shrink: 0;
+}
+
+.barre-recherche i {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.barre-recherche input {
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #111;
+    width: 100%;
+}
+
+.barre-recherche input::placeholder {
+    color: #bbb;
+}
+
+/* ── MESSAGERIE ── */
+.messagerie {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    flex: 1;
+    min-height: 0;
+}
+
+/* ── CONVERSATIONS ── */
+.col-conv {
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.col-titre {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 14px 10px;
+    flex-shrink: 0;
+}
+
+.conversations {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.conv {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: background 0.15s;
+}
+
+.conv:hover {
+    background: #f7f9fb;
+}
+
+.conv.active {
+    background: #f0f5f8;
+    border-left-color: #1a3a4a;
+}
+
+.conv img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.conv-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.conv-haut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.conv-nom {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.conv-heure {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.conv-metier {
+    font-size: 10px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.conv-metier.maconnerie {
+    color: #c0442a;
+}
+
+.conv-metier.electricien {
+    color: #f97316;
+}
+
+.conv-metier.plomberie {
+    color: #3b82f6;
+}
+
+.conv-apercu {
+    font-size: 11px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── CHAT ── */
+.col-chat {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #eee;
+    overflow: hidden;
+}
+
+.chat-entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.chat-interlocuteur {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-interlocuteur img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-nom {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.chat-metier {
+    color: #888;
+    font-weight: 400;
+}
+
+.chat-statut {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #22c55e;
+}
+
+.dot-vert {
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+}
+
+.btn-action:hover {
+    background: #f2f4f7;
+}
+
+.btn-action.dark {
+    background: #1a3a4a;
+    color: #fff;
+    border-color: #1a3a4a;
+}
+
+.btn-action.dark:hover {
+    background: #24536b;
+}
+
+.messages-zone {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.separateur-date {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #bbb;
+    background: #f2f4f7;
+    padding: 4px 14px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.message.envoye {
+    flex-direction: row-reverse;
+}
+
+.message.systeme {
+    justify-content: center;
+}
+
+.msg-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.bulle-systeme {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #1a3a4a;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+    max-width: 80%;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.bulle-systeme i {
+    color: #60a5fa;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bulle-systeme strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.bulle {
+    max-width: 75%;
+    border-radius: 12px;
+    padding: 10px 12px;
+}
+
+.bulle-recue {
+    background: #f2f4f7;
+    border-bottom-left-radius: 3px;
+}
+
+.bulle-recue p {
+    font-size: 12px;
+    color: #111;
+    line-height: 1.5;
+}
+
+.bulle-envoyee {
+    background: #1a3a4a;
+    border-bottom-right-radius: 3px;
+}
+
+.bulle-envoyee p {
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.msg-heure {
+    display: block;
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+.bulle-envoyee .msg-heure {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+}
+
+.msg-image {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: block;
+}
+
+.saisie-wrap {
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.saisie {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+}
+
+.btn-saisie {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    color: #bbb;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-saisie:hover {
+    color: #555;
+}
+
+.saisie-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #111;
+    background: transparent;
+}
+
+.saisie-input::placeholder {
+    color: #bbb;
+}
+
+.btn-envoyer {
+    width: 34px;
+    height: 34px;
+    background: #1a3a4a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn-envoyer:hover {
+    background: #24536b;
+}
+
+.saisie-info {
+    text-align: center;
+    font-size: 9px;
+    color: #ccc;
+    font-weight: 600;
+    padding: 4px 14px 8px;
+}
+
+/* ── DETAILS ── */
+.col-details {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 14px;
+    gap: 14px;
+}
+
+.statut-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f9fb;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.statut-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #aaa;
+    letter-spacing: 0.06em;
+}
+
+.statut-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0d9e75;
+    background: #e6f7f1;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details-entete span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.voir-tout {
+    font-size: 11px;
+    color: #1a3a4a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fichier {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fichier-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.fichier-icon.rouge {
+    color: #e25b45;
+}
+
+.fichier-icon.bleu {
+    color: #3b82f6;
+}
+
+.fichier-nom {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.fichier-date {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.artisan-card {
+    background: #f7f9fb;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.artisan-haut {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.artisan-check {
+    color: #22c55e;
+    font-size: 16px;
+}
+
+.artisan-haut strong {
+    font-size: 13px;
+}
+
+.artisan-desc {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.etoiles {
+    display: flex;
+    gap: 3px;
+    color: #f59e0b;
+    font-size: 14px;
+}
+
+/* ── FOOTER ── */
+.pied {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 20px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.pied p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.pied-liens {
+    display: flex;
+    gap: 16px;
+}
+
+.pied-liens a {
+    font-size: 11px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.pied-liens a:hover {
+    color: #333;
+}
+
+/* ── SCROLLBAR ── */
+.conversations::-webkit-scrollbar,
+.messages-zone::-webkit-scrollbar,
+.col-details::-webkit-scrollbar {
+    width: 4px;
+}
+
+.conversations::-webkit-scrollbar-thumb,
+.messages-zone::-webkit-scrollbar-thumb,
+.col-details::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 99px;
+}
