@@ -10,7 +10,14 @@
 </head>
 <body>
 
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <header class="navbar">
+    <!-- Burger (mobile uniquement) -->
+    <button class="btn-burger" onclick="ouvrirMenu()" aria-label="Ouvrir le menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-logo">
       <img src="../Ressources/images/logo.png" alt="Coup de Main" />
     </div>
@@ -22,7 +29,7 @@
 
   <div class="layout">
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="carte-profil">
         <h4 id="sidebar-nom"></h4>
         <p id="sidebar-projet"></p>
@@ -48,7 +55,6 @@
 
     <main class="principal">
 
-      <!-- BARRE RECHERCHE -->
       <div class="barre-recherche">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Rechercher une conversation..." />
@@ -219,7 +225,9 @@
       <a href="#">Recrutement</a>
     </div>
   </footer>
+
   <script src="../Script/auth.js"></script>
   <script src="../Script/particulier.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 </html>

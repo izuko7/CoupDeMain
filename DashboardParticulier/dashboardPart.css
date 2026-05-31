@@ -61,6 +61,36 @@ body {
     cursor: pointer;
 }
 
+/* ── BURGER ── */
+.btn-burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 16px;
+    color: #1a3a4a;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ── OVERLAY ── */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 90;
+    cursor: pointer;
+}
+
+.overlay.actif {
+    display: block;
+}
+
 /* ── LAYOUT ── */
 .layout {
     display: flex;
@@ -77,6 +107,7 @@ body {
     flex-direction: column;
     padding: 24px 16px;
     gap: 16px;
+    transition: transform 0.28s ease;
 }
 
 .carte-profil {
@@ -183,6 +214,7 @@ body {
     flex-direction: column;
     gap: 24px;
     overflow-y: auto;
+    min-width: 0;
 }
 
 .page-entete {
@@ -190,6 +222,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .page-entete h1 {
@@ -217,6 +250,7 @@ body {
     align-items: center;
     gap: 8px;
     color: #333;
+    flex-shrink: 0;
 }
 
 .bouton-telecharger:hover {
@@ -461,6 +495,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 14px;
+    flex-wrap: wrap;
 }
 
 .devis-icone {
@@ -478,6 +513,7 @@ h2 {
 
 .devis-info {
     flex: 1;
+    min-width: 0;
 }
 
 .devis-info strong {
@@ -669,6 +705,7 @@ h2 {
 .pied-liens {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .pied-liens a {
@@ -679,4 +716,133 @@ h2 {
 
 .pied-liens a:hover {
     color: #333;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Tablette (≤ 1024px)
+   ════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    /* Sidebar droite passe sous le contenu */
+    .contenu {
+        grid-template-columns: 1fr;
+    }
+
+    .droite {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Mobile (≤ 768px)
+   ════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Sidebar cachée, slide depuis la gauche */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 100;
+        transform: translateX(-100%);
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .sidebar.ouvert {
+        transform: translateX(0);
+    }
+
+    /* Burger visible */
+    .btn-burger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .principal {
+        padding: 20px 16px;
+        gap: 18px;
+    }
+
+    /* En-tête page */
+    .page-entete {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-entete h1 {
+        font-size: 20px;
+    }
+
+    .bouton-telecharger {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stats : 2 colonnes */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Projets : 1 colonne */
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sidebar droite : 1 colonne */
+    .droite {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .pied {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .pied-liens {
+        gap: 12px;
+    }
+}
+
+/* RESPONSIVE – Petit mobile (≤ 480px)*/
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 56px;
+    }
+
+    .nav-logo img {
+        height: 36px;
+    }
+
+    /* Stats : 1 colonne */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-valeur,
+    .stat-valeur-dark {
+        font-size: 26px;
+    }
+
+    /* Devis : masquer le montant sous le nom */
+    .devis-item {
+        gap: 10px;
+    }
+
+    .page-entete h1 {
+        font-size: 18px;
+    }
 }

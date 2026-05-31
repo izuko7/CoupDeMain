@@ -63,11 +63,42 @@ body {
     cursor: pointer;
 }
 
+/* ── BURGER ── */
+.btn-burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 16px;
+    color: #1a3a4a;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ── OVERLAY ── */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 90;
+    cursor: pointer;
+}
+
+.overlay.actif {
+    display: block;
+}
+
 /* ── LAYOUT ── */
 .layout {
     display: flex;
     flex: 1;
     overflow: hidden;
+    min-height: 0;
 }
 
 /* ── SIDEBAR ── */
@@ -80,6 +111,7 @@ body {
     flex-direction: column;
     padding: 20px 14px;
     gap: 16px;
+    transition: transform 0.28s ease;
 }
 
 .carte-profil {
@@ -186,6 +218,7 @@ body {
     overflow: hidden;
     padding: 20px 20px 0;
     gap: 14px;
+    min-width: 0;
 }
 
 .barre-recherche {
@@ -340,6 +373,8 @@ body {
     padding: 12px 16px;
     border-bottom: 1px solid #eee;
     flex-shrink: 0;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .chat-interlocuteur {
@@ -384,6 +419,7 @@ body {
 .chat-actions {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .btn-action {
@@ -399,6 +435,7 @@ body {
     align-items: center;
     gap: 6px;
     color: #333;
+    white-space: nowrap;
 }
 
 .btn-action:hover {
@@ -554,6 +591,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .btn-saisie:hover {
@@ -568,6 +606,7 @@ body {
     font-size: 12px;
     color: #111;
     background: transparent;
+    min-width: 0;
 }
 
 .saisie-input::placeholder {
@@ -746,6 +785,7 @@ body {
 .pied-liens {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .pied-liens a {
@@ -770,4 +810,145 @@ body {
 .col-details::-webkit-scrollbar-thumb {
     background: #ddd;
     border-radius: 99px;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Tablette (≤ 1024px)
+   ════════════════════════════════ */
+@media (max-width: 1024px) {
+
+    /* Cacher la colonne détails */
+    .col-details {
+        display: none;
+    }
+
+    .messagerie {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .col-chat {
+        border-right: none;
+    }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Mobile (≤ 768px)
+   ════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Sidebar cachée */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 100;
+        transform: translateX(-100%);
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .sidebar.ouvert {
+        transform: translateX(0);
+    }
+
+    /* Burger visible */
+    .btn-burger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 0 16px;
+    }
+
+    /* Principal pleine largeur */
+    .principal {
+        padding: 14px 14px 0;
+        gap: 10px;
+    }
+
+    /* Grille : conversations cachées, chat pleine largeur */
+    .messagerie {
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+    }
+
+    .col-conv {
+        display: none;
+    }
+
+    .col-chat {
+        border-right: none;
+    }
+
+    /* En-tête chat : wrap sur 2 lignes */
+    .chat-entete {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .chat-actions {
+        width: 100%;
+    }
+
+    .btn-action {
+        flex: 1;
+        justify-content: center;
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    /* Bulle système moins large */
+    .bulle-systeme {
+        max-width: 95%;
+    }
+
+    /* Footer */
+    .pied {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .pied-liens {
+        gap: 12px;
+    }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Petit mobile (≤ 480px)
+   ════════════════════════════════ */
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 56px;
+    }
+
+    .nav-logo img {
+        height: 36px;
+    }
+
+    .saisie {
+        padding: 8px 10px;
+        gap: 4px;
+    }
+
+    /* Cacher les boutons saisie secondaires sur très petit écran */
+    .btn-saisie:nth-child(1),
+    .btn-saisie:nth-child(3) {
+        display: none;
+    }
+
+    .bulle {
+        max-width: 90%;
+    }
+
+    .chat-actions {
+        flex-direction: column;
+    }
+
+    .btn-action {
+        width: 100%;
+    }
 }

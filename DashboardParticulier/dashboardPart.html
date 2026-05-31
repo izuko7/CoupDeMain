@@ -12,7 +12,14 @@
 
 <body>
 
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <header class="navbar">
+    <!-- Burger (mobile uniquement) -->
+    <button class="btn-burger" onclick="ouvrirMenu()" aria-label="Ouvrir le menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-logo">
       <img src="../Ressources/images/logo.png" alt="Coup de Main" />
     </div>
@@ -25,7 +32,7 @@
 
   <div class="layout">
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="carte-profil">
         <h4 id="sidebar-nom"></h4>
         <p id="sidebar-projet"></p>
@@ -51,7 +58,6 @@
 
     <main class="principal">
 
-      <!-- EN-TETE -->
       <div class="page-entete">
         <div>
           <h1 id="titre-bienvenue"></h1>
@@ -60,7 +66,6 @@
         <button class="bouton-telecharger"><i class="fa-solid fa-download"></i> Télécharger rapports</button>
       </div>
 
-      <!-- STATS -->
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-top">
@@ -89,11 +94,9 @@
         </div>
       </div>
 
-      <!-- CONTENU -->
       <div class="contenu">
         <div class="gauche">
 
-          <!-- PROJETS ACTIFS -->
           <section>
             <div class="section-entete">
               <h2>Projets Actifs</h2>
@@ -103,46 +106,33 @@
 
               <div class="projet-card">
                 <div class="projet-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80"
-                    alt="Rénovation Cuisine" />
+                  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Rénovation Cuisine" />
                   <span class="badge-ok"><i class="fa-solid fa-circle-check"></i></span>
                 </div>
                 <div class="projet-body">
                   <h3>Rénovation Cuisine</h3>
                   <p class="projet-lieu">Dakar, Almadies · Plomberie & Électricité</p>
-                  <div class="progression-ligne">
-                    <span>Progression</span>
-                    <span>65%</span>
-                  </div>
-                  <div class="barre">
-                    <div class="barre-fill bleu" style="width:65%"></div>
-                  </div>
+                  <div class="progression-ligne"><span>Progression</span><span>65%</span></div>
+                  <div class="barre"><div class="barre-fill bleu" style="width:65%"></div></div>
                 </div>
               </div>
 
               <div class="projet-card">
                 <div class="projet-img-wrap">
-                  <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80"
-                    alt="Villa Dakar" />
+                  <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&q=80" alt="Villa Dakar" />
                   <span class="badge-action">ACTION REQUISE</span>
                 </div>
                 <div class="projet-body">
                   <h3>Villa Dakar</h3>
                   <p class="projet-lieu">Dakar, Plateau · Gros Œuvre</p>
-                  <div class="progression-ligne">
-                    <span>Progression</span>
-                    <span>20%</span>
-                  </div>
-                  <div class="barre">
-                    <div class="barre-fill rouge" style="width:20%"></div>
-                  </div>
+                  <div class="progression-ligne"><span>Progression</span><span>20%</span></div>
+                  <div class="barre"><div class="barre-fill rouge" style="width:20%"></div></div>
                 </div>
               </div>
 
             </div>
           </section>
 
-          <!-- DEVIS -->
           <section>
             <h2>Derniers Devis Reçus</h2>
             <div class="devis-liste">
@@ -176,7 +166,6 @@
 
         </div>
 
-        <!-- SIDEBAR DROITE -->
         <aside class="droite">
 
           <div class="widget">
@@ -184,36 +173,26 @@
               <h2>Messages récents</h2>
               <span class="badge-notif">●</span>
             </div>
-
             <div class="message-item">
               <img src="https://i.pravatar.cc/36?img=47" alt="Fatou Diop" />
               <div class="msg-info">
-                <div class="msg-haut">
-                  <strong>Fatou Diop</strong>
-                  <span class="msg-heure">10:45</span>
-                </div>
+                <div class="msg-haut"><strong>Fatou Diop</strong><span class="msg-heure">10:45</span></div>
                 <p>Les plans de la villa ont été...</p>
               </div>
             </div>
-
             <div class="message-item">
               <img src="https://i.pravatar.cc/36?img=12" alt="Jean Kambou" />
               <div class="msg-info">
-                <div class="msg-haut">
-                  <strong>Jean Kambou</strong>
-                  <span class="msg-heure">Hier</span>
-                </div>
+                <div class="msg-haut"><strong>Jean Kambou</strong><span class="msg-heure">Hier</span></div>
                 <p>Le matériel pour la cuisine...</p>
               </div>
             </div>
-
             <button class="bouton-messagerie">Ouvrir la messagerie</button>
           </div>
 
           <div class="widget dark">
             <p class="widget-accroche">Assurez votre chantier</p>
-            <p class="widget-desc">Bénéficiez de 15% de réduction sur l'assurance dommages-ouvrage avec notre partenaire
-              AXA.</p>
+            <p class="widget-desc">Bénéficiez de 15% de réduction sur l'assurance dommages-ouvrage avec notre partenaire AXA.</p>
             <button class="bouton-savoir">En savoir plus</button>
           </div>
 
@@ -232,8 +211,10 @@
 
     </main>
   </div>
+
   <script src="../Script/auth.js"></script>
   <script src="../Script/particulier.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 
 </html>
