@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 nav {
   display: flex;
   align-items: center;
@@ -25,9 +25,7 @@ nav {
   flex-shrink: 0;
 }
 
-.logo img {
-  height: 48px;
-}
+.logo img { height: 48px; }
 
 .onglets {
   display: flex;
@@ -41,9 +39,7 @@ nav {
   font-size: 15px;
 }
 
-#lang-select{
-  display: none;
-}
+#lang-select { display: none; }
 
 .btn-dark {
   background: #1a3a4a;
@@ -53,14 +49,14 @@ nav {
   font-weight: 600;
 }
 
-/* LAYOUT */
+/* ── LAYOUT ── */
 .contenu {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
-/* GAUCHE */
+/* ── GAUCHE ── */
 .gauche {
   position: relative;
   width: 42%;
@@ -105,11 +101,7 @@ nav {
   line-height: 1.6;
 }
 
-.avantages {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+.avantages { display: flex; flex-direction: column; gap: 20px; }
 
 .avantages-contenu {
   display: flex;
@@ -131,32 +123,14 @@ nav {
   font-size: 16px;
 }
 
-.icon-avantages.orange {
-  background: rgba(232, 96, 28, 0.25);
-  color: #e8601c;
-}
-.icon-avantages.blue {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-.icon-avantages.green {
-  background: rgba(42, 157, 92, 0.25);
-  color: #2a9d5c;
-}
+.icon-avantages.orange { background: rgba(232, 96, 28, 0.25); color: #e8601c; }
+.icon-avantages.blue   { background: rgba(255, 255, 255, 0.15); color: #fff; }
+.icon-avantages.green  { background: rgba(42, 157, 92, 0.25); color: #2a9d5c; }
 
-.avantages-contenu h4 {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
+.avantages-contenu h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.avantages-contenu p  { font-size: 13px; opacity: 0.75; line-height: 1.5; }
 
-.avantages-contenu p {
-  font-size: 13px;
-  opacity: 0.75;
-  line-height: 1.5;
-}
-
-/* DROITE */
+/* ── DROITE ── */
 .droite {
   flex: 1;
   overflow-y: auto;
@@ -165,6 +139,7 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  min-width: 0;
 }
 
 .formulaire,
@@ -175,23 +150,14 @@ nav {
   max-width: 520px;
 }
 
-.formulaire h2 {
-  font-size: 24px;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 6px;
-}
+.formulaire h2 { font-size: 24px; font-weight: 800; color: #111; margin-bottom: 6px; }
+.sous-titre    { font-size: 14px; color: #666; }
 
-.sous-titre {
-  font-size: 14px;
-  color: #666;
-}
-
-/* SÉLECTEUR PROFIL */
+/* ── SÉLECTEUR PROFIL ── */
 .profil-selection {
   display: flex;
   gap: 12px;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .profil-item {
@@ -208,40 +174,19 @@ nav {
   transition: border-color 0.2s;
 }
 
-.profil-item i {
-  font-size: 20px;
-  color: #888;
-  margin-bottom: 4px;
-}
+.profil-item i      { font-size: 20px; color: #888; margin-bottom: 4px; }
+.profil-item span   { font-size: 14px; font-weight: 700; color: #222; }
+.profil-item small  { font-size: 11px; color: #888; line-height: 1.3; }
 
-.profil-item span a {
-  font-size: 15px;
-  font-weight: 700;
-  color: #222;
-  text-decoration: none;
-}
+.profil-item.active            { border-color: #1a3a4a; background: #f0f5f8; }
+.profil-item.active i          { color: #1a3a4a; }
 
-.profil-item small {
-  font-size: 11px;
-  color: #888;
-  line-height: 1.3;
-}
-
-.profil-item.active {
-  border-color: #1a3a4a;
-  background: #f0f5f8;
-}
-
-.profil-item.active i {
-  color: #1a3a4a;
-}
-
-/* LABEL FORMULAIRE */
+/* ── LABEL FORMULAIRE ── */
 .formulaire-label {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .badge-orange {
@@ -256,23 +201,15 @@ nav {
   width: fit-content;
 }
 
-.formulaire-label h3 {
-  font-size: 18px;
-  font-weight: 800;
-  color: #111;
-}
+.formulaire-label h3 { font-size: 18px; font-weight: 800; color: #111; }
+.formulaire-label p  { font-size: 13px; color: #666; }
 
-.formulaire-label p {
-  font-size: 13px;
-  color: #666;
-}
-
-/* CHAMPS */
+/* ── CHAMPS ── */
 .champs-grille {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .champs,
@@ -283,11 +220,7 @@ nav {
 }
 
 .champs label,
-.champ label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #222;
-}
+.champ label { font-size: 13px; font-weight: 600; color: #222; }
 
 .champs input,
 .champ input,
@@ -303,21 +236,13 @@ nav {
   appearance: none;
 }
 
-.input-selection {
-  position: relative;
-}
-
-.input-selection select {
-  width: 100%;
-}
-
+.input-selection { position: relative; }
+.input-selection select { width: 100%; }
 .input-selection i {
   position: absolute;
-  right: 14px;
-  top: 50%;
+  right: 14px; top: 50%;
   transform: translateY(-50%);
-  color: #888;
-  font-size: 12px;
+  color: #888; font-size: 12px;
   pointer-events: none;
 }
 
@@ -331,12 +256,11 @@ nav {
   color: #888;
 }
 
-.input-info input {
-  border: none;
-  padding: 11px 0;
-}
+.input-info input { border: none; padding: 11px 0; min-width: 0; flex: 1; }
 
-/* CGU */
+.toggle-mdp { cursor: pointer; }
+
+/* ── CGU ── */
 .cgu {
   display: flex;
   align-items: flex-start;
@@ -346,19 +270,10 @@ nav {
   line-height: 1.5;
   grid-column: 1 / -1;
 }
+.cgu input { margin-top: 3px; flex-shrink: 0; }
+.cgu a     { color: #e8601c; text-decoration: none; font-weight: 600; }
 
-.cgu input {
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.cgu a {
-  color: #e8601c;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* BOUTON */
+/* ── BOUTON ── */
 .btn-submit {
   background: #1a3a4a;
   color: #fff;
@@ -377,10 +292,7 @@ nav {
   font-family: "Poppins", sans-serif;
   grid-column: 1 / -1;
 }
-
-.btn-submit:hover {
-  background: #0f2533;
-}
+.btn-submit:hover { background: #0f2533; }
 
 .deja-compte {
   font-size: 13px;
@@ -388,14 +300,8 @@ nav {
   text-align: center;
   grid-column: 1 / -1;
 }
+.deja-compte a { color: #e8601c; text-decoration: none; font-weight: 600; }
 
-.deja-compte a {
-  color: #e8601c;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* SECTION TITRE */
 .section-titre {
   grid-column: 1 / -1;
   font-size: 11px;
@@ -406,7 +312,72 @@ nav {
   margin-top: 4px;
 }
 
-/* PLEINE LARGEUR */
-.pleine-largeur {
-  grid-column: 1 / -1;
+.pleine-largeur { grid-column: 1 / -1; }
+
+/*  RESPONSIVE – Tablette (≤ 900px)*/
+@media (max-width: 900px) {
+  .gauche { width: 36%; }
+
+  .gauche-contenu { padding: 28px; }
+  .gauche-contenu h1 { font-size: 22px; }
+
+  .droite { padding: 28px 28px; }
+}
+
+/* RESPONSIVE – Mobile (≤ 768px)*/
+@media (max-width: 768px) {
+
+  body { height: auto; overflow: auto; }
+
+  .contenu { flex-direction: column; overflow: visible; }
+
+  /* Gauche : bandeau haut */
+  .gauche { width: 100%; height: 220px; flex-shrink: 0; }
+
+  .gauche-fond { justify-content: flex-end; }
+
+  .gauche-contenu {
+    padding: 20px 24px;
+    gap: 8px;
+  }
+
+  .gauche-contenu h1 { font-size: 20px; }
+  .gauche-contenu > p { font-size: 12px; }
+
+  /* Cacher les avantages sur mobile pour alléger */
+  .avantages { display: none; }
+
+  /* Droite pleine largeur */
+  .droite { padding: 24px 20px; min-height: auto; }
+
+  nav { padding: 10px 20px; }
+
+  /* Sélecteur profil : flex wrap */
+  .profil-selection { flex-wrap: wrap; }
+  .profil-item { min-width: calc(50% - 6px); }
+
+  /* Grille champs : 1 colonne */
+  .champs-grille { grid-template-columns: 1fr; }
+  .pleine-largeur { grid-column: 1; }
+  .cgu            { grid-column: 1; }
+  .btn-submit     { grid-column: 1; }
+  .deja-compte    { grid-column: 1; }
+  .section-titre  { grid-column: 1; }
+}
+
+/* RESPONSIVE – Petit mobile (≤ 480px)*/
+@media (max-width: 480px) {
+
+  nav { padding: 10px 16px; }
+  .logo img { height: 38px; }
+  .btn-dark { padding: 8px 14px; font-size: 13px; }
+
+  .gauche { height: 160px; }
+  .gauche-contenu h1 { font-size: 17px; }
+
+  .droite { padding: 20px 16px; }
+
+  .profil-item { min-width: 100%; }
+
+  .formulaire h2 { font-size: 20px; }
 }
