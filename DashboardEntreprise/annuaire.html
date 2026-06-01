@@ -10,11 +10,16 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <header class="navbar">
     <div class="nav-logo">
       <img src="../Ressources/images/logo.png" alt="Coup de Main" />
     </div>
+    <button class="btn-burger" onclick="ouvrirMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-icones">
       <span class="cloche">
         <i class="fa-solid fa-bell"></i>
@@ -26,19 +31,19 @@
 
   <div class="layout">
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="profil">
         <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
         <div>
-          <strong>Jean Dupont</strong>
-          <span>Gestionnaire Entreprise</span>
+          <strong id="sidebar-nom"></strong>
+          <span id="sidebar-activite"></span>
+          <span id="sidebar-id"></span>
         </div>
       </div>
 
       <nav class="nav-sidebar">
         <a href="dashboardEnt.html" class="lien"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
-        <a href="" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="messages.html" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
         <a href="projet.html" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
         <a href="annuaire.html" class="lien active"><i class="fa-solid fa-book"></i> Annuaires</a>
         <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
@@ -50,16 +55,15 @@
 
       <div class="liens-bas">
         <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
-        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
       </div>
     </aside>
 
-    <!-- MAIN -->
     <main class="principal">
 
       <div class="page-entete">
         <div>
-          <h1>Côte d'Ivoire Construction SA</h1>
+          <h1 id="entrepise"></h1>
           <p>Trouvez les meilleures opportunités de chantiers en Afrique.</p>
         </div>
         <button class="bouton-publier"><i class="fa-solid fa-plus"></i> Publier un nouveau projet</button>
@@ -67,7 +71,6 @@
 
       <div class="contenu">
 
-        <!-- FILTRES -->
         <aside class="filtres-panel">
           <h3><i class="fa-solid fa-sliders"></i> Filtres</h3>
 
@@ -114,10 +117,8 @@
           <button class="bouton-filtrer">Appliquer les filtres</button>
         </aside>
 
-        <!-- RESULTATS -->
         <div class="resultats">
 
-          <!-- BARRE DE RECHERCHE -->
           <div class="barre-recherche">
             <div class="champ-select">
               <label>Métier</label>
@@ -140,12 +141,11 @@
             <button class="bouton-filtre-bar"><i class="fa-solid fa-sliders"></i> Filtrer</button>
           </div>
 
-          <!-- GRILLE PROFILS -->
           <div class="profils-grid">
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oladipo Adejumo" />
+                <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?q=80&w=870&auto=format&fit=crop" alt="Félicien Koffi" />
                 <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
               </div>
               <div class="profil-body">
@@ -170,7 +170,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ousmane Sow" />
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop" alt="Ousmane Sow" />
                 <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
               </div>
               <div class="profil-body">
@@ -195,7 +195,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oladipo Adejumo" />
+                <img src="https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop" alt="Oladipo Adejumo" />
               </div>
               <div class="profil-body">
                 <div class="profil-haut">
@@ -219,7 +219,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1587052694737-a972e4186288?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pierre LeVert" />
+                <img src="https://images.unsplash.com/photo-1587052694737-a972e4186288?q=80&w=870&auto=format&fit=crop" alt="Pierre LeVert" />
               </div>
               <div class="profil-body">
                 <div class="profil-haut">
@@ -243,7 +243,6 @@
 
           </div>
 
-          <!-- PAGINATION -->
           <div class="pagination">
             <button class="page-btn"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="page-btn active">1</button>
@@ -270,5 +269,8 @@
     </main>
   </div>
 
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/entreprise.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 </html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="mes-message.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+  <title>CoupdeMain | Mes Messages</title>
+</head>
+<body>
+
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+    </div>
+    <button class="btn-burger" onclick="ouvrirMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-icones">
+      <span class="cloche"><i class="fa-solid fa-bell"></i><span class="pastille"></span></span>
+      <i class="fa-solid fa-message"></i>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profil-bas">
+        <nav class="nav-sidebar">
+          <a href="dashboardEnt.html" class="lien"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
+          <a href="messages.html" class="lien active"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+          <a href="projet.html" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
+          <a href="annuaire.html" class="lien"><i class="fa-solid fa-book"></i> Annuaires</a>
+          <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
+        </nav>
+        <div class="spacer"></div>
+        <div class="profil">
+          <img src="https://i.pravatar.cc/40?img=3" alt="Jean Dupont" />
+          <div>
+            <strong id="sidebar-nom"></strong>
+            <span id="sidebar-activite"></span>
+            <span id="sidebar-id"></span>
+          </div>
+        </div>
+        <button class="bouton-poster"><i class="fa-solid fa-plus"></i> Poster une offre</button>
+        <div class="liens-bas">
+          <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="principal">
+      <div class="messagerie">
+
+        <!-- COLONNE 1 : liste -->
+        <div class="col-liste">
+          <h2>Messages</h2>
+          <div class="recherche">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Rechercher une discussion..." />
+          </div>
+          <div class="conversations">
+
+            <div class="conv active">
+              <img src="https://i.pravatar.cc/40?img=12" alt="Moussa Kane" />
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Moussa Kane</span>
+                  <span class="conv-heure">14:20</span>
+                </div>
+                <p class="conv-sous">Résidence Azur - Phase 2</p>
+                <p class="conv-apercu">J'ai bien reçu les nouveaux plans de coffrage...</p>
+              </div>
+            </div>
+
+            <div class="conv">
+              <img src="https://i.pravatar.cc/40?img=47" alt="Sophie Lefebvre" />
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Sophie Lefebvre</span>
+                  <span class="conv-heure">Hier</span>
+                </div>
+                <p class="conv-sous">Villa Simple, Dakar</p>
+                <p class="conv-apercu">Pouvez-vous confirmer la livraison du ciment ?</p>
+              </div>
+            </div>
+
+            <div class="conv">
+              <div class="avatar-initiales">OC</div>
+              <div class="conv-info">
+                <div class="conv-haut">
+                  <span class="conv-nom">Oumar Cissé</span>
+                  <span class="conv-heure">Lun</span>
+                </div>
+                <p class="conv-sous">Immeuble Le Plateau</p>
+                <p class="conv-apercu">Le devis pour la plomberie est en cours.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLONNE 2 : chat -->
+        <div class="col-chat">
+
+          <div class="chat-entete">
+            <div class="chat-interlocuteur">
+              <img src="https://i.pravatar.cc/40?img=12" alt="Moussa Kane" />
+              <div>
+                <span class="chat-nom">Moussa Kane</span>
+                <span class="chat-sous">RÉSIDENCE AZUR · <span class="premium">CLIENT PREMIUM</span></span>
+              </div>
+            </div>
+            <div class="chat-actions">
+              <button class="btn-action"><i class="fa-solid fa-phone"></i></button>
+              <button class="btn-action"><i class="fa-solid fa-video"></i></button>
+              <button class="btn-action"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+          </div>
+
+          <div class="messages-zone">
+            <div class="separateur-date">AUJOURD'HUI</div>
+
+            <div class="message recu">
+              <img src="https://i.pravatar.cc/32?img=12" alt="" class="msg-avatar" />
+              <div class="bulle bulle-recue">
+                <p>Bonjour Jean, j'ai bien reçu les nouveaux plans de coffrage pour le niveau 2 de la Résidence Azur.</p>
+                <span class="msg-heure">11:15</span>
+              </div>
+            </div>
+
+            <div class="message recu">
+              <img src="https://i.pravatar.cc/32?img=12" alt="" class="msg-avatar" />
+              <div class="bulle bulle-recue">
+                <p>Cependant, l'architecte s'inquiète pour la descente de charges dans l'aile Ouest. Pouvons-nous revoir cela lors de l'appel de demain ?</p>
+                <span class="msg-heure">14:16</span>
+              </div>
+            </div>
+
+            <div class="message envoye">
+              <div class="bulle bulle-envoyee">
+                <p>Bonjour Moussa. Pas de problème, j'ai déjà anticipé le renforcement des armatures sur cette zone.</p>
+                <span class="msg-heure">14:22 ✓✓</span>
+              </div>
+            </div>
+
+            <div class="message envoye">
+              <div class="bulle bulle-envoyee pj-bulle">
+                <div class="piece-jointe">
+                  <div class="pj-icone"><i class="fa-solid fa-file-pdf"></i></div>
+                  <div class="pj-info">
+                    <span class="pj-nom">Note_Calcul_Structure_V2.pdf</span>
+                    <span class="pj-taille">1.4 MB · PDF</span>
+                  </div>
+                  <button class="pj-telecharger"><i class="fa-solid fa-download"></i></button>
+                </div>
+                <span class="msg-heure">14:23 ✓✓</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="saisie-wrap">
+            <div class="saisie">
+              <button class="btn-saisie"><i class="fa-solid fa-circle-plus"></i></button>
+              <button class="btn-saisie"><i class="fa-regular fa-image"></i></button>
+              <input type="text" placeholder="Répondre à Moussa..." class="saisie-input" />
+              <button class="btn-saisie"><i class="fa-regular fa-face-smile"></i></button>
+              <button class="btn-envoyer"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <p class="saisie-info"><i class="fa-solid fa-lock"></i> CONNEXION SÉCURISÉE &nbsp;·&nbsp; BTP MARCHÉ MESSAGERIE PRO</p>
+          </div>
+        </div>
+
+        <!-- COLONNE 3 : détails projet -->
+        <div class="col-details">
+          <div class="details-entete">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Détails du projet</span>
+          </div>
+
+          <div class="projet-card">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="Résidence Azur" class="projet-img" />
+            <div class="projet-info">
+              <strong>Résidence Azur - Phase 2</strong>
+              <span>Dakar, Plateau · Chantier en cours</span>
+              <div class="progression-wrap">
+                <div class="prog-barre"><div class="prog-fill" style="width:65%"></div></div>
+                <span class="prog-pct">65% Terminé</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <p class="details-titre">FICHIERS PARTAGÉS</p>
+            <div class="fichier">
+              <i class="fa-solid fa-file-pdf fichier-icon rouge"></i>
+              <div>
+                <p class="fichier-nom">Plan_Fondations_V1.pdf</p>
+                <p class="fichier-date">12 Oct 2023</p>
+              </div>
+            </div>
+            <div class="fichier">
+              <i class="fa-solid fa-file-image fichier-icon bleu"></i>
+              <div>
+                <p class="fichier-nom">Photo_Site_Zone8.jpg</p>
+                <p class="fichier-date">13 Oct 2023</p>
+              </div>
+            </div>
+            <button class="voir-tout">Voir tout (12)</button>
+          </div>
+
+          <div class="details-section">
+            <p class="details-titre">INTERVENANTS</p>
+            <div class="intervenants">
+              <img src="https://i.pravatar.cc/32?img=12" alt="" class="intervenant-avatar" />
+              <img src="https://i.pravatar.cc/32?img=47" alt="" class="intervenant-avatar" />
+              <img src="https://i.pravatar.cc/32?img=33" alt="" class="intervenant-avatar" />
+              <div class="intervenant-plus">+2</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="pied">
+        <p>© 2026 CDMain Marché. La fondation de vos projets en Afrique.</p>
+        <div class="pied-liens">
+          <a href="#">À propos</a>
+          <a href="#">Conditions Générales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Recrutement</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../Script/auth.js"></script>
+  <script src="../Script/entreprise.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
+</body>
+</html>

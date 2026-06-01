@@ -33,7 +33,7 @@ document.getElementById("btn-connexion")?.addEventListener("click", function (e)
         window.location.href = "../DashboardEntreprise/dashboardEnt.html"; //"../Dashboard/dashboard_entreprise.html"
         break;
       case "particulier":
-        window.location.href = ""; // TODO: "../Dashboard/dashboard_particulier.html"
+        window.location.href = "../DashboardParticulier/dashboardPart.html";  //"../Dashboard/dashboard_particulier.html"
         break;
       default:
         erreur.textContent = "Rôle utilisateur inconnu.";

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboarProdPart.css" />
+    <link rel="shortcut icon" href="../Ressources/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>CoupdeMain | Mes Chantiers</title>
+</head>
+
+<body>
+
+    <!-- Overlay menu burger -->
+    <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
+    <!-- BARRE LATERALE -->
+    <aside class="barre-laterale" id="sidebar">
+        <div class="logo">
+            <img src="../Ressources/images/logo.png" alt="Coup de Main" />
+        </div>
+
+        <div class="carte-profil">
+            <h4 id="sidebar-nom"></h4>
+            <p id="sidebar-projet"></p>
+            <span id="sidebar-ide"></span>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboardPart.html" class="lien">
+                <i class="fa-solid fa-table-columns"></i> Tableau de bord
+            </a>
+            <a href="messagespart.html" class="lien">
+                <i class="fa-solid fa-envelope"></i> Mes Messages
+            </a>
+            <a href="projetParticulier.html" class="lien active">
+                <i class="fa-solid fa-wrench"></i> Mes Projets
+            </a>
+            <a href="#" class="lien">
+                <i class="fa-solid fa-gear"></i> Paramètres
+            </a>
+        </nav>
+
+        <button class="bouton-poster">
+            <i class="fa-solid fa-plus"></i> Nouveau Projet
+        </button>
+
+        <div class="liens-bas">
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Centre d'aide</a>
+            <a href="#" onclick="logOut()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+        </div>
+    </aside>
+
+    <!-- PRINCIPAL -->
+    <main class="principal">
+
+        <!-- EN-TETE -->
+        <header class="en-tete">
+            <!-- Bouton burger (visible sur mobile uniquement) -->
+            <button class="btn-burger" onclick="ouvrirMenu()" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="icones">
+                <span class="icone"><i class="fa-regular fa-bell"></i></span>
+                <div class="avatar"></div>
+            </div>
+        </header>
+
+        <!-- PAGE -->
+        <div class="page">
+
+            <!-- TITRE + BARRE RECHERCHE -->
+            <div class="page-haut">
+                <div>
+                    <h1>Gérez vos chantiers</h1>
+                    <p>Suivez l'avancement et retrouvez les professionnels qui interviennent sur vos projets.</p>
+                </div>
+                <div class="barre-droite">
+                    <div class="recherche">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Rechercher un projet..." />
+                    </div>
+                    <button class="btn-filtrer"><i class="fa-solid fa-sliders"></i> Filtrer</button>
+                </div>
+            </div>
+
+            <!-- GRILLE CHANTIERS -->
+            <div class="grille-chantiers">
+
+                <!-- Carte 1 -->
+                <div class="carte-chantier">
+                    <div class="carte-image">
+                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="" />
+                        <span class="badge-statut en-cours">En cours</span>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="carte-haut">
+                            <h3>Extension Villa "Le Bosquet"</h3>
+                            <span class="ref">Réf. 2026-11</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Maçonnerie</span>
+                            <span class="tag">Gros Œuvre</span>
+                        </div>
+                        <div class="progression">
+                            <div class="prog-haut">
+                                <span>Agence d'offre reçue</span>
+                                <span class="prog-val">72%</span>
+                            </div>
+                            <div class="barre">
+                                <div class="remplissage" style="width:72%"></div>
+                            </div>
+                        </div>
+                        <div class="carte-bas">
+                            <div class="pro-assign">
+                                <div class="pro-avatar"></div>
+                                <span>Aucun artisan assigné</span>
+                            </div>
+                            <a href="#" class="lien-voir">Voir les offres <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="carte-chantier">
+                    <div class="carte-image">
+                        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="" />
+                        <span class="badge-statut termine">Terminé</span>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="carte-haut">
+                            <h3>Rénovation Plomberie Complète</h3>
+                            <span class="ref">Réf. 2025-04</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Plomberie</span>
+                            <span class="tag">Abidjan S4</span>
+                        </div>
+                        <div class="progression">
+                            <div class="prog-haut">
+                                <span>Intervention payée</span>
+                                <span class="prog-val">40%</span>
+                            </div>
+                            <div class="barre">
+                                <div class="remplissage orange" style="width:40%"></div>
+                            </div>
+                        </div>
+                        <div class="carte-bas">
+                            <div class="pro-assign">
+                                <div class="pro-avatar photo">
+                                    <img src="https://i.pravatar.cc/32?img=12" alt="" />
+                                </div>
+                                <span>Alassane Soro</span>
+                            </div>
+                            <button class="btn-devis">Devis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 3 pleine largeur -->
+                <div class="carte-chantier large">
+                    <div class="carte-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="" />
+                        <span class="badge-statut en-cours">En cours</span>
+                    </div>
+                    <div class="carte-corps">
+                        <div class="carte-haut">
+                            <h3>Installation Solaire Photovoltaïque</h3>
+                            <span class="ref">Réf. 2026-13</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Énergie</span>
+                            <span class="tag">Construction/BTP</span>
+                        </div>
+                        <div class="progression">
+                            <div class="prog-haut">
+                                <span>Livraison 12 Fév, 26h</span>
+                                <span class="prog-val">100%</span>
+                            </div>
+                            <div class="barre">
+                                <div class="remplissage vert" style="width:100%"></div>
+                            </div>
+                        </div>
+                        <div class="carte-bas">
+                            <div class="pro-assign">
+                                <div class="pro-avatar photo">
+                                    <img src="https://i.pravatar.cc/32?img=33" alt="" />
+                                </div>
+                                <div class="etoiles">
+                                    <span>Hatoum Ballo</span>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RESUME ACTIVITES -->
+            <div class="resume">
+                <div class="resume-icone"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Résumé de vos activités</h3>
+                <div class="resume-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">TOTAL INVEST</span>
+                        <span class="stat-val">13.5M FCFA</span>
+                    </div>
+                    <div class="separateur-vertical"></div>
+                    <div class="stat-item">
+                        <span class="stat-label">ARTISANS CONTACTÉS</span>
+                        <span class="stat-val">24</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-bloc">
+                <div class="cta-icone"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Un nouveau besoin ?</h3>
+                <p>Décrivez votre projet et trouvez les meilleurs artisans de professionnels vérifiés dans votre région.</p>
+                <button class="btn-cta">
+                    <i class="fa-solid fa-plus"></i> Publier un nouveau projet
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../Script/auth.js"></script>
+    <script src="../Script/particulier.js"></script>
+    <script src="../Script/burgurMenu.js"></script>
+</body>
+
+</html>

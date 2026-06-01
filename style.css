@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 nav {
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@ nav {
   background: transparent;
 }
 
-/* HERO */
+/* ── HERO ── */
 .hero {
   position: relative;
   display: flex;
@@ -83,18 +83,15 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 .hero-background::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(15, 35, 55, 0.85) 50%,
-    rgba(15, 35, 55, 0.2) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(15, 35, 55, 0.85) 50%,
+      rgba(15, 35, 55, 0.2) 100%);
 }
 
 .hero-contenu {
@@ -119,7 +116,7 @@ nav {
   opacity: 0.85;
 }
 
-/* SEARCH BAR */
+/* ── SEARCH BAR ── */
 .search-bar {
   display: flex;
   background: #fff;
@@ -157,17 +154,19 @@ nav {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .search-bar button:hover {
   background: #c85319;
 }
 
-/* CTA BUTTONS */
+/* ── CTA BUTTONS ── */
 .CTA-buttons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn-ornage {
@@ -178,7 +177,7 @@ nav {
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  transition: 0.2s ease-in-out;
+  transition: background 0.2s;
 }
 
 .btn-ornage:hover {
@@ -194,15 +193,14 @@ nav {
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  transition: 0.2s ease-in-out;
+  transition: background 0.2s;
 }
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* SECTION PRINCIPAL */
-
+/* ── SECTION MÉTIERS ── */
 .main {
   padding: 60px 40px;
   background: #fff;
@@ -213,6 +211,8 @@ nav {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 40px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .main-content h2 {
@@ -222,18 +222,19 @@ nav {
   margin-bottom: 8px;
 }
 
-.main-content > div > p {
+.main-content>div>p {
   font-size: 14px;
   color: #666;
 }
 
-.main-content > a{
+.main-content>a {
   text-decoration: none;
   color: #1a3a4a;
   font-weight: 600;
   font-size: 15px;
+  white-space: nowrap;
 }
-/* STYLE CARD */
+
 .main-card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -247,9 +248,7 @@ nav {
   padding: 28px 24px 0;
   border-radius: 12px;
   overflow: hidden;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
@@ -297,37 +296,37 @@ nav {
 .bar-card {
   height: 4px;
   margin: 16px -24px 0;
-  border-radius: 0 0 2px 2px;
 }
 
 .barre-bleu {
   background: #1a3a4a;
 }
 
-.barre-orange{
+.barre-orange {
   background: #e8601c;
 }
 
-.barre-yellow{
+.barre-yellow {
   background: #e7e71c;
 }
 
-.barre-green{
+.barre-green {
   background: #2a9d5c;
 }
 
-/* SECTION COMMENT ? */
-.comment{
-  padding: 61px 40px;
+/* ── COMMENT ÇA MARCHE ── */
+.comment {
+  padding: 60px 40px;
   background: #f0f4f8;
 }
 
-.comment-head{
+.comment-head {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.bg{
+.bg {
+  display: inline-block;
   background: #1a3a4a;
   color: #fff;
   font-size: 12px;
@@ -338,127 +337,159 @@ nav {
   margin-bottom: 16px;
 }
 
-.comment-head h2{
+.comment-head h2 {
   font-size: 32px;
   font-weight: 700;
   color: #1a3a4a;
   margin-bottom: 12px;
 }
 
-.comment-head p{
+.comment-head p {
   font-size: 15px;
   color: #555;
 }
-.grille-comment{
+
+.grille-comment {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin: 25px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.grille-item{
+.grille-item {
   display: flex;
   gap: 20px;
   align-items: flex-start;
 }
 
-.comment-icon img{
-  width: 120px;
-  height: 120px;
+.comment-icon img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
-.grille-item h3{
+.grille-item h3 {
   font-size: 18px;
   font-weight: 700;
   color: #111;
   margin-bottom: 8px;
 }
 
-.grille-item p{
+.grille-item p {
   font-size: 14px;
   color: #555;
   line-height: 1.5;
 }
-/* AVANTAGES */
-.avantages{
+
+/* ── AVANTAGES ── */
+.avantages {
   padding: 60px 40px;
   background: #fff;
 }
 
-.grille-avantages{
+.grille-avantages {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 24px;
   text-align: center;
 }
 
-.avantages-items{
+.avantages-items {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.avantages-items p{
-  font-family: 14px;
+.avantages-items img {
+  max-width: 60px;
+}
+
+.avantages-items p {
+  font-size: 14px;
   color: #333;
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* BANNIERE */
-.banniere{
+/* ── BANNIÈRE ── */
+.banniere {
   padding: 0 40px 60px;
   background: #fff;
 }
 
-.carte{
+.carte {
   display: flex;
   align-items: center;
   gap: 28px;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   padding: 31px 40px;
+  flex-wrap: wrap;
 }
 
-/* FOOTER */
+.carte img {
+  max-width: 180px;
+  flex-shrink: 0;
+}
+
+.banniere-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.banniere-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a3a4a;
+  margin-bottom: 8px;
+}
+
+.banniere-text p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
 .pied-de-page {
   background: #0d2b35;
   color: #ccc;
   padding: 48px 40px 0;
 }
- 
+
 .pied-de-page__contenu {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
   gap: 48px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
- 
+
 .pied-de-page__logo {
   height: 85px;
   margin-bottom: 16px;
 }
- 
+
 .pied-de-page__description {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
   color: #aaa;
 }
- 
+
 .pied-de-page__reseaux {
   display: flex;
   gap: 12px;
 }
- 
+
 .pied-de-page__reseaux a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -466,31 +497,31 @@ nav {
   font-size: 16px;
   text-decoration: none;
 }
- 
+
 .pied-de-page__colonne h4 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 20px;
 }
- 
+
 .pied-de-page__colonne ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
- 
+
 .pied-de-page__colonne ul a {
   text-decoration: none;
   color: #aaa;
   font-size: 14px;
 }
- 
+
 .pied-de-page__colonne ul a:hover {
   color: #fff;
 }
- 
+
 .pied-de-page__contact li {
   display: flex;
   align-items: center;
@@ -498,39 +529,39 @@ nav {
   font-size: 14px;
   color: #aaa;
 }
- 
+
 .pied-de-page__contact i {
   font-size: 16px;
   color: #fff;
 }
- 
+
 .pied-de-page__newsletter-texte {
   font-size: 14px;
   color: #aaa;
   line-height: 1.6;
   margin-bottom: 16px;
 }
- 
+
 .pied-de-page__formulaire {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
- 
+
 .pied-de-page__formulaire input {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 12px 16px;
   color: #fff;
   font-size: 14px;
   outline: none;
 }
- 
+
 .pied-de-page__formulaire input::placeholder {
   color: #888;
 }
- 
+
 .pied-de-page__formulaire button {
   background: #1a4a5a;
   color: #fff;
@@ -540,15 +571,200 @@ nav {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s;
 }
- 
+
 .pied-de-page__formulaire button:hover {
   background: #1f5a6e;
 }
- 
+
 .pied-de-page__bas {
   text-align: center;
   padding: 20px 0;
   font-size: 13px;
   color: #666;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+
+/* ── Tablette (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .main-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grille-avantages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pied-de-page__contenu {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── Mobile large (≤ 768px) ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 14px 20px;
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+
+  .tab {
+    gap: 8px;
+  }
+
+  .tab a {
+    font-size: 13px;
+  }
+
+  .btn-inscrire {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero-background::after {
+    background: rgba(15, 35, 55, 0.75);
+  }
+
+  .hero-contenu {
+    padding: 48px 20px;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .hero-contenu h1 {
+    font-size: 26px;
+  }
+
+  .hero-contenu p {
+    font-size: 14px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .search-logo,
+  .search-location {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 0 14px;
+  }
+
+  .search-bar button {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .CTA-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-ornage,
+  .btn-outline {
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .main {
+    padding: 40px 20px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-content h2 {
+    font-size: 24px;
+  }
+
+  .main-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .comment {
+    padding: 40px 20px;
+  }
+
+  .comment-head h2 {
+    font-size: 24px;
+  }
+
+  .grille-comment {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .comment-icon img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .avantages {
+    padding: 40px 20px;
+  }
+
+  .grille-avantages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .banniere {
+    padding: 0 20px 40px;
+  }
+
+  .carte {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .carte img {
+    max-width: 120px;
+  }
+
+  .pied-de-page {
+    padding: 40px 20px 0;
+  }
+
+  .pied-de-page__contenu {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ── Mobile petit (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero-contenu h1 {
+    font-size: 22px;
+  }
+
+  .main-card {
+    grid-template-columns: 1fr;
+  }
+
+  .grille-avantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    padding: 12px 16px;
+  }
 }

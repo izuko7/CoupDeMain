@@ -23,11 +23,13 @@ body {
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
+
 .nav-logo img {
   height: 44px;
 }
+
 .nav-icones {
   display: flex;
   align-items: center;
@@ -35,10 +37,12 @@ body {
   font-size: 18px;
   color: #555;
 }
+
 .cloche {
   position: relative;
   cursor: pointer;
 }
+
 .pastille {
   position: absolute;
   top: -2px;
@@ -66,21 +70,25 @@ body {
   padding: 24px 16px;
   gap: 16px;
 }
+
 .profil {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .profil img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 .profil strong {
   display: block;
   font-size: 13px;
 }
+
 .profil span {
   font-size: 11px;
   color: #888;
@@ -91,6 +99,7 @@ body {
   flex-direction: column;
   gap: 4px;
 }
+
 .lien {
   display: flex;
   align-items: center;
@@ -102,14 +111,17 @@ body {
   color: #555;
   transition: background 0.15s;
 }
+
 .lien:hover {
   background: #f2f4f7;
 }
+
 .lien.active {
   background: #f0f5f8;
   color: #1a3a4a;
   font-weight: 600;
 }
+
 .lien i {
   font-size: 14px;
   width: 16px;
@@ -130,7 +142,9 @@ body {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   width: 100%;
+  transition: background 0.15s;
 }
+
 .bouton-poster:hover {
   background: #a83820;
 }
@@ -140,6 +154,7 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+
 .liens-bas a {
   display: flex;
   align-items: center;
@@ -148,6 +163,7 @@ body {
   color: #888;
   text-decoration: none;
 }
+
 .liens-bas a:hover {
   color: #333;
 }
@@ -160,6 +176,7 @@ body {
   flex-direction: column;
   gap: 24px;
   overflow-y: auto;
+  min-width: 0;
 }
 
 .page-entete {
@@ -167,11 +184,14 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
 }
+
 .page-entete h1 {
   font-size: 26px;
   font-weight: 800;
 }
+
 .page-entete p {
   font-size: 13px;
   color: #777;
@@ -192,7 +212,9 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: background 0.15s;
 }
+
 .bouton-publier:hover {
   background: #24536b;
 }
@@ -215,6 +237,7 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
 .filtres-panel h3 {
   font-size: 15px;
   font-weight: 700;
@@ -228,6 +251,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
 .filtre-titre {
   font-size: 13px;
   font-weight: 600;
@@ -241,12 +265,14 @@ body {
   color: #444;
   cursor: pointer;
 }
+
 .checkbox-label input[type="checkbox"] {
   width: 16px;
   height: 16px;
   accent-color: #1a3a4a;
   cursor: pointer;
 }
+
 .checkbox-label.checked {
   font-weight: 600;
   color: #111;
@@ -255,6 +281,7 @@ body {
 .select-wrap {
   position: relative;
 }
+
 .select-wrap select {
   width: 100%;
   padding: 9px 32px 9px 12px;
@@ -268,6 +295,7 @@ body {
   cursor: pointer;
   outline: none;
 }
+
 .select-wrap i {
   position: absolute;
   right: 12px;
@@ -285,6 +313,7 @@ body {
   color: #f59e0b;
   font-size: 16px;
 }
+
 .etoiles span {
   font-size: 13px;
   color: #555;
@@ -296,6 +325,7 @@ body {
   accent-color: #1a3a4a;
   cursor: pointer;
 }
+
 .slider-labels {
   display: flex;
   justify-content: space-between;
@@ -315,7 +345,9 @@ body {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   width: 100%;
+  transition: background 0.15s;
 }
+
 .bouton-filtrer:hover {
   background: #24536b;
 }
@@ -327,7 +359,6 @@ body {
   gap: 20px;
 }
 
-/* Barre de recherche */
 .barre-recherche {
   background: #fff;
   border-radius: 12px;
@@ -336,14 +367,18 @@ body {
   display: flex;
   align-items: flex-end;
   gap: 16px;
+  flex-wrap: wrap;
 }
+
 .champ-select,
 .champ-input {
   display: flex;
   flex-direction: column;
   gap: 5px;
   flex: 1;
+  min-width: 140px;
 }
+
 .champ-select label,
 .champ-input label {
   font-size: 11px;
@@ -358,12 +393,13 @@ body {
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 9px 12px;
-  background: #fff;
 }
+
 .input-wrap i {
   color: #aaa;
   font-size: 13px;
 }
+
 .input-wrap input {
   border: none;
   outline: none;
@@ -387,12 +423,14 @@ body {
   align-items: center;
   gap: 8px;
   white-space: nowrap;
+  transition: background 0.15s;
 }
+
 .bouton-filtre-bar:hover {
   background: #24536b;
 }
 
-/* Grille profils */
+/* ── GRILLE PROFILS ── */
 .profils-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -405,15 +443,18 @@ body {
   border: 1px solid #eee;
   overflow: hidden;
 }
+
 .profil-img-wrap {
   position: relative;
 }
+
 .profil-img-wrap img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
 }
+
 .badge-verifie {
   position: absolute;
   top: 12px;
@@ -428,6 +469,7 @@ body {
   align-items: center;
   gap: 5px;
 }
+
 .badge-verifie i {
   color: #22c55e;
 }
@@ -445,10 +487,12 @@ body {
   justify-content: space-between;
   gap: 8px;
 }
+
 .profil-haut h3 {
   font-size: 14px;
   font-weight: 700;
 }
+
 .profil-metier {
   font-size: 12px;
   color: #777;
@@ -466,7 +510,9 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+  flex-shrink: 0;
 }
+
 .note i {
   font-size: 11px;
 }
@@ -476,7 +522,9 @@ body {
   gap: 14px;
   font-size: 12px;
   color: #888;
+  flex-wrap: wrap;
 }
+
 .profil-meta span {
   display: flex;
   align-items: center;
@@ -488,6 +536,7 @@ body {
   flex-wrap: wrap;
   gap: 6px;
 }
+
 .tag {
   background: #f2f4f7;
   color: #555;
@@ -510,17 +559,20 @@ body {
   cursor: pointer;
   transition: background 0.15s;
 }
+
 .bouton-profil:hover {
   background: #f2f4f7;
 }
 
-/* Pagination */
+/* ── PAGINATION ── */
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  flex-wrap: wrap;
 }
+
 .page-btn {
   width: 36px;
   height: 36px;
@@ -535,15 +587,19 @@ body {
   align-items: center;
   justify-content: center;
   color: #555;
+  transition: background 0.15s;
 }
+
 .page-btn:hover {
   background: #f2f4f7;
 }
+
 .page-btn.active {
   background: #1a3a4a;
   color: #fff;
   border-color: #1a3a4a;
 }
+
 .page-dots {
   font-size: 13px;
   color: #aaa;
@@ -560,19 +616,151 @@ body {
   border-top: 1px solid #eee;
   margin-top: auto;
 }
+
 .pied p {
   font-size: 12px;
   color: #aaa;
 }
+
 .pied-liens {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
+
 .pied-liens a {
   font-size: 12px;
   color: #aaa;
   text-decoration: none;
 }
+
 .pied-liens a:hover {
   color: #333;
+}
+
+/*  RESPONSIVE */
+
+/* Burger */
+.btn-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 16px;
+  color: #1a3a4a;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 40;
+}
+
+.overlay.actif {
+  display: block;
+}
+
+/* ── Tablette (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .contenu {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .profils-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .btn-burger {
+    display: flex;
+    position: absolute;
+    right: 88px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.28s ease;
+  }
+
+  .sidebar.ouvert {
+    transform: translateX(0);
+  }
+
+  .principal {
+    padding: 20px 16px;
+  }
+
+  .page-entete h1 {
+    font-size: 20px;
+  }
+
+  .contenu {
+    grid-template-columns: 1fr;
+  }
+
+  .filtres-panel {
+    display: none;
+  }
+
+  /* Barre recherche en colonne */
+  .barre-recherche {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .bouton-filtre-bar {
+    justify-content: center;
+  }
+
+  .profils-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pied {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ── Mobile petit (≤ 480px) ── */
+@media (max-width: 480px) {
+  .principal {
+    padding: 16px 12px;
+  }
+
+  .page-entete {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bouton-publier {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profil-img-wrap img {
+    height: 140px;
+  }
 }

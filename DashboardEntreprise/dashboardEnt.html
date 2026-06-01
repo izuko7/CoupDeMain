@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-logo">
@@ -19,11 +22,10 @@
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="Rechercher des projets..." />
     </div>
-    <nav class="nav-liens">
-      <!-- <a href="#">Annuaire</a>
-      <a href="#">Projets</a>
-      <a href="#">Comment ça marche</a> -->
-    </nav>
+    <nav class="nav-liens"></nav>
+    <button class="btn-burger" onclick="ouvrirMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-icones">
       <span class="cloche">
         <i class="fa-solid fa-bell"></i>
@@ -48,7 +50,7 @@
 
       <nav class="nav-sidebar">
         <a href="dashboardEnt.html" class="lien active"><i class="fa-solid fa-table-columns"></i> Tableau de bord</a>
-        <a href="#" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
+        <a href="messages.html" class="lien"><i class="fa-solid fa-envelope"></i> Mes Messages</a>
         <a href="projet.html" class="lien"><i class="fa-solid fa-wrench"></i> Mes Projets</a>
         <a href="annuaire.html" class="lien"><i class="fa-solid fa-address-book"></i> Annuaires</a>
         <a href="#" class="lien"><i class="fa-solid fa-gear"></i> Paramètres</a>
@@ -110,7 +112,7 @@
         </div>
       </div>
 
-      <!-- CONTENU PRINCIPAL : projets + sidebar droite -->
+      <!-- CONTENU PRINCIPAL -->
       <div class="contenu">
 
         <div class="gauche">
@@ -287,8 +289,10 @@
 
     </main>
   </div>
+
   <script src="../Script/auth.js"></script>
   <script src="../Script/connexion.js"></script>
   <script src="../Script/entreprise.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 </html>

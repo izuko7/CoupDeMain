@@ -12,6 +12,8 @@ if (user) {
   document.getElementById("mois-actuel").textContent = mois.toUpperCase();
 }
 
+
+
 // Filtrage des projets
 function filtrerProjets() {
   const metier = document.getElementById("filtre-metier").value.toLowerCase();
