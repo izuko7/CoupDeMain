@@ -668,3 +668,146 @@ body {
 .pied-liens a:hover {
     color: #333;
 }
+
+/* ── RESPONSIVE ── */
+
+/* Bouton burger (caché sur desktop) */
+.btn-burger {
+    display: none;
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 200;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 150;
+}
+
+/* ── TABLETTE ── */
+@media (max-width: 900px) {
+    .barre-laterale {
+        position: fixed;
+        left: -240px;
+        top: 0;
+        height: 100vh;
+        z-index: 160;
+        transition: left 0.25s ease;
+        box-shadow: 2px 0 12px rgba(0,0,0,0.08);
+    }
+
+    .barre-laterale.ouverte {
+        left: 0;
+    }
+
+    .overlay.visible {
+        display: block;
+    }
+
+    .btn-burger {
+        display: flex;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    .en-tete {
+        padding: 14px 16px 14px 60px;
+    }
+
+    .page {
+        padding: 10px 12px 8px;
+    }
+
+    .liste-contacts {
+        width: 240px;
+        min-width: 240px;
+    }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+
+    .page {
+        padding: 8px 8px 4px;
+    }
+
+    .messagerie {
+        border-radius: 10px;
+    }
+
+    /* Affiche soit les contacts, soit le chat */
+    .liste-contacts {
+        width: 100%;
+        min-width: unset;
+        border-right: none;
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        z-index: 10;
+        border-radius: 10px;
+        transition: transform 0.25s ease;
+    }
+
+    .liste-contacts.masquee {
+        transform: translateX(-110%);
+    }
+
+    .panneau-chat {
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        border-radius: 10px;
+        transform: translateX(110%);
+        transition: transform 0.25s ease;
+    }
+
+    .panneau-chat.visible {
+        transform: translateX(0);
+    }
+
+    .messagerie {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Bouton retour dans l'entête chat */
+    .btn-retour {
+        display: flex !important;
+    }
+
+    .pied {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .pied-liens {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .bulle,
+    .bulle-fichier,
+    .bulle-image {
+        max-width: 88%;
+    }
+}
