@@ -325,9 +325,7 @@ nav {
   color: #333;
 }
 
-/* ════════════════════════════════
-   RESPONSIVE – Tablette (≤ 900px)
-   ════════════════════════════════ */
+/* RESPONSIVE – Tablette (≤ 900px) */
 @media (max-width: 900px) {
 
   /* Panel gauche réduit */
@@ -345,9 +343,7 @@ nav {
   }
 }
 
-/* ════════════════════════════════
-   RESPONSIVE – Mobile (≤ 768px)
-   ════════════════════════════════ */
+/*RESPONSIVE – Mobile (≤ 768px) */
 @media (max-width: 768px) {
 
   /* Corps scrollable, on abandonne le layout fixed 2 colonnes */
@@ -385,7 +381,7 @@ nav {
     padding: 5px 10px;
   }
 
-  /* Panel droite : prend toute la largeur, en flux normal */
+
   .droite {
     position: relative;
     top: auto;
