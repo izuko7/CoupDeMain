@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-logo">
@@ -19,11 +22,10 @@
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="Rechercher des projets..." />
     </div>
-    <nav class="nav-liens">
-      <!-- <a href="#">Annuaire</a>
-      <a href="#">Projets</a>
-      <a href="#">Comment ça marche</a> -->
-    </nav>
+    <nav class="nav-liens"></nav>
+    <button class="btn-burger" onclick="ouvrirMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-icones">
       <span class="cloche">
         <i class="fa-solid fa-bell"></i>
@@ -110,7 +112,7 @@
         </div>
       </div>
 
-      <!-- CONTENU PRINCIPAL : projets + sidebar droite -->
+      <!-- CONTENU PRINCIPAL -->
       <div class="contenu">
 
         <div class="gauche">
@@ -287,6 +289,7 @@
 
     </main>
   </div>
+
   <script src="../Script/auth.js"></script>
   <script src="../Script/connexion.js"></script>
   <script src="../Script/entreprise.js"></script>

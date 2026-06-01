@@ -7,3 +7,17 @@ function fermerMenu() {
     document.getElementById('sidebar').classList.remove('ouvert');
     document.getElementById('overlay').classList.remove('actif');
 }
+
+
+// Menu bugur
+
+function ouvrirMenu() {
+  document.querySelector('.sidebar').classList.add('ouvert');
+  document.getElementById('overlay').classList.add('actif');
+}
+ 
+function fermerMenu() {
+  document.querySelector('.sidebar').classList.remove('ouvert');
+  document.getElementById('overlay').classList.remove('actif');
+}
+ 

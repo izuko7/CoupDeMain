@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 nav {
   display: flex;
   align-items: center;
@@ -23,6 +23,8 @@ nav {
   background: #fff;
   border-bottom: 1px solid #eee;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .logo img {
@@ -49,11 +51,11 @@ nav {
   font-weight: 600;
 }
 
-#lang-select{
+#lang-select {
   display: none;
 }
 
-/* LAYOUT */
+/* ── LAYOUT ── */
 .gauche,
 .droite {
   position: fixed;
@@ -61,7 +63,7 @@ nav {
   bottom: 0;
 }
 
-/* GAUCHE */
+/* ── GAUCHE ── */
 .gauche {
   left: 0;
   width: 45%;
@@ -121,7 +123,7 @@ nav {
   border-radius: 20px;
 }
 
-/* DROITE */
+/* ── DROITE ── */
 .droite {
   left: 45%;
   right: 0;
@@ -154,7 +156,7 @@ nav {
   margin-top: -12px;
 }
 
-/* CHAMPS */
+/* ── CHAMPS ── */
 .champ {
   display: flex;
   flex-direction: column;
@@ -202,6 +204,7 @@ nav {
   color: #333;
   padding: 12px 0;
   font-family: "Poppins", sans-serif;
+  min-width: 0;
 }
 
 .toggle-mdp {
@@ -226,7 +229,7 @@ nav {
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-  transition:  0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   font-family: "Poppins", sans-serif;
 }
 
@@ -268,7 +271,7 @@ nav {
   font-weight: 600;
   background: #fff;
   cursor: pointer;
-  transition:  0.2s;
+  transition: 0.2s;
   font-family: "Poppins", sans-serif;
 }
 
@@ -320,4 +323,130 @@ nav {
 
 .droite-liens a:hover {
   color: #333;
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Tablette (≤ 900px)
+   ════════════════════════════════ */
+@media (max-width: 900px) {
+
+  /* Panel gauche réduit */
+  .gauche {
+    width: 38%;
+  }
+
+  .droite {
+    left: 38%;
+    padding: 32px 32px;
+  }
+
+  .gauche-contenu h1 {
+    font-size: 28px;
+  }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE – Mobile (≤ 768px)
+   ════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Corps scrollable, on abandonne le layout fixed 2 colonnes */
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  /* Panel gauche : bandeau haut fixe */
+  .gauche {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    height: 200px;
+  }
+
+  .gauche-contenu {
+    bottom: 20px;
+    left: 24px;
+    right: 24px;
+    gap: 10px;
+  }
+
+  .gauche-contenu h1 {
+    font-size: 22px;
+  }
+
+  .gauche-contenu p {
+    font-size: 12px;
+  }
+
+  .badges-gauche span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  /* Panel droite : prend toute la largeur, en flux normal */
+  .droite {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    padding: 32px 24px;
+    overflow-y: visible;
+  }
+
+  .formulaire {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
+  /* Navbar */
+  nav {
+    padding: 12px 20px;
+  }
+}
+
+/* RESPONSIVE – Petit mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+  nav {
+    padding: 10px 16px;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .btn-inscrire {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .gauche {
+    height: 160px;
+  }
+
+  .gauche-contenu h1 {
+    font-size: 18px;
+  }
+
+  .droite {
+    padding: 24px 16px;
+  }
+
+  .formulaire h2 {
+    font-size: 22px;
+  }
+
+  .button-socials {
+    flex-direction: column;
+  }
+
+  .droite-liens {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
