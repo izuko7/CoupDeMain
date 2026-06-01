@@ -11,10 +11,14 @@
 </head>
 
 <body>
+
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <!-- BARRE LATERALE -->
-  <aside class="barre-laterale">
+  <aside class="barre-laterale" id="barre-laterale">
     <div class="logo">
-      <img src="../Ressources/images/logo.png" alt="" />
+      <img src="../Ressources/images/logo.png" alt="Logo CoupdeMain" />
     </div>
 
     <div class="carte-profil">
@@ -50,7 +54,10 @@
   <main class="principal">
     <!-- EN-TETE -->
     <header class="en-tete">
-      <div></div>
+      <!-- Bouton burger (visible sur mobile uniquement) -->
+      <button class="bouton-burger" onclick="ouvrirMenu()" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <div class="icones">
         <span class="cloche">
           <i class="fa-solid fa-bell"></i>
@@ -128,9 +135,7 @@
             <div class="projet-haut">
               <div>
                 <h4>Villa K - Gros Œuvre</h4>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Cocody, Abidjan
-                </p>
+                <p><i class="fa-solid fa-location-dot"></i> Cocody, Abidjan</p>
               </div>
               <span class="etiquette-cours">EN COURS</span>
             </div>
@@ -154,9 +159,7 @@
             <div class="projet-haut">
               <div>
                 <h4>Rénovation Immeuble "Le Phare"</h4>
-                <p>
-                  <i class="fa-solid fa-location-dot"></i> Plateau, Abidjan
-                </p>
+                <p><i class="fa-solid fa-location-dot"></i> Plateau, Abidjan</p>
               </div>
               <span class="etiquette-urgent">URGENT</span>
             </div>
@@ -237,7 +240,7 @@
         <div class="grille-opportunites">
           <div class="carte-opportunite">
             <div class="image-opport">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="" />
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="Extension Garage" />
               <span class="prix">1.200.000 FCFA</span>
             </div>
             <div class="corps-opport">
@@ -250,8 +253,7 @@
                 <span><i class="fa-solid fa-clock"></i> 7 jours</span>
               </p>
               <p class="description-opport">
-                Agrandissement d'un garage existant pour deux véhicules
-                supplémentaires, incluant dalle béton.
+                Agrandissement d'un garage existant pour deux véhicules supplémentaires, incluant dalle béton.
               </p>
               <button class="bouton-repondre">Répondre à l'appel</button>
             </div>
@@ -259,7 +261,7 @@
 
           <div class="carte-opportunite">
             <div class="image-opport">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="" />
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80" alt="Réfection Fondation" />
               <span class="prix sur-devis">Sur Devis</span>
             </div>
             <div class="corps-opport">
@@ -272,8 +274,7 @@
                 <span><i class="fa-solid fa-clock"></i> À définir</span>
               </p>
               <p class="description-opport">
-                Reprise en sous-œuvre pour villa présentant des fissures
-                structurelles importantes.
+                Reprise en sous-œuvre pour villa présentant des fissures structurelles importantes.
               </p>
               <button class="bouton-repondre">Répondre à l'appel</button>
             </div>
@@ -289,6 +290,7 @@
 
   <script src="../Script/auth.js"></script>
   <script src="../Script/dashboard.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 
 </html>

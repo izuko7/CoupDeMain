@@ -581,3 +581,185 @@ body {
   .bloc-filtres { flex-direction: column; }
   .page { padding: 20px 16px; }
 } */
+
+/* ── BURGER & OVERLAY ── */
+.btn-burger {
+    display: none;
+    position: fixed;
+    top: 14px;
+    left: 16px;
+    z-index: 1001;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    color: #1a3a4a;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 999;
+}
+
+.overlay.actif {
+    display: block;
+}
+
+/* ── TABLETTE (≤ 1100px) ── */
+@media (max-width: 1100px) {
+    .grille-projets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .barre-laterale {
+        width: 200px;
+        min-width: 200px;
+        padding: 20px 12px;
+    }
+}
+
+/* ── TABLETTE PORTRAIT (≤ 900px) ── */
+@media (max-width: 900px) {
+    body {
+        overflow: auto;
+    }
+
+    .btn-burger {
+        display: flex;
+    }
+
+    .barre-laterale {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 240px;
+        min-width: 240px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+    }
+
+    .barre-laterale.ouverte {
+        left: 0;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    .en-tete {
+        padding: 14px 20px 14px 68px;
+    }
+
+    .page {
+        padding: 20px 20px;
+    }
+
+    .titre h1 {
+        font-size: 22px;
+    }
+
+    .grille-projets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bloc-filtres {
+        gap: 12px;
+    }
+
+    .filtre-champ {
+        min-width: calc(50% - 8px);
+    }
+
+    .btn-filtrer {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ── MOBILE (≤ 600px) ── */
+@media (max-width: 600px) {
+    .en-tete {
+        padding: 12px 16px 12px 64px;
+    }
+
+    .page {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .titre h1 {
+        font-size: 20px;
+    }
+
+    .bloc-filtres {
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .filtre-champ {
+        min-width: 100%;
+    }
+
+    .btn-filtrer {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grille-projets {
+        grid-template-columns: 1fr;
+    }
+
+    .image-projet {
+        height: 190px;
+    }
+
+    .pied {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .pied-liens {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .pagination {
+        gap: 6px;
+    }
+
+    .page-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* ── TRÈS PETIT MOBILE (≤ 380px) ── */
+@media (max-width: 380px) {
+    .projet-bas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-postuler {
+        width: 100%;
+        text-align: center;
+    }
+
+    .montant {
+        font-size: 13px;
+    }
+}
