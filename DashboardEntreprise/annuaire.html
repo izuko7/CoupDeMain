@@ -10,10 +10,16 @@
 </head>
 <body>
 
+  <!-- Overlay menu burger -->
+  <div class="overlay" id="overlay" onclick="fermerMenu()"></div>
+
   <header class="navbar">
     <div class="nav-logo">
       <img src="../Ressources/images/logo.png" alt="Coup de Main" />
     </div>
+    <button class="btn-burger" onclick="ouvrirMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="nav-icones">
       <span class="cloche">
         <i class="fa-solid fa-bell"></i>
@@ -139,7 +145,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Félicien Koffi" />
+                <img src="https://images.unsplash.com/photo-1530639834082-05bafb67fbbe?q=80&w=870&auto=format&fit=crop" alt="Félicien Koffi" />
                 <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
               </div>
               <div class="profil-body">
@@ -164,7 +170,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ousmane Sow" />
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=869&auto=format&fit=crop" alt="Ousmane Sow" />
                 <span class="badge-verifie"><i class="fa-solid fa-circle-check"></i> VÉRIFIÉ</span>
               </div>
               <div class="profil-body">
@@ -189,7 +195,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Oladipo Adejumo" />
+                <img src="https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop" alt="Oladipo Adejumo" />
               </div>
               <div class="profil-body">
                 <div class="profil-haut">
@@ -213,7 +219,7 @@
 
             <div class="profil-card">
               <div class="profil-img-wrap">
-                <img src="https://images.unsplash.com/photo-1587052694737-a972e4186288?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pierre LeVert" />
+                <img src="https://images.unsplash.com/photo-1587052694737-a972e4186288?q=80&w=870&auto=format&fit=crop" alt="Pierre LeVert" />
               </div>
               <div class="profil-body">
                 <div class="profil-haut">
@@ -262,7 +268,9 @@
 
     </main>
   </div>
+
   <script src="../Script/auth.js"></script>
   <script src="../Script/entreprise.js"></script>
+  <script src="../Script/burgurMenu.js"></script>
 </body>
 </html>
