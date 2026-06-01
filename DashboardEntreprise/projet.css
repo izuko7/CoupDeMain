@@ -500,7 +500,8 @@ body {
 @media (max-width: 768px) {
 
     .navbar { padding: 0 16px; }
-    .btn-burger { display: flex; }
+    .btn-burger { display: flex; position: absolute;
+        right: 88px; }
 
     /* Sidebar cachée */
     .sidebar {
